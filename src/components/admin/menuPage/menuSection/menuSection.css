@@ -1,0 +1,11 @@
+.menuSection {
+}
+
+.menuSectionHeader {
+  color: var(--primary-color);
+}
+
+.menuItemsContainer {
+  height: 200px;
+  position: relative;
+}

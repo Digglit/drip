@@ -1,0 +1,9 @@
+
+
+.driverDataContainer {
+  height: 500px;
+  width: 90%;
+  padding: 0% 5%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}

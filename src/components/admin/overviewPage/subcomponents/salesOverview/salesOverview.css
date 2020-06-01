@@ -1,0 +1,38 @@
+
+.salesOverviewContainer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 500px;
+  width: 90%;
+  padding: 0% 5%;
+  justify-self: center;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.textContainer {
+  display: grid;
+  align-items: center;
+  justify-items: left;
+  height: 50%;
+  width: 80%;
+  justify-self: center;
+  align-self: center;
+}
+
+.salesOverviewGraph {
+  height: 50%;
+  width: 80%;
+  align-self: center;
+  justify-self: center;
+  background-color: black;
+}
+
+.salesOverviewButton {
+  height: 50px;
+  width: 200px;
+  transition-duration: 150ms;
+}
+
+.salesOverviewButton:hover {
+ box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+}

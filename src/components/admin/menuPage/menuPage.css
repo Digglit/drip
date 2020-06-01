@@ -1,0 +1,11 @@
+:root {
+  --menu-rows: 1;
+}
+
+.menuContainer {
+  display: grid;
+  grid-template-rows: repeat(var(--menu-rows), 300px);
+  margin-left: 50px;
+  height: 100%;
+  width: 100%;
+}

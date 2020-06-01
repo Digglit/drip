@@ -1,0 +1,47 @@
+
+
+
+.popularDishesContainer {
+    height: 400px;
+    width: 80%;
+    padding: 0% 10%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.foodImageContainer {
+    height: 80%;
+    width: 80%;
+    align-self: center;
+    justify-self: center;
+    position: relative;
+}
+
+.foodImageAccent1 {
+    height: 175px;
+    width: 250px;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 37.5%;
+    left: 32.5%;
+    transform: translate(-50%, -50%);
+}
+
+.foodImageAccent2 {
+    height: 100px;
+    width: 150px;
+    background-color: var(--secondary-color);
+    position: absolute;
+    top: 72%;
+    left: 78%;
+    transform: translate(-50%, -50%);
+}
+
+.popularFoodImage {
+    height: 200px;
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

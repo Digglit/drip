@@ -19,10 +19,10 @@ export default class SideBar extends Component {
           </div>
         </div>
         <div className='notificationFooter'>
-          <button className='secondaryButton'>Modify Menu</button>
-          <button className='secondaryButton'>Email</button>
-          <button className='secondaryButton'>Tools</button>
-          <button className='primaryButton'>Logout</button>
+          <button className='sideBarButton secondaryButton'>Modify Menu</button>
+          <button className='sideBarButton secondaryButton'>Email</button>
+          <button className='sideBarButton secondaryButton'>Tools</button>
+          <button className='sideBarButton primaryButton'>Logout</button>
         </div>
       </div>
     )
