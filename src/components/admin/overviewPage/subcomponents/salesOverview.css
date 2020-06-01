@@ -1,0 +1,7 @@
+
+.salesOverviewContainer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 500px;
+  width: 100%;
+}
