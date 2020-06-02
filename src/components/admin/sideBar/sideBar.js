@@ -1,8 +1,20 @@
 import React, { Component } from 'react'
 import './sideBar.css'
 import logo from '../../../assets/BIGmPIZZAredrevised.png'
+import { connect } from 'react-redux'
+import { changePage } from '../../../actions'
 
-export default class SideBar extends Component {
+
+
+class SideBar extends Component {
+  changePageHandler = () => {
+    if (this.props.pageDisplayed === 0) {
+      this.props.changePage(1)
+    } else {
+      this.props.changePage(0)
+    }
+  }
+
   render() {
     return (
       <div className='sideBarContainer'>
@@ -19,12 +31,18 @@ export default class SideBar extends Component {
           </div>
         </div>
         <div className='notificationFooter'>
-          <button className='sideBarButton secondaryButton'>Modify Menu</button>
-          <button className='sideBarButton secondaryButton'>Email</button>
-          <button className='sideBarButton secondaryButton'>Tools</button>
+          <button className={`sideBarButton ${this.props.pageDisplayed === 1 ? 'primaryButton' : 'secondaryButton'}`} onMouseDown={this.changePageHandler}>Modify Menu</button>
+          <button className={`sideBarButton secondaryButton`}>Email</button>
+          <button className={`sideBarButton secondaryButton`}>Tools</button>
           <button className='sideBarButton primaryButton'>Logout</button>
         </div>
       </div>
     )
   }
 }
+
+const mapStateToProps = state => ({
+  pageDisplayed: state.pageDisplayed
+})
+
+export default connect(mapStateToProps, { changePage })(SideBar)

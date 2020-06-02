@@ -4,3 +4,9 @@ export const changePage = (number) => {
     payload: number
   }
 }
+
+export const displayBackdrop = () => {
+  return {
+    type: 'DISPLAY_BACKDROP'
+  }
+}

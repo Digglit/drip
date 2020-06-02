@@ -16,6 +16,7 @@ button {
   display: grid;
   grid-template-columns: 300px auto;
   overflow: hidden;
+  height: 100vh;
 }
 
 .primaryButton, .secondaryButton:hover {

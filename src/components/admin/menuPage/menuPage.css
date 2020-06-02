@@ -1,11 +1,31 @@
 :root {
-  --menu-rows: 1;
+  --menu-rows: 4;
 }
 
 .menuContainer {
   display: grid;
   grid-template-rows: repeat(var(--menu-rows), 300px);
   margin-left: 50px;
+  height: 100vh;
+  width: calc(100vw - 350px);
+  overflow-y: auto;
+  position: relative;
+}
+
+.menuOverlay {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
+  background-color: rgba(255, 255, 255, 0.75);
+  transition-duration: 150ms;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.menuOverlayHidden {
+  opacity: 0;
+  pointer-events: none;
 }

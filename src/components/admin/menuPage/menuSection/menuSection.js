@@ -4,15 +4,16 @@ import MenuItem from './subcomponents/menuItem/menuItem'
 
 export default class MenuSection extends Component {
   render() {
-    return(
+    return (
       <div className='menuSection'>
         <h1 className='menuSectionHeader'>Appetizers</h1>
         <div className='menuItemsContainer'>
-          <MenuItem position = {0}/>
-          <MenuItem position = {270}/>
-          <MenuItem position = {540}/>
-          <MenuItem position = {810}/>
-          <MenuItem position = {1080}/>
+          <MenuItem position={0} />
+          <MenuItem position={270} />
+          <MenuItem position={540} />
+          <MenuItem position={810} />
+          <MenuItem position={1080} />
+          <MenuItem position={1350} />
         </div>
       </div>
     )

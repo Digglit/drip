@@ -11,7 +11,7 @@ export default class SalesOverview extends Component {
           <button className='salesOverviewButton primaryButton'>View More</button>
         </div>
         <div className='salesOverviewGraph'>
-          
+
         </div>
       </div>
     )

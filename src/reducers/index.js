@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
 import pageDisplayer from './pageDisplayer'
+import backdropDisplay from './backdropDisplay'
 
 const rootReducer = combineReducers({
-  pageDisplayed: pageDisplayer
+  pageDisplayed: pageDisplayer,
+  backdropDisplay: backdropDisplay
 })
 
 export default rootReducer

@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
-import { useSelector, useDispatch } from 'react-redux'
-import { changePage } from './actions'
+import { useSelector } from 'react-redux'
 import SideBar from './components/admin/sideBar/sideBar'
 import OverviewPage from './components/admin/overviewPage/overviewPage'
 import MenuPage from './components/admin/menuPage/menuPage'
@@ -11,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <SideBar />
-      {false ? <OverviewPage /> : <MenuPage />}
+      {currentPageDisplayed === 0 ? <OverviewPage /> : <MenuPage />}
     </div>
   );
 }

@@ -1,4 +1,8 @@
 .menuSection {
+  height: 100%;
+  width: calc(100% - 50px);
+  overflow-x: hidden;
+  position: relative;
 }
 
 .menuSectionHeader {

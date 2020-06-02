@@ -1,7 +1,7 @@
 const pageDisplayer = (state = 0, action) => {
   switch (action.type) {
     case 'CHANGE_PAGE':
-      return action.payload
+      return state = action.payload
     default:
       return state
   }
