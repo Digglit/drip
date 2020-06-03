@@ -32,5 +32,7 @@
 
 .menuItemName {
   color: white;
-  margin-left: 10px;
+  margin-left: 5px;
+  position: relative;
+  top: -10px;
 }

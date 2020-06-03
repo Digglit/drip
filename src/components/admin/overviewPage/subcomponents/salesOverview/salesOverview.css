@@ -17,6 +17,7 @@
   width: 80%;
   justify-self: center;
   align-self: center;
+  max-width: 500px;
 }
 
 .salesOverviewGraph {

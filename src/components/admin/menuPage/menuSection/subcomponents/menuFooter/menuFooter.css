@@ -1,0 +1,25 @@
+
+
+
+.menuFooterContainer {
+  position: sticky;
+  width: calc(100% - 50px);
+  height: 75px;
+  bottom: 0;
+  background-color: white;
+  z-index: 1;
+  border-top: 1px solid var(--primary-color);
+  padding-right: 50px;
+}
+
+.menuFooterButton {
+  height: 75%;
+  width: 200px;
+  align-self: center;
+  float: right;
+  position: relative;
+  top: 50%;
+  transform: translate(0%, -50%);
+  margin-left: 15px;
+  font-size: 20px;
+}

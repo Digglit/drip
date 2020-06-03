@@ -1,0 +1,80 @@
+
+
+.itemDrawerBody {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 250px auto;
+  overflow-y: auto;
+}
+
+.itemDetailsContainer {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 30% 25% 45%
+}
+
+.itemDescriptionTextAreaContainer {
+  display: grid;
+  grid-template-rows: 52px auto;
+  align-items: center;
+}
+
+.itemDescriptionTextArea {
+  height: 80%;
+  width: 90%;
+  border: 2px solid var(--primary-color);
+  resize: none;
+  align-self: start;
+}
+
+.itemDrawerItemModifiersContainer {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 67px auto;
+}
+
+.itemDrawerItemModifiersHeader {
+  border-bottom: 2px solid var(--primary-color);
+  margin-top: 5px;
+  margin-bottom: 0px;
+  padding-left: 10px;
+}
+
+.itemDrawerItemModifiersWrapper {
+  height: 100%;
+  min-height: 325px;
+  width: 100%;
+}
+
+.itemDrawerItemModifier {
+  height: 80px;
+  width: 100%;
+  border-bottom: 1px solid var(--primary-color);
+  display: grid;
+  grid-template-columns: 60% 20% 20%;
+}
+
+.itemDrawerItemModifierText {
+  margin: 0px;
+  align-self: center;
+  justify-self: start;
+  margin-left: 20px;
+}
+
+.itemDrawerModifierButton {
+  height: 60%;
+  width: 90%;
+  align-self: center;
+  justify-self: center;
+}
+
+.itemDrawerAddModifierButton {
+  height: 40px;
+  width: 150px;
+  position: relative;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}

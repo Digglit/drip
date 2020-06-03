@@ -1,0 +1,23 @@
+
+
+.cornerCloseButtonContainer {
+  background-color: var(--primary-color);
+  height: 50px;
+  width: 50px;
+  display: grid;
+  position: absolute;
+  right: 0px;
+  top: 15px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.cornerCloseButtonText {
+  font-size: 36px;
+  align-self: center;
+  justify-self: center;
+  color: white;
+  margin: 0px;
+  position: relative;
+  top: -1px;
+}

@@ -1,0 +1,38 @@
+
+
+.switchContainer {
+  height: 30px;
+  width: 70px;
+  border: 2px solid var(--primary-color);
+  position: relative;
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.switchSlider {
+  width: 50%;
+  background-color: white;
+  height: 100%;
+  position: absolute;
+  transition-duration: 250ms;
+}
+
+.switchCheckmark {
+  position: absolute;
+  color: white;
+  left: 6px;
+  top: 50%;
+  transform: translate(0%, -51%);
+  font-size: 26px;
+  margin: 0px;
+}
+
+.switchX {
+  position: absolute;
+  color: white;
+  right: 6px;
+  top: 50%;
+  transform: translate(0%, -51%);
+  font-size: 26px;
+  margin: 0px;
+}

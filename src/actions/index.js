@@ -10,3 +10,10 @@ export const displayBackdrop = () => {
     type: 'DISPLAY_BACKDROP'
   }
 }
+
+export const openMenuItemDrawer = (drawerContents) => {
+  return {
+    type: 'OPEN_MENU_ITEM_DRAWER',
+    payload: drawerContents
+  }
+}

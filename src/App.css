@@ -4,6 +4,20 @@
   --primary-color: #BE2525;
   --secondary-color: #FF6B6B;
   --header-color: white;
+  overflow: hidden;
+}
+
+h1, h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.25em;
+}
+
+h1 {
+  font-size: 2.5em;
 }
 
 button {

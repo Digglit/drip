@@ -1,0 +1,80 @@
+
+
+
+
+.dropDownContainer {
+  height: 40px;
+  width: 200px;
+  border: 2px solid var(--primary-color);
+  display: grid;
+  grid-template-columns: 160px 40px;
+  position: relative;
+}
+
+.dropDownBody {
+  height: 100%;
+  width: 100%;
+  display: grid;
+}
+
+.dropDownBodyText {
+  margin: 0px;
+  align-self: center;
+  justify-self: center;
+  font-size: 20px;
+  position: relative;
+  top: -2px;
+}
+
+.dropDownArrowContainer {
+  height: 100%;
+  width: 100%;
+  grid-column: 2;
+  background-color: var(--primary-color);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  cursor: pointer;
+}
+
+.dropDownArrow {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0px;
+  font-size: 16px;
+  transform: scaleX(3);
+  color: white;
+}
+
+.dropDownListOfItemsContainer {
+  position: absolute;
+  top: 40px;
+  left: -2px;
+  width: 160px;
+  border: 2px solid var(--primary-color);
+  background-color: white;
+  opacity: 1;
+  transition-duration: 150ms;
+}
+
+.dropDownListOfItemsHidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dropDownListOfItemsItem {
+  height: 33px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.dropDownListOfItemsItem:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.dropDownListOfItemsText {
+  margin: 0px;
+}
