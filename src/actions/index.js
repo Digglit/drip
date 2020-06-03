@@ -11,9 +11,15 @@ export const displayBackdrop = () => {
   }
 }
 
-export const openMenuItemDrawer = (drawerContents) => {
+export const openMenuItemDrawer = () => {
   return {
-    type: 'OPEN_MENU_ITEM_DRAWER',
+    type: 'OPEN_MENU_ITEM_DRAWER'
+  }
+}
+
+export const openMenuItemDrawerWithDetails = (drawerContents) => {
+  return {
+    type: 'OPEN_MENU_ITEM_DRAWER_WITH_DETAILS',
     payload: drawerContents
   }
 }

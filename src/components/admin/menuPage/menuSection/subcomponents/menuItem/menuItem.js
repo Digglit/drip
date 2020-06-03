@@ -1,14 +1,31 @@
 import React, { Component } from 'react'
 import './menuItem.css'
 import foodImage from '../../../../../../assets/wings.jpg'
-import { displayBackdrop, openMenuItemDrawer } from '../../../../../../actions'
+import { displayBackdrop, openMenuItemDrawerWithDetails } from '../../../../../../actions'
 import { connect } from 'react-redux'
 
 
 class MenuItem extends Component {
   itemClickHandler = () => {
     this.props.displayBackdrop()
-    this.props.openMenuItemDrawer()
+    this.props.openMenuItemDrawerWithDetails(this.foodDetails)
+  }
+
+  foodDetails = {
+    open: true,
+    switched: true,
+    sections: [
+      'Appetizers',
+      'Specialty Pies',
+      'Subs & Wraps',
+      'Burgers'
+    ],
+    sectionSelected: 0,
+    name: 'Wings',
+    price: '$7.50',
+    itemDescription: 'These are the wings!',
+    modifiers: ['1) Your Choice of Sauce', '2) Celery and Dip?', '3) Size'],
+    image: foodImage,
   }
 
   render() {
@@ -23,4 +40,4 @@ class MenuItem extends Component {
   }
 }
 
-export default connect(null, { displayBackdrop, openMenuItemDrawer })(MenuItem)
+export default connect(null, { displayBackdrop, openMenuItemDrawerWithDetails })(MenuItem)

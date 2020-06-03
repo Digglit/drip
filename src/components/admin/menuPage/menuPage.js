@@ -8,7 +8,7 @@ import ItemDrawer from './menuSection/subcomponents/itemDrawer/itemDrawer'
 
 class MenuPage extends Component {
   backdropClickHandler = () => {
-    this.props.displayBackdrop()
+    this.props.displayBackdrop({ open: false })
     this.props.openMenuItemDrawer()
   }
 

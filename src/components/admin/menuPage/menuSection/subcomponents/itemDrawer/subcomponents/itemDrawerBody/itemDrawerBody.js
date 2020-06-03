@@ -6,7 +6,8 @@ import DropDown from '../../../../../../../global/dropDown/dropDown'
 import Input from '../../../../../../../global/input/input'
 import NumberInput from '../../../../../../../global/numberInput/numberInput'
 
-export class ItemDrawerBody extends Component {
+class ItemDrawerBody extends Component {
+
   constructor(props) {
     super(props)
     this.state = {
@@ -22,6 +23,20 @@ export class ItemDrawerBody extends Component {
       price: '$',
       itemDescription: '',
       modifiers: [],
+    }
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps != this.props) {
+      this.setState({
+        switched: this.props.itemDetails.switched,
+        sections: this.props.itemDetails.sections,
+        sectionSelected: this.props.itemDetails.sectionSelected,
+        name: this.props.itemDetails.name,
+        price: this.props.itemDetails.price,
+        itemDescription: this.props.itemDetails.itemDescription,
+        modifiers: this.props.itemDetails.modifiers,
+      }, () => console.log(this.state))
     }
   }
 
@@ -108,13 +123,13 @@ export class ItemDrawerBody extends Component {
           <h1 className='itemDrawerItemModifiersHeader'>Modifiers:</h1>
           <div className='itemDrawerItemModifiersWrapper'>
             {this.state.modifiers.map((value, index) => (
-              <div className='itemDrawerItemModifier' >
+              <div className='itemDrawerItemModifier' key={index}>
                 <p className='itemDrawerItemModifierText'>{value}</p>
                 <button className='itemDrawerModifierButton primaryButton'>Remove</button>
                 <button className='itemDrawerModifierButton secondaryButton'>Edit Option</button>
               </div>
             ))}
-            <button className='secondaryButton itemDrawerAddModifierButton' onMouseDow={this.addModifierHandler}>Add Modifier</button>
+            <button className='secondaryButton itemDrawerAddModifierButton' onMouseDown={this.addModifierHandler}>Add Modifier</button>
           </div>
         </div>
       </div>
@@ -122,12 +137,10 @@ export class ItemDrawerBody extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-
-})
-
-const mapDispatchToProps = {
-
+const mapStateToProps = state => {
+  return {
+    itemDetails: state.menuDrawerOpenStatus
+  }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ItemDrawerBody)
+export default connect(mapStateToProps, null)(ItemDrawerBody)
