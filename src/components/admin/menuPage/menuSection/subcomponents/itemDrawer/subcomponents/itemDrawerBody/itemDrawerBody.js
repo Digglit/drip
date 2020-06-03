@@ -36,7 +36,7 @@ class ItemDrawerBody extends Component {
         price: this.props.itemDetails.price,
         itemDescription: this.props.itemDetails.itemDescription,
         modifiers: this.props.itemDetails.modifiers,
-      }, () => console.log(this.state))
+      })
     }
   }
 

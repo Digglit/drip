@@ -7,11 +7,11 @@ import { changePage } from '../../../actions'
 
 
 class SideBar extends Component {
-  changePageHandler = () => {
-    if (this.props.pageDisplayed === 0) {
-      this.props.changePage(1)
-    } else {
+  changePageHandler = (newPage) => {
+    if (this.props.pageDisplayed === newPage) {
       this.props.changePage(0)
+    } else {
+      this.props.changePage(newPage)
     }
   }
 
@@ -31,9 +31,9 @@ class SideBar extends Component {
           </div>
         </div>
         <div className='notificationFooter'>
-          <button className={`sideBarButton ${this.props.pageDisplayed === 1 ? 'primaryButton' : 'secondaryButton'}`} onMouseDown={this.changePageHandler}>Modify Menu</button>
-          <button className={`sideBarButton secondaryButton`}>Email</button>
-          <button className={`sideBarButton secondaryButton`}>Tools</button>
+          <button className={`sideBarButton ${this.props.pageDisplayed === 1 ? 'primaryButton' : 'secondaryButton'}`} onMouseDown={() => this.changePageHandler(1)}>Modify Menu</button>
+          <button className={`sideBarButton ${this.props.pageDisplayed === 2 ? 'primaryButton' : 'secondaryButton'}`} onMouseDown={() => this.changePageHandler(2)}>Email</button>
+          <button className={`sideBarButton ${this.props.pageDisplayed === 3 ? 'primaryButton' : 'secondaryButton'}`} onMouseDown={() => this.changePageHandler(3)}>Tools</button>
           <button className='sideBarButton primaryButton'>Logout</button>
         </div>
       </div>

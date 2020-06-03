@@ -5,6 +5,7 @@ import MenuSection from './menuSection/menuSection'
 import { displayBackdrop, openMenuItemDrawer } from '../../../actions'
 import MenuFooter from './menuSection/subcomponents/menuFooter/menuFooter'
 import ItemDrawer from './menuSection/subcomponents/itemDrawer/itemDrawer'
+import ConfirmActionModule from '../../global/confirmActionModule/confirmActionModule'
 
 class MenuPage extends Component {
   backdropClickHandler = () => {
@@ -15,6 +16,7 @@ class MenuPage extends Component {
   render() {
     return (
       <div className='menuPagecontainer'>
+        <ConfirmActionModule header={'Confirm Action'} body={'Are you sure you want to confirm this action? '} confirmAction={() => console.log('Action Confirmed')}/>
         <div className='menuContainer'>
           <MenuSection />
           <MenuSection />
