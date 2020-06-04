@@ -14,9 +14,95 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   transition-duration: 250ms;
   opacity: 1;
+  display: grid;
+  grid-template-rows: 70px 100px auto 75px;
 }
 
 .shrunkenContainer {
   transform: translate(-50%, -50%) scale(.95);
   opacity: 0;
+  pointer-events: none;
+}
+
+.manageCouponsSearchContainer {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: 60% 40%;
+  align-items: center;
+  justify-items: center;
+}
+
+.couponSearchInput {
+  height: 45px;
+  width: 80%;
+  justify-self: end;
+  font-size: 20px;
+  border-width: 1px;
+}
+
+.createNewCouponButton {
+  height: 49px;
+  width: 200px;
+}
+
+.couponCodeContainerWrapper {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 12.5% 87.5%;
+}
+
+.couponCodeContainerHeader {
+  height: 100%;
+  width: 100%;
+  background-color: var(--primary-color);
+  display: grid;
+  grid-template-columns: 30% 20% 20% 30%;
+}
+
+.couponCodeContainerHeaderText {
+  color: white;
+  margin: 0px;
+  align-self: center;
+  justify-self: center;
+}
+
+.couponCodeContainer {
+
+}
+
+.couponContainer {
+  grid-template-columns: 30% 20% 20% 30%;
+  align-items: center;
+  justify-items: center;
+  display: grid;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.couponCodeName {
+  justify-self: start;
+  padding-left: 10px;
+  text-decoration: underline;
+  cursor: pointer;
+  transition-duration: 150ms;
+}
+
+.couponCodeName:hover {
+  color: var(--primary-color);
+}
+
+.couponCodeFooterContainer {
+  height: 100%;
+  width: 100%;
+  border-top: 1px solid var(--primary-color);
+  display: grid;
+}
+
+.couponCodeFooterButton {
+  height: 70%;
+  width: 250px;
+  align-self: center;
+  justify-self: end;
+  margin-right: 10px;
 }

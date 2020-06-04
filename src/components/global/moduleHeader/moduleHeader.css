@@ -8,7 +8,7 @@
 }
 
 .moduleHeaderText {
-  font-size: 28px;
+  font-size: 22px;
   margin: 0px;
   color: white;
   position: relative;
@@ -20,4 +20,8 @@
 .moduleHeaderCloseButton {
   background-color: rgba(0, 0, 0, 0);
   border: none;
+}
+
+.moduleHeaderCloseButton:focus {
+  outline: none;
 }
