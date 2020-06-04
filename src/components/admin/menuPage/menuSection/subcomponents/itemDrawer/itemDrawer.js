@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './itemDrawer.css'
 import { connect } from 'react-redux'
-import { openMenuItemDrawer, displayBackdrop } from '../../../../../../actions'
+import { openMenuItemDrawer, displayBackdrop, displayConfirmationPrompt, closeConfirmationPrompt } from '../../../../../../actions'
 import ItemDrawerBody from './subcomponents/itemDrawerBody/itemDrawerBody'
 import CornerCloseButton from '../../../../../global/cornerCloseButton/cornerCloseButton'
 
@@ -19,9 +19,21 @@ class ItemDrawer extends Component {
     this.setState({ drawerPosition: this.drawerRef.current.offsetWidth })
   }
 
-  closeDrawerHandler = () => {
-    this.props.openMenuItemDrawer()
+  confirmedFunction = () => {
+    this.props.closeConfirmationPrompt()
     this.props.displayBackdrop()
+    this.props.openMenuItemDrawer()
+  }
+
+  closeDrawerHandler = () => {
+    let actionDetails = {
+      open: true,
+      header: 'Close Without Saving?',
+      body: 'Are you sure you would like to close without saving your changes?',
+      confirmFunction: this.confirmedFunction,
+      zIndex: 20,
+    }
+    this.props.displayConfirmationPrompt(actionDetails)
   }
 
   render() {
@@ -53,4 +65,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, { openMenuItemDrawer, displayBackdrop })(ItemDrawer)
+export default connect(mapStateToProps, { openMenuItemDrawer, displayBackdrop, displayConfirmationPrompt, closeConfirmationPrompt })(ItemDrawer)

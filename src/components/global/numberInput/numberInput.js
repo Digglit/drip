@@ -6,7 +6,7 @@ export default class NumberInput extends Component {
   updateInputHandler = (e) => {
     let newString = e.target.value.slice(1)
     if (!isNaN(newString)) {
-      this.props.onChange(e.target.value.length === 0 ? '$' : e.target.value)
+      this.props.onChange(e.target.value.length === 0 && e.target.value === '' ? '$' : e.target.value)
     }
   }
 

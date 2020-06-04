@@ -16,7 +16,6 @@ class MenuPage extends Component {
   render() {
     return (
       <div className='menuPagecontainer'>
-        <ConfirmActionModule header={'Confirm Action'} body={'Are you sure you want to confirm this action? '} confirmAction={() => console.log('Action Confirmed')}/>
         <div className='menuContainer'>
           <MenuSection />
           <MenuSection />
@@ -24,15 +23,16 @@ class MenuPage extends Component {
           <MenuSection />
           <MenuFooter />
         </div>
-        <div className={`menuOverlay ${this.props.backdropDisplay ? '' : 'menuOverlayHidden'}`} onMouseDown={this.backdropClickHandler} />
+        <div className={`menuOverlay ${this.props.backdropDisplay ? '' : 'hide'}`} onMouseDown={this.backdropClickHandler} />
         <ItemDrawer />
+        <ConfirmActionModule />
       </div>
     )
   }
 }
 
 const mapStateToProps = state => ({
-  backdropDisplay: state.backdropDisplay
+  backdropDisplay: state.backdropDisplay,
 })
 
 export default connect(mapStateToProps, { displayBackdrop, openMenuItemDrawer })(MenuPage)

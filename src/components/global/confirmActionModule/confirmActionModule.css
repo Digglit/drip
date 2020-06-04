@@ -11,17 +11,19 @@
   border: 1px solid var(--primary-color);
   z-index: 3;
   display: grid;
-  grid-template-rows: 50px auto 70px;
+  grid-template-rows: 46px auto 70px;
 }
 
 .confirmActionModuleHeaderContainer {
   margin-left: 10px;
-  border-bottom: 1px solid var(--primary-color);
 }
 
 .confirmActionModuleHeaderText {
   color: var(--primary-color);
-  margin: 13px 0px 5px 0px;
+  margin-top: 13px;
+  border-bottom: 1px solid var(--primary-color);
+  padding-bottom: 5px;
+  display: inline-block;
 }
 
 .confirmActionModuleBodyText {

@@ -10,50 +10,83 @@
   position: relative;
 }
 
-.toolsPageToolContainer {
-  display: inline-block;
-  margin: 20px 10px;
-  width: 300px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
-  background-color: white;
+.toolsPageWrapper {
+  max-width: 990px;
 }
 
-.toolsPageToolHeaderContainer {
-  width: 100%;
-  height: 55px;
-  background-color: var(--primary-color);
+.toolsPageSwitchContainer {
   display: grid;
-  position: relative;
+  grid-auto-flow: column;
+  align-items: center;
+  height: 60px;
+  margin: 0px 10px;
 }
 
-.toolsPageToolHeaderText {
+.toolsPageText {
   margin: 0px;
-  color: white;
   align-self: center;
-  margin-left: 10px;
+  font-size: 18px;
 }
 
-.toolsPageToolHeaderButtonContainer {
-  position: absolute;
-  top: calc(50%);
-  transform: translate(0, -50%);
-  height: 25px;
-  width: 50px;
-  right: 5px;
+.hiddenContent {
+  display: none !important;
+}
+
+.toolsPageButton {
+  height: 50px;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 10px;
+}
+
+.toolsPageDriversToolContainer {
+  display: grid;
+  grid-template-rows: 50px auto 75px;
+}
+
+.toolsPageDriversHeaderTextContainer {
+  height: 100%;
+  display: grid;
+  padding-left: 10px;
+  width: calc(100% - 10px);
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.toolsPageDriversContainer {
+  padding-bottom: 10px;
+}
+
+.toolsPageDriverContainer {
+  display: grid;
+  grid-auto-flow: column;
+  padding: 0px 15px;
+  height: 50px;
+}
+
+.toolsPageDriverText {
+  text-decoration: underline;
   cursor: pointer;
 }
 
-.toolsPageToolHeaderButton {
-  height: 2px;
-  width: 25px;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transition-duration: 350ms;
+.toolsPageDriverText:hover {
+  color: var(--primary-color);
 }
 
-.toolsPageToolBodyContainer {
-  transition-duration: 350ms;
+.toolsPageDriverButton {
+  height: 35px;
+  width: 100px;
+  align-self: center;
+  justify-self: end;
+}
+
+.toolsPageDriverFooterContainer {
+  border-top: 1px solid var(--primary-color);
+  display: grid;
+}
+
+.toolsPageAddNewDriverButton {
+  height: 75%;
+  width: 95%;
+  align-self: center;
+  justify-self: center;
 }

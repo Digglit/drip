@@ -7,7 +7,7 @@
   overflow: hidden;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
 }
@@ -43,4 +43,9 @@ button {
   background-color: var(--header-color);
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
 }

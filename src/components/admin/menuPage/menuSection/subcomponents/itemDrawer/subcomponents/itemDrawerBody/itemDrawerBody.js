@@ -23,11 +23,23 @@ class ItemDrawerBody extends Component {
       price: '$',
       itemDescription: '',
       modifiers: [],
+      rendering: true,
     }
   }
 
+  initialState = {
+    switched: this.props.itemDetails.switched,
+    sections: this.props.itemDetails.sections,
+    sectionSelected: this.props.itemDetails.sectionSelected,
+    name: this.props.itemDetails.name,
+    price: this.props.itemDetails.price,
+    itemDescription: this.props.itemDetails.itemDescription,
+    modifiers: this.props.itemDetails.modifiers,
+  }
+
   componentDidUpdate(prevProps) {
-    if (prevProps != this.props) {
+    console.log('Component Updated')
+    if (prevProps !== this.props && this.props !== this.initialState) {
       this.setState({
         switched: this.props.itemDetails.switched,
         sections: this.props.itemDetails.sections,
@@ -61,7 +73,15 @@ class ItemDrawerBody extends Component {
   }
 
   addModifierHandler = () => {
+    let modifiers = this.state.modifiers
+    modifiers.push('New Modifier')
+    this.setState({ modifiers })
+  }
 
+  removeModifierHandler = (i) => {
+    let modifiers = this.state.modifiers
+    modifiers = modifiers.slice(0, i).concat(modifiers.slice(i + 1, modifiers.length))
+    this.setState({ modifiers })
   }
 
   render() {
@@ -125,7 +145,7 @@ class ItemDrawerBody extends Component {
             {this.state.modifiers.map((value, index) => (
               <div className='itemDrawerItemModifier' key={index}>
                 <p className='itemDrawerItemModifierText'>{value}</p>
-                <button className='itemDrawerModifierButton primaryButton'>Remove</button>
+                <button className='itemDrawerModifierButton primaryButton' onMouseDown={() => this.removeModifierHandler(index)}>Remove</button>
                 <button className='itemDrawerModifierButton secondaryButton'>Edit Option</button>
               </div>
             ))}

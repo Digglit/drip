@@ -32,7 +32,9 @@
 
 .menuItemName {
   color: white;
+  margin: 0px;
   margin-left: 5px;
-  position: relative;
-  top: -10px;
+  position: absolute;
+  bottom: 3px;
+  font-size: 30px;
 }

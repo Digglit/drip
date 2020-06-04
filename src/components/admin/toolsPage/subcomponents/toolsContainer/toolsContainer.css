@@ -1,0 +1,47 @@
+.toolsPageToolContainer {
+  display: inline-block;
+  margin: 20px 10px;
+  width: 300px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  background-color: white;
+}
+
+.toolsPageToolHeaderContainer {
+  width: 100%;
+  height: 55px;
+  background-color: var(--primary-color);
+  display: grid;
+  position: relative;
+}
+
+.toolsPageToolHeaderText {
+  margin: 0px;
+  color: white;
+  align-self: center;
+  margin-left: 10px;
+}
+
+.toolsPageToolHeaderButtonContainer {
+  position: absolute;
+  top: calc(50%);
+  transform: translate(0, -50%);
+  height: 25px;
+  width: 50px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.toolsPageToolHeaderButton {
+  height: 2px;
+  width: 25px;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition-duration: 350ms;
+}
+
+.toolsPageToolBodyContainer {
+  transition-duration: 350ms;
+}

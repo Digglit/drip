@@ -23,3 +23,22 @@ export const openMenuItemDrawerWithDetails = (drawerContents) => {
     payload: drawerContents
   }
 }
+
+export const displayConfirmationPrompt = (confirmationDetails) => {
+  return {
+    type: 'DISPLAY_CONFIRMATION',
+    payload: confirmationDetails
+  }
+}
+
+export const closeConfirmationPrompt = () => {
+  return {
+    type: 'CLOSE_CONFIRMATION',
+  }
+}
+
+export const manageCouponsHandler = () => {
+  return {
+    type: 'VIEW_MANAGE_COUPONS',
+  }
+}
