@@ -1,0 +1,23 @@
+
+
+
+.moduleHeaderContainer {
+  height: 70px;
+  position: relative;
+  background-color: var(--primary-color);
+}
+
+.moduleHeaderText {
+  font-size: 28px;
+  margin: 0px;
+  color: white;
+  position: relative;
+  top: 50%;
+  transform: translate(0%, -50%);
+  padding-left: 10px;
+}
+
+.moduleHeaderCloseButton {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}

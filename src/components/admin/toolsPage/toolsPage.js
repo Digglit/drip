@@ -120,7 +120,7 @@ class ToolsPage extends Component {
             height={''}
             content={
               <div style={{ display: 'grid', paddingBottom: '10px' }} className={this.state.expandedArray[4] ? '' : 'hiddenContent'}>
-                <button className='secondaryButton toolsPageButton' onMouseDown={this.props.manageCouponsHandler}>Manage Coupons</button>
+                <button className='secondaryButton toolsPageButton' onMouseDown={() => this.props.manageCouponsHandler(10)}>Manage Coupons</button>
                 <button className='secondaryButton toolsPageButton'>Manage Specials</button>
               </div>
             }

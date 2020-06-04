@@ -37,8 +37,9 @@ export const closeConfirmationPrompt = () => {
   }
 }
 
-export const manageCouponsHandler = () => {
+export const manageCouponsHandler = (values) => {
   return {
     type: 'VIEW_MANAGE_COUPONS',
+    payload: values
   }
 }

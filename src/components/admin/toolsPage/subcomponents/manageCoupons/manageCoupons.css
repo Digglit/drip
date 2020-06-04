@@ -1,0 +1,22 @@
+
+
+
+.manageCouponsContainer {
+  height: 100%;
+  width: 100%;
+  max-height: 550px;
+  max-width: 800px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  transition-duration: 250ms;
+  opacity: 1;
+}
+
+.shrunkenContainer {
+  transform: translate(-50%, -50%) scale(.95);
+  opacity: 0;
+}

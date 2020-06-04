@@ -12,7 +12,7 @@ const ConfirmActionModule = (props) => {
   return (
     <div className='confirmActionWrapper'>
       <div className={`menuOverlay ${props.open ? '' : 'hide'}`} onMouseDown={() => closeConfirmationHandler()} style={{ zIndex: props.zIndex }} />
-      <div className={`confirmActionModuleContainer ${props.open ? '' : 'hide'}`} style={{ zIndex: props.zIndex + 1 }}>
+      <div className={`confirmActionModuleContainer ${props.open ? '' : 'shrunkenContainer'}`} style={{ zIndex: props.zIndex + 1 }}>
         <CornerCloseButton customStyle={{ boxShadow: 'none', height: '40px' }} customTextStyle={{ fontSize: '28px' }} onClick={props.closeConfirmationPrompt} />
         <div className='confirmActionModuleHeaderContainer'>
           <h2 className='confirmActionModuleHeaderText'>{props.header}</h2>

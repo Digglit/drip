@@ -12,6 +12,7 @@
   z-index: 3;
   display: grid;
   grid-template-rows: 46px auto 70px;
+  transition-duration: 250ms;
 }
 
 .confirmActionModuleHeaderContainer {
