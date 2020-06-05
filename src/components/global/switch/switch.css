@@ -11,7 +11,8 @@
 
 .switchSlider {
   width: 50%;
-  background-color: white;
+  background-color: var(--primary-background-color);
+  z-index: 1;
   height: 100%;
   position: absolute;
   transition-duration: 250ms;
@@ -19,7 +20,7 @@
 
 .switchCheckmark {
   position: absolute;
-  color: white;
+  color: var(--header-font-color);
   left: 6px;
   top: 50%;
   transform: translate(0%, -51%);
@@ -29,7 +30,7 @@
 
 .switchX {
   position: absolute;
-  color: white;
+  color: var(--header-font-color);
   right: 6px;
   top: 50%;
   transform: translate(0%, -51%);

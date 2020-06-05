@@ -8,7 +8,7 @@
   max-width: 750px;
   right: 0;
   top: 0;
-  background-color: white;
+  background-color: var(--primary-background-color);
   z-index: 3;
   border-left: 1px solid var(--primary-color);
   transition-duration: 450ms;
@@ -43,39 +43,31 @@
 .itemDrawerHeaderImageModificationButton {
   position: absolute;
   bottom: 0;
-  border: 2px solid white;
+  border: 2px solid var(--header-font-color);
   background-color: rgba(0, 0, 0, 0);
   border-radius: 2px;
   margin-left: 10px;
   margin-bottom: 10px;
   height: 50px;
   width: 200px;
-  color: white;
+  color: var(--header-font-color);
 }
 
 .itemDrawerHeaderImageModificationButton:hover {
-  background-color: white;
-  color: black;
+  background-color: var(--primary-background-color);
+  color: var(--tertiary-color);
 }
 
 .itemDrawerHeaderRemoveItemButton {
   border-color: var(--primary-color);
   background-color: var(--primary-color);
-  color: white;
+  color: var(--header-font-color);
   right: 10px;
 }
 
 .itemDrawerHeaderRemoveItemButton:hover {
   color: var(--primary-color);
   background-color: rgba(0, 0, 0, 0);
-}
-
-.itemDrawerHeaderText {
-  color: white;
-  margin-left: 10px;
-  margin-bottom: 5px;
-  position: absolute;
-  bottom: 0;
 }
 
 .itemDrawerFooter {

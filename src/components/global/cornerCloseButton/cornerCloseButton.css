@@ -17,7 +17,7 @@
   font-size: 36px;
   align-self: center;
   justify-self: center;
-  color: white;
+  color: var(--header-font-color);
   margin: 0px;
   position: relative;
   top: -1px;

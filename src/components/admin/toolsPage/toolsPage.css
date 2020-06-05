@@ -4,7 +4,7 @@
   overflow-x: hidden;
   height: calc(100vh - 20px);
   width: calc(100vw - 330px);
-  background-color: #F3F3F3;
+  background-color: var(--secondary-background-color);
   padding-top: 20px;
   padding-left: 30px;
   position: relative;
@@ -26,6 +26,7 @@
   margin: 0px;
   align-self: center;
   font-size: 18px;
+  color: var(--tertiary-color);
 }
 
 .hiddenContent {
@@ -66,6 +67,7 @@
 .toolsPageDriverText {
   text-decoration: underline;
   cursor: pointer;
+  color: var(--tertiary-color);
 }
 
 .toolsPageDriverText:hover {

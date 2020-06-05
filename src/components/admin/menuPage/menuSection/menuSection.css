@@ -35,10 +35,10 @@
   transform: scaleY(1.5);
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
-  background-color: white;
+  background-color: var(--primary-background-color);
 }
 
 .moveMenuButtonLeft:hover, .moveMenuButtonRight:hover {
   background-color: var(--primary-color);
-  color: white;
+  color: var(--primary-background-color);
 }

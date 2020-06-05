@@ -1,7 +1,6 @@
 .menuItem {
   height: 90%;
   width: 260px;
-  border: 1px solid black;
   position: absolute;
   cursor: pointer;
   transition-duration: 200ms;

@@ -1,11 +1,33 @@
 
 
+/* :root {
+  --primary-color: #BE2525;
+  --secondary-color: #FF6B6B;
+  --tertiary-color: rgb(255, 255, 255);
+  --primary-background-color: rgb(31, 31, 31);
+  --secondary-background-color: rgb(20, 20, 20);
+  --header-font-color: rgb(255, 255, 255);
+  --backdrop-overlay-color: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+} */
+
+
 :root {
   --primary-color: #BE2525;
   --secondary-color: #FF6B6B;
-  --header-color: white;
+  --tertiary-color: black;
+  --primary-background-color: white;
+  --header-font-color: white;
+  --secondary-background-color: rgb(245, 245, 245);
+  --backdrop-overlay-color: rgba(255, 255, 255, 0.6);
   overflow: hidden;
 }
+
+
+/* 
+rgb(190, 37, 70) -- dark pink
+rgb(22, 135, 143) -- turquoise 
+*/
 
 h1, h2, h3, h4 {
   font-family: 'Open Sans', sans-serif;
@@ -20,10 +42,18 @@ h1 {
   font-size: 2.5em;
 }
 
+p {
+  color: var(--tertiary-color);
+}
+
 button {
   cursor: pointer;
   font-size: 16px;
   transition-duration: 150ms;
+}
+
+button:focus {
+  outline: none;
 }
 
 .App {
@@ -35,12 +65,12 @@ button {
 
 .primaryButton, .secondaryButton:hover {
   background-color: var(--primary-color);
-  color: var(--header-color);
+  color: white;
   border: 1px solid var(--primary-color);
 }
 
 .secondaryButton {
-  background-color: var(--header-color);
+  background-color: var(--primary-background-color);
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
 }

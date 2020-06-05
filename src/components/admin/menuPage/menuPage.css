@@ -15,7 +15,7 @@
   width: 100%;
   overflow-y: auto;
   position: relative;
-  background-color: rgb(245, 245, 245);
+  background-color: var(--secondary-background-color);
   overflow-x: hidden;
 }
 
@@ -26,7 +26,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: var(--backdrop-overlay-color);
   transition-duration: 250ms;
   opacity: 1;
   cursor: pointer;

@@ -15,7 +15,12 @@ class ToolsPage extends Component {
       expandedArray: [true, true, true, true, true, true],
       deliveryEnabled: true,
       pickupEnabled: true,
-      deliveryFee: '$'
+      deliveryFee: '$',
+      currentColor: 0,
+      colors: ['rgb(22, 135, 143)', 'rgb(190, 37, 70)', 'rgb(66, 87, 32)', 'rgb(92, 21, 133)', 'rgb(2, 177, 129)', 'rgb(190, 37, 37)'],
+      currentMode: true,
+      lightMode: ['rgb(0, 0, 0)', 'rgb(255, 255, 255)', 'rgb(245, 245, 245)', 'rgba(255, 255, 255, 0.6)'],
+      darkMode: ['rgb(255, 255, 255)', 'rgb(35, 35, 35)', 'rgb(20, 20, 20)', 'rgba(0, 0, 0, 0.6)']
     }
   }
 
@@ -23,6 +28,30 @@ class ToolsPage extends Component {
     let arr = this.state.expandedArray
     arr[arrPosition] = !arr[arrPosition]
     this.setState({ expandedArray: arr })
+  }
+
+  changeColorHandler = () => {
+    let colorAmount = this.state.colors.length - 1
+    document.documentElement.style.setProperty('--primary-color', this.state.colors[this.state.currentColor])
+    if (this.state.currentColor === colorAmount) {
+      this.setState({ currentColor: 0 })
+    } else {
+      this.setState({ currentColor: this.state.currentColor + 1 })
+    }
+  }
+
+  darkModeHandler = () => {
+    let colorScheme
+    if (this.state.currentMode) {
+      colorScheme = [...this.state.darkMode]
+    } else {
+      colorScheme = [...this.state.lightMode]
+    }
+    document.documentElement.style.setProperty('--tertiary-color', colorScheme[0])
+    document.documentElement.style.setProperty('--primary-background-color', colorScheme[1])
+    document.documentElement.style.setProperty('--secondary-background-color', colorScheme[2])
+    document.documentElement.style.setProperty('--backdrop-overlay-color', colorScheme[3])
+    this.setState({ currentMode: !this.state.currentMode })
   }
 
   render() {
@@ -56,11 +85,13 @@ class ToolsPage extends Component {
             expandContainerHandler={() => this.modifyExpandedHandler(1)}
             expandedState={this.state.expandedArray[1]}
             toolTitle={'Tools'}
-            height={'130px'}
+            height={''}
             content={
-              <div className={this.state.expandedArray[1] ? '' : 'hiddenContent'}>
+              <div className={this.state.expandedArray[1] ? '' : 'hiddenContent'} style={{ paddingBottom: '10px' }}>
                 <button className='secondaryButton toolsPageButton'>Create Order</button>
                 <button className='secondaryButton toolsPageButton'>Custom Transaction</button>
+                <button className='secondaryButton toolsPageButton' onMouseDown={this.changeColorHandler}>Change Color</button>
+                <button className='secondaryButton toolsPageButton' onMouseDown={this.darkModeHandler}>Change Mode</button>
               </div>
             }
           />

@@ -10,7 +10,7 @@
 .moduleHeaderText {
   font-size: 22px;
   margin: 0px;
-  color: white;
+  color: var(--header-font-color);
   position: relative;
   top: 50%;
   transform: translate(0%, -50%);

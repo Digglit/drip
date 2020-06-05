@@ -27,6 +27,8 @@
   border: 2px solid var(--primary-color);
   resize: none;
   align-self: start;
+  background-color: var(--primary-background-color);
+  color: var(--tertiary-color);
 }
 
 .itemDrawerItemModifiersContainer {
@@ -37,6 +39,7 @@
 
 .itemDrawerItemModifiersHeader {
   border-bottom: 2px solid var(--primary-color);
+  color: var(--tertiary-color);
   margin-top: 5px;
   margin-bottom: 0px;
   padding-left: 10px;

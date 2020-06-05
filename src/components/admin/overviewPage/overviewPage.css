@@ -3,6 +3,7 @@
   width: 100%;
   display: grid;
   overflow-y: scroll;
+  background-color: var(--secondary-background-color);
 }
 
 .overviewPageHeader {

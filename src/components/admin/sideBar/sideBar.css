@@ -12,13 +12,14 @@
 
 .whiteText {
   margin: 0px;
-  color: var(--header-color);
+  color: var(--header-font-color);
 }
 
 .sideBarContainer {
   height: 100vh;
   width: 299px;
   border-right: 1px solid var(--primary-color);
+  background-color: var(--primary-background-color);
   display: grid;
   grid-template-rows: 95px auto 250px;
   z-index: 1;

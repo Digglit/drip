@@ -2,6 +2,8 @@
 
 .specializedInput {
   border: 2px solid var(--primary-color);
+  background-color: var(--primary-background-color);
+  color: var(--tertiary-color);
   height: 30px;
   padding-left: 5px;
 }
