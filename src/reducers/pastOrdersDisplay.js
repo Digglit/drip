@@ -1,11 +1,10 @@
-let initialState = {
-  open: false
-}
 
-const pastOrdersDisplay = (state = initialState, action) => {
+const pastOrdersDisplay = (state = false, action) => {
   switch(action.type) {
+    case 'PAST_ORDERS_DISPLAY':
+      return state = !this.state
     default:
-      return
+      return state
   }
 }
 

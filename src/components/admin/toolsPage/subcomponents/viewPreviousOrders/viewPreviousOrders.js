@@ -4,7 +4,7 @@ import ModuleHeader from '../../../../global/moduleHeader/moduleHeader'
 
 const viewPreviousOrders = (props) => {
   return (
-    <div className='viewPreviousOrdersContainer'>
+    <div className={`viewPreviousOrdersContainer ${props.display ? '' : 'shrunkenContainer'}`}>
       <ModuleHeader header={'View Older Orders'} closeButton={null} />
     </div>
   )

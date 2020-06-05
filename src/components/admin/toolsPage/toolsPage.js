@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './toolsPage.css'
 import { connect } from 'react-redux'
-import { changePage, manageCouponsHandler } from '../../../actions'
+import { changePage, manageCouponsHandler, pastOrdersDisplayHandler } from '../../../actions'
 import CornerCloseButton from '../../global/cornerCloseButton/cornerCloseButton'
 import ToolsContainer from './subcomponents/toolsContainer/toolsContainer'
 import Switch from '../../global/switch/switch'
@@ -52,6 +52,10 @@ class ToolsPage extends Component {
     document.documentElement.style.setProperty('--secondary-background-color', colorScheme[2])
     document.documentElement.style.setProperty('--backdrop-overlay-color', colorScheme[3])
     this.setState({ currentMode: !this.state.currentMode })
+  }
+
+  viewPastOrdersHandler = () => {
+    
   }
 
   render() {
@@ -168,7 +172,7 @@ class ToolsPage extends Component {
             height={''}
             content={
               <div style={{ display: 'grid', paddingBottom: '10px' }} className={this.state.expandedArray[5] ? '' : 'hiddenContent'}>
-                <button className='secondaryButton toolsPageButton'>View Past Orders</button>
+                <button className='secondaryButton toolsPageButton' onMouseDown={this.viewPastOrdersHandler}>View Past Orders</button>
               </div>
             }
           />
@@ -182,4 +186,4 @@ const mapStateToProps = (state) => ({
 
 })
 
-export default connect(mapStateToProps, { changePage, manageCouponsHandler })(ToolsPage)
+export default connect(mapStateToProps, { changePage, manageCouponsHandler, pastOrdersDisplayHandler })(ToolsPage)

@@ -18,12 +18,6 @@
   grid-template-rows: 70px 100px auto 75px;
 }
 
-.shrunkenContainer {
-  transform: translate(-50%, -50%) scale(.95);
-  opacity: 0;
-  pointer-events: none;
-}
-
 .manageCouponsSearchContainer {
   display: grid;
   height: 100%;
@@ -31,6 +25,12 @@
   grid-template-columns: 60% 40%;
   align-items: center;
   justify-items: center;
+}
+
+.shrunkenContainer {
+  transform: translate(-50%, -50%) scale(.95);
+  opacity: 0;
+  pointer-events: none;
 }
 
 .couponSearchInput {

@@ -79,3 +79,9 @@ button:focus {
   opacity: 0;
   pointer-events: none;
 }
+
+.shrunkenContainer {
+  transform: translate(-50%, -50%) scale(.95);
+  opacity: 0;
+  pointer-events: none;
+}

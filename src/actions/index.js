@@ -43,3 +43,9 @@ export const manageCouponsHandler = (values) => {
     payload: values
   }
 }
+
+export const pastOrdersDisplayHandler = () => {
+  return {
+    type: 'PAST_ORDERS_DISPLAY'
+  }
+}
