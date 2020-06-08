@@ -1,0 +1,16 @@
+.plusExpanderContainer {
+  height: 25px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.plusExpanderElement {
+  height: 2px;
+  width: 25px;
+  transform: translate(-50%, -50%);
+  background-color: var(--header-font-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition-duration: 350ms;
+}

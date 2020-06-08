@@ -6,6 +6,7 @@ let initialState = {
   body: '',
   zIndex: 0,
   confirmFunction: null,
+  confirmAction: false
 }
 
 const confirmFunctionDetails = (state = initialState, action) => {
@@ -13,7 +14,15 @@ const confirmFunctionDetails = (state = initialState, action) => {
     case 'DISPLAY_CONFIRMATION':
       return state = action.payload
     case 'CLOSE_CONFIRMATION':
-      return state = initialState
+      let updatedStateReset = {
+        open: false,
+        header: state.header,
+        body: state.body,
+        zIndex: state.zIndex,
+        confirmFunction: null,
+        confirmAction: state.confirmAction
+      }
+      return state = updatedStateReset
     default:
       return state
   }

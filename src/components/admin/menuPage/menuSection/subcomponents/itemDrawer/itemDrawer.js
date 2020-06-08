@@ -32,6 +32,7 @@ class ItemDrawer extends Component {
       body: 'Are you sure you would like to close without saving your changes?',
       confirmFunction: this.confirmedFunction,
       zIndex: 20,
+      confirmAction: true
     }
     this.props.displayConfirmationPrompt(actionDetails)
   }

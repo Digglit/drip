@@ -5,6 +5,7 @@ import Switch from '../../../../../../../global/switch/switch'
 import DropDown from '../../../../../../../global/dropDown/dropDown'
 import Input from '../../../../../../../global/input/input'
 import NumberInput from '../../../../../../../global/numberInput/numberInput'
+import { displayConfirmationPrompt, closeConfirmationPrompt } from '../../../../../../../../actions'
 
 class ItemDrawerBody extends Component {
 
@@ -84,6 +85,23 @@ class ItemDrawerBody extends Component {
     this.setState({ modifiers })
   }
 
+  confirmRemovalHandler = (index) => {
+    this.removeModifierHandler(index)
+    this.props.closeConfirmationPrompt()
+  }
+
+  confirmActionHandler = (index, name) => {
+    let confirmationInfo = {
+      header: 'Remove Modifier?',
+      body: `Remove ${name} as a modifier?`,
+      open: true,
+      confirmFunction: () => this.confirmRemovalHandler(index),
+      zIndex: 20,
+      confirmAction: true,
+    }
+    this.props.displayConfirmationPrompt(confirmationInfo)
+  }
+
   render() {
     return (
       <div className='itemDrawerBody'>
@@ -134,6 +152,7 @@ class ItemDrawerBody extends Component {
               items={this.state.sections}
               itemSelected={this.state.sectionSelected}
               changeOption={this.changeDropdownSelectionHandler}
+              width={200}
             />
           </div>
         </div>
@@ -144,8 +163,8 @@ class ItemDrawerBody extends Component {
           <div className='itemDrawerItemModifiersWrapper'>
             {this.state.modifiers.map((value, index) => (
               <div className='itemDrawerItemModifier' key={index}>
-                <p className='itemDrawerItemModifierText'>{value}</p>
-                <button className='itemDrawerModifierButton primaryButton' onMouseDown={() => this.removeModifierHandler(index)}>Remove</button>
+                <p className='itemDrawerItemModifierText'>{index + 1}) {value}</p>
+                <button className='itemDrawerModifierButton primaryButton' onMouseDown={() => this.confirmActionHandler(index, value)}>Remove</button>
                 <button className='itemDrawerModifierButton secondaryButton'>Edit Option</button>
               </div>
             ))}
@@ -163,4 +182,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, null)(ItemDrawerBody)
+export default connect(mapStateToProps, { displayConfirmationPrompt, closeConfirmationPrompt })(ItemDrawerBody)

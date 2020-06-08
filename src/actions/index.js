@@ -43,3 +43,17 @@ export const manageCouponsHandler = (values) => {
     payload: values
   }
 }
+
+export const viewPreviousOrdersHandler = (values) => {
+  return {
+    type: 'VIEW_PREVIOUS_ORDERS',
+    payload: values
+  }
+}
+
+export const displayAddDriverHandler = (values) => {
+  return {
+    type: 'DISPLAY_ADD_DRIVER',
+    payload: values
+  }
+}

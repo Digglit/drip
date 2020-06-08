@@ -1,0 +1,44 @@
+
+
+
+.addNewDriverContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--primary-background-color);
+  height: 500px;
+  width: 350px;
+  transition-duration: 250ms;
+  display: grid;
+  grid-template-rows: 70px auto 70px;
+}
+
+.addNewDriverBodyContainer {
+  height: auto;
+}
+
+.addNewDriverInputContainer {
+  display: grid;
+  align-items: center;
+  width: 85%;
+  padding: 0% 10% 0% 5%;
+}
+
+.addNewDriverText {
+  margin: 14px 0px;
+}
+
+.addNewDriverFooterContainer {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-auto-flow: column;
+  border-top: 1px solid var(--primary-color);
+  grid-template-columns: 50% 50%;
+}
+
+.addNewDriverButton {
+  height: 65%;
+  width: 90%
+}

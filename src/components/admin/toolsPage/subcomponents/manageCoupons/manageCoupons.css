@@ -19,9 +19,9 @@
 }
 
 .shrunkenContainer {
-  transform: translate(-50%, -50%) scale(.95);
-  opacity: 0;
-  pointer-events: none;
+  transform: translate(-50%, -50%) scale(.95) !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 .manageCouponsSearchContainer {

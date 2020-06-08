@@ -44,3 +44,9 @@
   height: 70%;
   width: 90%;
 }
+
+.confirmActionModuleSoloButton {
+  height: 70%;
+  width: 90%;
+  grid-column: 2;
+}

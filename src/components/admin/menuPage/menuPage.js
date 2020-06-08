@@ -5,7 +5,6 @@ import MenuSection from './menuSection/menuSection'
 import { displayBackdrop, openMenuItemDrawer, displayConfirmationPrompt, closeConfirmationPrompt } from '../../../actions'
 import MenuFooter from './menuSection/subcomponents/menuFooter/menuFooter'
 import ItemDrawer from './menuSection/subcomponents/itemDrawer/itemDrawer'
-import ConfirmActionModule from '../../global/confirmActionModule/confirmActionModule'
 
 class MenuPage extends Component {
   backdropClickHandler = () => {
@@ -37,7 +36,6 @@ class MenuPage extends Component {
         </div>
         <div className={`menuOverlay ${this.props.backdropDisplay ? '' : 'hide'}`} onMouseDown={this.closeDrawerHandler} />
         <ItemDrawer />
-        <ConfirmActionModule />
       </div>
     )
   }
