@@ -1,0 +1,28 @@
+
+
+
+
+.itemModifierOptionContainer {
+  height: 40px;
+  background-color: var(--primary-color);
+  margin: 0px 10px;
+  display: inline-grid;
+  grid-template-columns: auto 50px 40px;
+  align-items: center;
+  justify-items: center;
+}
+
+.itemModifierOptionX {
+  color: var(--header-font-color);
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.itemModifierOptionInput {
+  width: 100%;
+}
+
+.itemModifierOptionText {
+  margin: 0px;
+  padding: 0px 15px;
+}

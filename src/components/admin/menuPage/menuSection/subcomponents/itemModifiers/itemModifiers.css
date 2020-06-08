@@ -1,0 +1,30 @@
+
+
+
+.manageItemModifiersContainer {
+  height: 500px;
+  width: 800px;
+  background-color: var(--primary-background-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition-duration: 250ms;
+  display: grid;
+  grid-template-rows: 70px auto 70px;
+}
+
+.manageItemModifiersFooterContainer {
+  height: 100%;
+  width: 100%;
+  border-top: 1px solid var(--primary-color);
+  display: grid;
+  grid-template-columns: auto 225px 225px;
+  align-items: center;
+  justify-items: center;
+}
+
+.manageItemModifiersFooterButton {
+  height: 70%;
+  width: 200px;
+}

@@ -57,3 +57,10 @@ export const displayAddDriverHandler = (values) => {
     payload: values
   }
 }
+
+export const displayItemModifiersHandler = (zIndex, values) => {
+  return {
+    type: 'DISPLAY_ITEM_MODIFIERS',
+    payload: {zIndex, values}
+  }
+}

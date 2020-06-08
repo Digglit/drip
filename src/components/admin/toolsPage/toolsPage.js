@@ -187,11 +187,7 @@ class ToolsPage extends Component {
             height={''}
             content={
               <div style={{ display: 'grid', paddingBottom: '10px' }} className={this.state.expandedArray[5] ? '' : 'hiddenContent'}>
-<<<<<<< HEAD
-                <button className='secondaryButton toolsPageButton' onMouseDown={this.viewPastOrdersHandler}>View Past Orders</button>
-=======
                 <button className='secondaryButton toolsPageButton' onMouseDown={() => this.props.viewPreviousOrdersHandler(10)}>View Past Orders</button>
->>>>>>> 4720137a9ec3094b5cb3f615fdacb4affabb9a4c
               </div>
             }
           />
@@ -205,8 +201,4 @@ const mapStateToProps = (state) => ({
 
 })
 
-<<<<<<< HEAD
-export default connect(mapStateToProps, { changePage, manageCouponsHandler, pastOrdersDisplayHandler })(ToolsPage)
-=======
 export default connect(mapStateToProps, { changePage, manageCouponsHandler, viewPreviousOrdersHandler, displayAddDriverHandler, closeConfirmationPrompt, displayConfirmationPrompt })(ToolsPage)
->>>>>>> 4720137a9ec3094b5cb3f615fdacb4affabb9a4c

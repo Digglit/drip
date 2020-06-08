@@ -24,7 +24,55 @@ class MenuItem extends Component {
     name: 'Wings',
     price: '$7.50',
     itemDescription: 'These are the wings!',
-    modifiers: ['Your Choice of Sauce', 'Celery and Dip?', 'Size'],
+    modifiers: [
+      {
+        modifierName: 'Your Choice of Sauce',
+        selectAmount: 1,
+        allowMultipleSelected: false,
+        options: [
+          {
+            modifier: 'Garlic Parmesan',
+            price: 0.00
+          },
+          {
+            modifier: 'BBQ',
+            price: 0.00
+          },
+          {
+            modifier: 'Hot',
+            price: 0.00
+          },
+          {
+            modifier: 'Mild',
+            price: 0.00
+          },
+          {
+            modifier: 'Dry Rub',
+            price: 0.00
+          },
+          {
+            modifier: 'Buffalo',
+            price: 0.00
+          },
+          {
+            modifier: 'Honey Mustard',
+            price: 0.00
+          },
+        ]
+      },
+      {
+        modifierName: 'Celery and Dip?',
+        selectAmount: 1,
+        allowMultipleSelected: false,
+        options: []
+      },
+      {
+        modifierName: 'Size',
+        selectAmount: 1,
+        allowMultipleSelected: false,
+        options: []
+      }
+    ],
     image: foodImage,
   }
 

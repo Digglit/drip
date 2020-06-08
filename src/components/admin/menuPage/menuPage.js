@@ -20,6 +20,7 @@ class MenuPage extends Component {
       body: 'Are you sure you want to close without saving your changes?',
       confirmFunction: this.backdropClickHandler,
       zIndex: 20,
+      confirmAction: true,
     }
     this.props.displayConfirmationPrompt(actionDetails)
   }

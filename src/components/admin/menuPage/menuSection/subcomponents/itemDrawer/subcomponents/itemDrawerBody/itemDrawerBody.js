@@ -5,7 +5,7 @@ import Switch from '../../../../../../../global/switch/switch'
 import DropDown from '../../../../../../../global/dropDown/dropDown'
 import Input from '../../../../../../../global/input/input'
 import NumberInput from '../../../../../../../global/numberInput/numberInput'
-import { displayConfirmationPrompt, closeConfirmationPrompt } from '../../../../../../../../actions'
+import { displayConfirmationPrompt, closeConfirmationPrompt, displayItemModifiersHandler } from '../../../../../../../../actions'
 
 class ItemDrawerBody extends Component {
 
@@ -163,9 +163,9 @@ class ItemDrawerBody extends Component {
           <div className='itemDrawerItemModifiersWrapper'>
             {this.state.modifiers.map((value, index) => (
               <div className='itemDrawerItemModifier' key={index}>
-                <p className='itemDrawerItemModifierText'>{index + 1}) {value}</p>
-                <button className='itemDrawerModifierButton primaryButton' onMouseDown={() => this.confirmActionHandler(index, value)}>Remove</button>
-                <button className='itemDrawerModifierButton secondaryButton'>Edit Option</button>
+                <p className='itemDrawerItemModifierText'>{index + 1}) {value.modifierName}</p>
+                <button className='itemDrawerModifierButton primaryButton' onMouseDown={() => this.confirmActionHandler(index, value.modifierName)}>Remove</button>
+                <button className='itemDrawerModifierButton secondaryButton' onMouseDown={() => this.props.displayItemModifiersHandler(10, value)}>Edit Option</button>
               </div>
             ))}
             <button className='secondaryButton itemDrawerAddModifierButton' onMouseDown={this.addModifierHandler}>Add Modifier</button>
@@ -182,4 +182,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, { displayConfirmationPrompt, closeConfirmationPrompt })(ItemDrawerBody)
+export default connect(mapStateToProps, { displayConfirmationPrompt, closeConfirmationPrompt, displayItemModifiersHandler })(ItemDrawerBody)

@@ -9,6 +9,7 @@ import ManageCoupons from './components/admin/toolsPage/subcomponents/manageCoup
 import ViewPreviousOrders from './components/admin/toolsPage/subcomponents/viewPreviousOrders/viewPreviousOrders';
 import AddNewDriver from './components/admin/toolsPage/subcomponents/addNewDriver/addNewDriver';
 import ConfirmActionModule from './components/global/confirmActionModule/confirmActionModule'
+import ItemModifiers from './components/admin/menuPage/menuSection/subcomponents/itemModifiers/itemModifiers';
 
 function App() {
   const currentPageDisplayed = useSelector(state => state.pageDisplayed)
@@ -20,6 +21,7 @@ function App() {
       <ViewPreviousOrders />
       <AddNewDriver />
       <ConfirmActionModule />
+      <ItemModifiers />
     </div>
   );
 }
