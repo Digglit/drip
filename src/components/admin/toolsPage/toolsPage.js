@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import './toolsPage.css'
 import { connect } from 'react-redux'
-import { changePage, manageCouponsHandler, pastOrdersDisplayHandler } from '../../../actions'
+import { changePage, manageCouponsHandler, viewPreviousOrdersHandler, displayAddDriverHandler, closeConfirmationPrompt, displayConfirmationPrompt } from '../../../actions'
 import CornerCloseButton from '../../global/cornerCloseButton/cornerCloseButton'
 import ToolsContainer from './subcomponents/toolsContainer/toolsContainer'
 import Switch from '../../global/switch/switch'
 import NumberInput from '../../global/numberInput/numberInput'
-import ManageCoupons from './subcomponents/manageCoupons/manageCoupons'
 
 class ToolsPage extends Component {
   constructor() {
@@ -19,9 +18,25 @@ class ToolsPage extends Component {
       currentColor: 0,
       colors: ['rgb(22, 135, 143)', 'rgb(190, 37, 70)', 'rgb(66, 87, 32)', 'rgb(92, 21, 133)', 'rgb(2, 177, 129)', 'rgb(1, 32, 77)', 'rgb(167, 67, 0)', 'rgb(190, 37, 37)'],
       currentMode: true,
-      lightMode: ['rgb(0, 0, 0)', 'rgb(255, 255, 255)', 'rgb(245, 245, 245)', 'rgba(255, 255, 255, 0.6)'],
-      darkMode: ['rgb(255, 255, 255)', 'rgb(35, 35, 35)', 'rgb(20, 20, 20)', 'rgba(0, 0, 0, 0.6)']
+      lightMode: ['rgb(0, 0, 0)', 'rgb(255, 255, 255)', 'rgb(245, 245, 245)', 'rgba(0, 0, 0, 0.5)'],
+      darkMode: ['rgb(255, 255, 255)', 'rgb(35, 35, 35)', 'rgb(20, 20, 20)', 'rgba(0, 0, 0, 0.5)']
     }
+  }
+
+  confirmAdditionHandler = () => {
+    this.props.closeConfirmationPrompt()
+  }
+
+  confirmActionHandler = (name) => {
+    let confirmationInfo = {
+      header: 'Log Out Driver',
+      body: `Force ${name} to log off?`,
+      open: true,
+      confirmFunction: this.confirmAdditionHandler,
+      zIndex: 20,
+      confirmAction: true
+    }
+    this.props.displayConfirmationPrompt(confirmationInfo)
   }
 
   modifyExpandedHandler = (arrPosition) => {
@@ -117,15 +132,15 @@ class ToolsPage extends Component {
                 <div className='toolsPageDriversContainer'>
                   <div className='toolsPageDriverContainer'>
                     <h4 className='toolsPageDriverText'>ZackG</h4>
-                    <button className='secondaryButton toolsPageDriverButton'>Log Out</button>
+                    <button className='secondaryButton toolsPageDriverButton' name='ZackG' onMouseDown={(e) => this.confirmActionHandler(e.target.name)}>Log Out</button>
                   </div>
                   <div className='toolsPageDriverContainer'>
                     <h4 className='toolsPageDriverText'>Casey</h4>
-                    <button className='secondaryButton toolsPageDriverButton'>Log Out</button>
+                    <button className='secondaryButton toolsPageDriverButton' name='Casey' onMouseDown={(e) => this.confirmActionHandler(e.target.name)}>Log Out</button>
                   </div>
                 </div>
                 <div className='toolsPageDriverFooterContainer'>
-                  <button className='secondaryButton toolsPageAddNewDriverButton'>Add New Driver</button>
+                  <button className='secondaryButton toolsPageAddNewDriverButton' onMouseDown={() => this.props.displayAddDriverHandler(10)}>Add New Driver</button>
                 </div>
               </div>
             }
@@ -172,7 +187,11 @@ class ToolsPage extends Component {
             height={''}
             content={
               <div style={{ display: 'grid', paddingBottom: '10px' }} className={this.state.expandedArray[5] ? '' : 'hiddenContent'}>
+<<<<<<< HEAD
                 <button className='secondaryButton toolsPageButton' onMouseDown={this.viewPastOrdersHandler}>View Past Orders</button>
+=======
+                <button className='secondaryButton toolsPageButton' onMouseDown={() => this.props.viewPreviousOrdersHandler(10)}>View Past Orders</button>
+>>>>>>> 4720137a9ec3094b5cb3f615fdacb4affabb9a4c
               </div>
             }
           />
@@ -186,4 +205,8 @@ const mapStateToProps = (state) => ({
 
 })
 
+<<<<<<< HEAD
 export default connect(mapStateToProps, { changePage, manageCouponsHandler, pastOrdersDisplayHandler })(ToolsPage)
+=======
+export default connect(mapStateToProps, { changePage, manageCouponsHandler, viewPreviousOrdersHandler, displayAddDriverHandler, closeConfirmationPrompt, displayConfirmationPrompt })(ToolsPage)
+>>>>>>> 4720137a9ec3094b5cb3f615fdacb4affabb9a4c

@@ -24,7 +24,7 @@ class MenuItem extends Component {
     name: 'Wings',
     price: '$7.50',
     itemDescription: 'These are the wings!',
-    modifiers: ['1) Your Choice of Sauce', '2) Celery and Dip?', '3) Size'],
+    modifiers: ['Your Choice of Sauce', 'Celery and Dip?', 'Size'],
     image: foodImage,
   }
 

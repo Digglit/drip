@@ -4,11 +4,11 @@
 
 .dropDownContainer {
   height: 40px;
-  width: 200px;
   border: 2px solid var(--primary-color);
   display: grid;
-  grid-template-columns: 160px 40px;
+  grid-template-columns: auto 40px;
   position: relative;
+  cursor: pointer;
 }
 
 .dropDownBody {
@@ -49,11 +49,14 @@
   position: absolute;
   top: 40px;
   left: -2px;
-  width: 160px;
   border: 2px solid var(--primary-color);
   background-color: var(--primary-background-color);
   opacity: 1;
   transition-duration: 150ms;
+  max-height: 198px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 1;
 }
 
 .dropDownListOfItemsHidden {

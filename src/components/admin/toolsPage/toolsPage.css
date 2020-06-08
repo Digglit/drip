@@ -68,6 +68,7 @@
   text-decoration: underline;
   cursor: pointer;
   color: var(--tertiary-color);
+  transition-duration: 100ms;
 }
 
 .toolsPageDriverText:hover {

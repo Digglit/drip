@@ -1,27 +1,29 @@
 
+/* Development Preferred Dark Scheme */
 
-/* :root {
-  --primary-color: #BE2525;
+:root {
+  --primary-color: rgb(22, 135, 143);
   --secondary-color: #FF6B6B;
   --tertiary-color: rgb(255, 255, 255);
-  --primary-background-color: rgb(31, 31, 31);
+  --primary-background-color: rgb(35, 35, 35);
   --secondary-background-color: rgb(20, 20, 20);
   --header-font-color: rgb(255, 255, 255);
   --backdrop-overlay-color: rgba(0, 0, 0, 0.6);
   overflow: hidden;
-} */
+}
 
+/* Main Color Scheme */
 
-:root {
+/* :root {
   --primary-color: #BE2525;
   --secondary-color: #FF6B6B;
   --tertiary-color: black;
   --primary-background-color: white;
   --header-font-color: white;
-  --secondary-background-color: rgb(245, 245, 245);
+  --secondary-background-color: rgb(235, 235, 235);
   --backdrop-overlay-color: rgba(255, 255, 255, 0.6);
   overflow: hidden;
-}
+} */
 
 
 /* 

@@ -18,6 +18,12 @@
   grid-template-rows: 70px 100px auto 75px;
 }
 
+.shrunkenContainer {
+  transform: translate(-50%, -50%) scale(.95) !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
 .manageCouponsSearchContainer {
   display: grid;
   height: 100%;
