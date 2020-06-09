@@ -1,0 +1,29 @@
+
+
+
+.wholeNumberInputContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.wholeNumberInput {
+  width: 70px;
+}
+
+.wholeNumberInputIncrementButton, .wholeNumberInputDecrementButton {
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  right: 0px;
+  padding: 0px;
+  font-size: 12px;
+}
+
+.wholeNumberInputIncrementButton {
+  transform: rotate(90deg);
+}
+
+.wholeNumberInputDecrementButton {
+  transform: rotate(-90deg);
+  bottom: 0px;
+}

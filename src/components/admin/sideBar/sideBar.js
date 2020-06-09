@@ -27,7 +27,7 @@ class SideBar extends Component {
             <h3 className='primaryTextColor' style={{ marginLeft: '5px' }}>Notification Center</h3>
           </div>
           <div className='notificationBodyContainer'>
-            <img src={logo} className='logo'></img>
+            <img src={logo} alt='Restaurant logo' className='logo'></img>
           </div>
         </div>
         <div className='notificationFooter'>

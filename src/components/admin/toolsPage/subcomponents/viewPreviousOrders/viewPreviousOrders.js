@@ -50,7 +50,7 @@ class ViewPreviousOrders extends Component {
       <div>
         <div className={this.props.open ? 'menuOverlay' : 'menuOverlay hide'} onMouseDown={() => this.props.viewPreviousOrdersHandler(0)} style={{ zIndex: this.props.zIndex }} />
         <div className={`viewPreviousOrdersContainer ${this.props.open ? '' : 'shrunkenContainer'}`} style={{ zIndex: this.props.zIndex + 1 }}>
-          <ModuleHeader header={'View Older Orders'} closeButton={null} closeButton={() => this.props.viewPreviousOrdersHandler(0)} />
+          <ModuleHeader header={'View Older Orders'} closeButton={() => this.props.viewPreviousOrdersHandler(0)} />
           <div className='previousOrdersSearchContainer'>
             <p>Enter Date to Search:</p>
             <DropDown items={this.state.days} changeOption={this.changeDayHandler} itemSelected={this.state.daySelected} width={100} />

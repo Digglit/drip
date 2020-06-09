@@ -9,9 +9,9 @@ export default class PopularDishes extends Component {
                 <div className='foodImageContainer'>
                     <div className='foodImageAccent1'></div>
                     <div className='foodImageAccent2'></div>
-                    <img src={popularFoodImage} className='popularFoodImage' />
+                    <img src={popularFoodImage} alt='Popular Dishes' className='popularFoodImage' />
                 </div>
-                <div className='textContainer' style={{height: '70%'}}>
+                <div className='textContainer' style={{ height: '70%' }}>
                     <h1 className='overviewPageHeader'>Popular Dishes</h1>
                     <p className='overviewPageBody'>People are loving your wings! This week's sales of Wings have increased from 13 orders to 22 orders. People most frequently choose to modify with <strong>Garlic Parmesan</strong>, <strong>Celery and Ranch</strong>, and <strong>6 Piece</strong>.</p>
                     <button className='salesOverviewButton primaryButton'>View More</button>

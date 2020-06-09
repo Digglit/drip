@@ -79,7 +79,7 @@ class MenuItem extends Component {
   render() {
     return (
       <div className='menuItem' style={{ left: `${this.props.position}px` }} onMouseDown={this.itemClickHandler}>
-        <img src={this.foodDetails.image} className='menuItemImage'></img>
+        <img src={this.foodDetails.image} alt={this.foodDetails.name} className='menuItemImage'></img>
         <div className='menuItemNameBackground'>
           <h2 className='menuItemName'>{this.foodDetails.name}</h2>
         </div>

@@ -93,7 +93,7 @@ class ItemDrawerBody extends Component {
   confirmActionHandler = (index, name) => {
     let confirmationInfo = {
       header: 'Remove Modifier?',
-      body: `Remove ${name} as a modifier?`,
+      body: <p style={{ margin: '0px' }}>Remove <strong>{name}</strong> as a modifier?</p>,
       open: true,
       confirmFunction: () => this.confirmRemovalHandler(index),
       zIndex: 20,

@@ -42,7 +42,7 @@ class ItemDrawer extends Component {
       <div className='itemDrawerContainer' id='drawerContainer' ref={this.drawerRef} style={{ right: `-${this.props.drawerOpen ? 0 : this.state.drawerPosition}px` }}>
         <CornerCloseButton onClick={this.closeDrawerHandler} />
         <div className='itemDrawerHeaderContainer'>
-          <img className='itemDrawerHeaderImage' src={this.props.image} />
+          <img className='itemDrawerHeaderImage' alt='Food Item' src={this.props.image} />
           <div className='itemDrawerHeaderTextContainer'>
             <button className='itemDrawerHeaderImageModificationButton'>Add Image</button>
             <button className='itemDrawerHeaderImageModificationButton itemDrawerHeaderRemoveItemButton'>Remove Item</button>

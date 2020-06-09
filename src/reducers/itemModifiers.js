@@ -4,12 +4,12 @@ let initialState = {
   zIndex: 0,
   modifierName: '',
   allowMultipleSelected: false,
-  maxSelectionAmount: 1,
+  selectAmount: 1,
   options: []
 }
 
 const itemModifiers = (state = initialState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case 'DISPLAY_ITEM_MODIFIERS':
       let updatedState
       if (action.payload.zIndex === 0) {
@@ -18,7 +18,7 @@ const itemModifiers = (state = initialState, action) => {
           zIndex: 0,
           modifierName: state.modifierName,
           allowMultipleSelected: state.allowMultipleSelected,
-          maxSelectionAmount: state.maxSelectionAmount,
+          selectAmount: state.selectAmount,
           options: state.options
         }
       } else {
@@ -27,7 +27,7 @@ const itemModifiers = (state = initialState, action) => {
           zIndex: action.payload.zIndex,
           modifierName: action.payload.values.modifierName,
           allowMultipleSelected: action.payload.values.allowMultipleSelected,
-          maxSelectionAmount: action.payload.values.maxSelectionAmount,
+          selectAmount: action.payload.values.selectAmount,
           options: action.payload.values.options
         }
       }

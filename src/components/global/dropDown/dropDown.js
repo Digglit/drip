@@ -16,7 +16,7 @@ export default class DropDown extends Component {
 
   getDropDownWidthHandler = () => {
     let props = this.props
-    if (props.items.length <= 6 || (props.items.length == 7 && props.itemSelected !== -1)) {
+    if (props.items.length <= 6 || (props.items.length === 7 && props.itemSelected !== -1)) {
       return this.props.width - 40
     } else {
       return this.props.width - 23
