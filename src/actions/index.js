@@ -64,3 +64,17 @@ export const displayItemModifiersHandler = (zIndex, values) => {
     payload: {zIndex, values}
   }
 }
+
+export const displayDriverDetailsHandler = (zIndex, values) => {
+  return {
+    type: 'DISPLAY_DRIVER_DETAILS',
+    payload: {zIndex, values}
+  }
+}
+
+export const displayEditModifiersHandler = (values) => {
+  return {
+    type: 'DISPLAY_EDIT_MODIFIERS',
+    payload: values
+  }
+}

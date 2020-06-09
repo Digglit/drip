@@ -61,7 +61,7 @@ export class ItemModifiers extends Component {
       <div>
         <div className={this.props.itemData.open ? 'menuOverlay' : 'menuOverlay hide'} onMouseDown={() => this.props.displayItemModifiersHandler(0)} style={{ zIndex: this.props.itemData.zIndex }} />
         <div className={`manageItemModifiersContainer ${this.props.itemData.open ? '' : 'shrunkenContainer'}`} style={{ zIndex: this.props.itemData.zIndex + 1 }}>
-          <ModuleHeader header={`Editing Modifier "${this.state.modifierName}"`} closeButton={() => this.props.displayItemModifiersHandler(0)} />
+          <ModuleHeader header={`Editing Modifier "${this.props.itemData.modifierName}"`} closeButton={() => this.props.displayItemModifiersHandler(0)} />
           <div className='manageItemModifiersBodyContainer'>
             <div className='manageItemModifiersInputContainer'>
               <p className='manageItemModifiersText'>Modifier Name:</p>

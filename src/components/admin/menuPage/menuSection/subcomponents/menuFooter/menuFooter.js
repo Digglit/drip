@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './menuFooter.css'
 import { connect } from 'react-redux'
-import { displayBackdrop, openMenuItemDrawerWithDetails } from '../../../../../../actions'
+import { displayBackdrop, openMenuItemDrawerWithDetails, displayEditModifiersHandler } from '../../../../../../actions'
 
 class MenuFooter extends Component {
 
@@ -31,10 +31,10 @@ class MenuFooter extends Component {
     return (
       <div className='menuFooterContainer'>
         <button className='primaryButton menuFooterButton' onMouseDown={this.newItemHandler}>Create New Item</button>
-        <button className='secondaryButton menuFooterButton'>Edit Modifiers</button>
+        <button className='secondaryButton menuFooterButton' onMouseDown={() => this.props.displayEditModifiersHandler(10)}>Edit Modifiers</button>
       </div>
     )
   }
 }
 
-export default connect(null, { displayBackdrop, openMenuItemDrawerWithDetails })(MenuFooter)
+export default connect(null, { displayBackdrop, openMenuItemDrawerWithDetails, displayEditModifiersHandler })(MenuFooter)

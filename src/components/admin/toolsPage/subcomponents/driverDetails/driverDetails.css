@@ -1,0 +1,51 @@
+
+
+
+.driverDetailsContainer {
+  height: 500px;
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--primary-background-color);
+  transition-duration: 250ms;
+  display: grid;
+  grid-template-rows: 70px auto 70px;
+}
+
+.driverDetailsBodyContainer {
+  overflow-y: auto;
+}
+
+.driverDetailsHeaderText {
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
+  display: inline-block;
+  margin: 10px 0px 5px 10px;
+}
+
+.driverDetailsBodyText {
+  margin: 3px 0px 3px 10px;
+}
+
+.modifyDriverButton {
+  height: 50px;
+  margin: 10px 0px 10px 10px;
+  width: 250px;
+}
+
+.driverDetailsFooterContainer {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  border-top: 1px solid var(--primary-color);
+}
+
+.driverDetailsFooterButton {
+  height: 70%;
+  width: 50%;
+  align-self: center;
+  justify-self: end;
+  margin-right: 10px;
+}

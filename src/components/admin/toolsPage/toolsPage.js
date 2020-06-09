@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './toolsPage.css'
 import { connect } from 'react-redux'
-import { changePage, manageCouponsHandler, viewPreviousOrdersHandler, displayAddDriverHandler, closeConfirmationPrompt, displayConfirmationPrompt } from '../../../actions'
+import { changePage, manageCouponsHandler, viewPreviousOrdersHandler, displayAddDriverHandler, closeConfirmationPrompt, displayConfirmationPrompt, displayDriverDetailsHandler } from '../../../actions'
 import CornerCloseButton from '../../global/cornerCloseButton/cornerCloseButton'
 import ToolsContainer from './subcomponents/toolsContainer/toolsContainer'
 import Switch from '../../global/switch/switch'
@@ -19,7 +19,8 @@ class ToolsPage extends Component {
       colors: ['rgb(22, 135, 143)', 'rgb(190, 37, 70)', 'rgb(66, 87, 32)', 'rgb(92, 21, 133)', 'rgb(2, 177, 129)', 'rgb(1, 32, 77)', 'rgb(167, 67, 0)', 'rgb(190, 37, 37)'],
       currentMode: true,
       lightMode: ['rgb(0, 0, 0)', 'rgb(255, 255, 255)', 'rgb(245, 245, 245)', 'rgba(0, 0, 0, 0.5)'],
-      darkMode: ['rgb(255, 255, 255)', 'rgb(35, 35, 35)', 'rgb(20, 20, 20)', 'rgba(0, 0, 0, 0.5)']
+      darkMode: ['rgb(255, 255, 255)', 'rgb(35, 35, 35)', 'rgb(20, 20, 20)', 'rgba(0, 0, 0, 0.5)'],
+      drivers: ['ZackG', 'Casey']
     }
   }
 
@@ -69,7 +70,7 @@ class ToolsPage extends Component {
     this.setState({ currentMode: !this.state.currentMode })
   }
 
-  viewPastOrdersHandler = () => {
+  displayDriverDetailsHandler = () => {
     
   }
 
@@ -130,14 +131,12 @@ class ToolsPage extends Component {
                   <h2 className='toolsPageText'>Current Drivers:</h2>
                 </div>
                 <div className='toolsPageDriversContainer'>
-                  <div className='toolsPageDriverContainer'>
-                    <h4 className='toolsPageDriverText'>ZackG</h4>
-                    <button className='secondaryButton toolsPageDriverButton' name='ZackG' onMouseDown={(e) => this.confirmActionHandler(e.target.name)}>Log Out</button>
-                  </div>
-                  <div className='toolsPageDriverContainer'>
-                    <h4 className='toolsPageDriverText'>Casey</h4>
-                    <button className='secondaryButton toolsPageDriverButton' name='Casey' onMouseDown={(e) => this.confirmActionHandler(e.target.name)}>Log Out</button>
-                  </div>
+                  {this.state.drivers.map((value, index) => (
+                    <div className='toolsPageDriverContainer' key={index}>
+                      <h4 className='toolsPageDriverText' onMouseDown={() => this.props.displayDriverDetailsHandler(10, value)}>{value}</h4>
+                      <button className='secondaryButton toolsPageDriverButton' name={value} onMouseDown={(e) => this.confirmActionHandler(e.target.name)}>Log Out</button>
+                    </div>
+                  ))}
                 </div>
                 <div className='toolsPageDriverFooterContainer'>
                   <button className='secondaryButton toolsPageAddNewDriverButton' onMouseDown={() => this.props.displayAddDriverHandler(10)}>Add New Driver</button>
@@ -201,4 +200,4 @@ const mapStateToProps = (state) => ({
 
 })
 
-export default connect(mapStateToProps, { changePage, manageCouponsHandler, viewPreviousOrdersHandler, displayAddDriverHandler, closeConfirmationPrompt, displayConfirmationPrompt })(ToolsPage)
+export default connect(mapStateToProps, { changePage, manageCouponsHandler, viewPreviousOrdersHandler, displayAddDriverHandler, closeConfirmationPrompt, displayConfirmationPrompt, displayDriverDetailsHandler })(ToolsPage)

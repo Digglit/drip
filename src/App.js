@@ -10,6 +10,8 @@ import ViewPreviousOrders from './components/admin/toolsPage/subcomponents/viewP
 import AddNewDriver from './components/admin/toolsPage/subcomponents/addNewDriver/addNewDriver';
 import ConfirmActionModule from './components/global/confirmActionModule/confirmActionModule'
 import ItemModifiers from './components/admin/menuPage/menuSection/subcomponents/itemModifiers/itemModifiers';
+import DriverDetails from './components/admin/toolsPage/subcomponents/driverDetails/driverDetails';
+import EditModifiers from './components/admin/menuPage/menuSection/subcomponents/editModifiers/editModifiers';
 
 function App() {
   const currentPageDisplayed = useSelector(state => state.pageDisplayed)
@@ -22,6 +24,8 @@ function App() {
       <AddNewDriver />
       <ConfirmActionModule />
       <ItemModifiers />
+      <DriverDetails />
+      <EditModifiers />
     </div>
   );
 }
