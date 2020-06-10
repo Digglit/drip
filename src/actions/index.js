@@ -85,3 +85,10 @@ export const addNewModifierHandler = (values) => {
     payload: values
   }
 }
+
+export const displayCouponDetailsHandler = (values) => {
+  return {
+    type: 'ADD_NEW_COUPON',
+    payload: values
+  }
+}

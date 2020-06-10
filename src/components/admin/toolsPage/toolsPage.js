@@ -16,7 +16,7 @@ class ToolsPage extends Component {
       pickupEnabled: true,
       deliveryFee: '$',
       currentColor: 0,
-      colors: ['rgb(22, 135, 143)', 'rgb(190, 37, 70)', 'rgb(66, 87, 32)', 'rgb(92, 21, 133)', 'rgb(2, 177, 129)', 'rgb(1, 32, 77)', 'rgb(167, 67, 0)', 'rgb(190, 37, 37)'],
+      colors: ['rgb(22, 135, 143)', 'rgb(190, 37, 70)', 'rgb(66, 87, 32)', 'rgb(92, 21, 133)', 'rgb(2, 177, 129)', 'rgb(1, 32, 77)', 'rgb(167, 67, 0)', 'rgb(190, 37, 37)', 'rgb(202, 93, 29)'],
       currentMode: true,
       lightMode: ['rgb(0, 0, 0)', 'rgb(255, 255, 255)', 'rgb(245, 245, 245)', 'rgba(0, 0, 0, 0.5)'],
       darkMode: ['rgb(255, 255, 255)', 'rgb(35, 35, 35)', 'rgb(20, 20, 20)', 'rgba(0, 0, 0, 0.5)'],

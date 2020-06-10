@@ -12,6 +12,7 @@ import ConfirmActionModule from './components/global/confirmActionModule/confirm
 import ItemModifiers from './components/admin/menuPage/menuSection/subcomponents/itemModifiers/itemModifiers';
 import DriverDetails from './components/admin/toolsPage/subcomponents/driverDetails/driverDetails';
 import EditModifiers from './components/admin/menuPage/menuSection/subcomponents/editModifiers/editModifiers';
+import CouponDetails from './components/admin/toolsPage/subcomponents/manageCoupons/subcomponents/couponDetails/couponDetails';
 
 function App() {
   const currentPageDisplayed = useSelector(state => state.pageDisplayed)
@@ -26,6 +27,7 @@ function App() {
       <ItemModifiers />
       <DriverDetails />
       <EditModifiers />
+      <CouponDetails />
     </div>
   );
 }

@@ -9,6 +9,7 @@ import displayAddNewDriver from './displayAddNewDriver'
 import itemModifiers from './itemModifiers'
 import driverDetails from './driverDetails'
 import editModifiers from './editModifiers'
+import couponDetails from './couponDetails'
 
 const rootReducer = combineReducers({
   pageDisplayed: pageDisplayer,
@@ -21,6 +22,7 @@ const rootReducer = combineReducers({
   itemModifiers,
   driverDetails,
   editModifiers,
+  couponDetails
 })
 
 export default rootReducer
