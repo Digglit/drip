@@ -61,20 +61,27 @@ export const displayAddDriverHandler = (values) => {
 export const displayItemModifiersHandler = (zIndex, values) => {
   return {
     type: 'DISPLAY_ITEM_MODIFIERS',
-    payload: {zIndex, values}
+    payload: { zIndex, values }
   }
 }
 
 export const displayDriverDetailsHandler = (zIndex, values) => {
   return {
     type: 'DISPLAY_DRIVER_DETAILS',
-    payload: {zIndex, values}
+    payload: { zIndex, values }
   }
 }
 
-export const displayEditModifiersHandler = (values) => {
+export const displayEditModifiersHandler = (values, mode, buttonFunction) => {
   return {
     type: 'DISPLAY_EDIT_MODIFIERS',
+    payload: { values, mode, buttonFunction }
+  }
+}
+
+export const addNewModifierHandler = (values) => {
+  return {
+    type: 'ADD_NEW_MODIFIER',
     payload: values
   }
 }

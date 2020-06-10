@@ -81,3 +81,23 @@
   left: 50%;
   transform: translate(-50%, 0%);
 }
+
+.itemDrawerAddNewModifierContainer {
+  display: grid;
+  grid-template-columns: 60% 20% 20%;
+  height: 80px;
+  width: 100%;
+  animation: containerFadeIn linear 150ms;
+}
+
+@keyframes containerFadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+.itemDrawerAddModifierInput {
+  align-self: center;
+  width: 90%;
+  justify-self: center;
+  height: 40px !important;
+}

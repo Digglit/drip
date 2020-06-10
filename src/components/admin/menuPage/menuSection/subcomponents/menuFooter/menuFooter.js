@@ -31,7 +31,7 @@ class MenuFooter extends Component {
     return (
       <div className='menuFooterContainer'>
         <button className='primaryButton menuFooterButton' onMouseDown={this.newItemHandler}>Create New Item</button>
-        <button className='secondaryButton menuFooterButton' onMouseDown={() => this.props.displayEditModifiersHandler(10)}>Edit Modifiers</button>
+        <button className='secondaryButton menuFooterButton' onMouseDown={() => this.props.displayEditModifiersHandler(10, 'edit', null)}>Edit Modifiers</button>
       </div>
     )
   }

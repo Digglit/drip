@@ -51,6 +51,16 @@
 .editModifiersModifierText {
   padding-left: 10px;
   margin: 0px;
+  grid-column: 1;
+  margin-top: 5px;
+}
+
+.editModifiersModifierDescription {
+  grid-column: 1;
+  margin: 0px;
+  padding-left: 10px;
+  margin-bottom: 5px;
+  font-size: 12px;
 }
 
 .editModifiersModiferButton {
@@ -58,6 +68,46 @@
   width: 60%;
   justify-self: end;
   margin-right: 10px;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column: 2;
+}
+
+.editModifiersNewModifierContainer {
+  height: 120px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 250px;
+  grid-template-rows: 50% 50%;
+  animation: spawnContainer 250ms linear;
+}
+
+@keyframes spawnContainer {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+.editModifiersNewModifierInputContainer {
+  grid-column: 1;
+}
+
+.editModifiersNewModifierText {
+  display: inline-block;
+  padding: 0px 10px;
+}
+
+.editModifiersNewModifierInput {
+  display: inline-block;
+  height: 60%;
+  width: 75%;
+}
+
+.editModifiersNewModifierButton {
+  grid-column: 2;
+  height: 80%;
+  width: 80%;
+  align-self: center;
+  justify-self: center;
 }
 
 .editModifiersFooterContainer {

@@ -25,6 +25,8 @@ class ItemDrawerBody extends Component {
       itemDescription: '',
       modifiers: [],
       rendering: true,
+      displayAddModifier: false,
+      newModifierName: '',
     }
   }
 
@@ -75,8 +77,14 @@ class ItemDrawerBody extends Component {
 
   addModifierHandler = () => {
     let modifiers = this.state.modifiers
-    modifiers.push('New Modifier')
-    this.setState({ modifiers })
+    let newModifier = {
+      modifierName: this.state.newModifierName,
+      selectAmount: 1,
+      allowMultipleSelected: false,
+      options: []
+    }
+    modifiers.push(newModifier)
+    this.setState({ modifiers, displayAddModifier: false })
   }
 
   removeModifierHandler = (i) => {
@@ -168,7 +176,14 @@ class ItemDrawerBody extends Component {
                 <button className='itemDrawerModifierButton secondaryButton' onMouseDown={() => this.props.displayItemModifiersHandler(10, value)}>Edit Option</button>
               </div>
             ))}
-            <button className='secondaryButton itemDrawerAddModifierButton' onMouseDown={this.addModifierHandler}>Add Modifier</button>
+            {this.state.displayAddModifier ?
+              <div className='itemDrawerAddNewModifierContainer'>
+                <Input value={this.state.newModifierName} onChange={(e) => this.setState({ newModifierName: e.target.value })} customClass={'itemDrawerAddModifierInput'} placeholder={'Modifier Title'} />
+                <button className='secondaryButton itemDrawerModifierButton' onMouseDown={() => this.setState({ displayAddModifier: false, newModifierName: '' })}>Cancel</button>
+                <button className='primaryButton itemDrawerModifierButton' onMouseDown={this.addModifierHandler}>Save</button>
+              </div>
+              : null}
+            {this.state.displayAddModifier ? null : <button className='secondaryButton itemDrawerAddModifierButton' onMouseDown={() => this.setState({ displayAddModifier: true })}>Add Modifier</button>}
           </div>
         </div>
       </div>

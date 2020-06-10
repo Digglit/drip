@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './itemModifiers.css'
 import { connect } from 'react-redux'
-import { displayItemModifiersHandler, displayConfirmationPrompt, closeConfirmationPrompt } from '../../../../../../actions'
+import { displayItemModifiersHandler, displayConfirmationPrompt, closeConfirmationPrompt, displayEditModifiersHandler } from '../../../../../../actions'
 import ModuleHeader from '../../../../../global/moduleHeader/moduleHeader'
 import Input from '../../../../../global/input/input'
 import Switch from '../../../../../global/switch/switch'
@@ -56,6 +56,16 @@ export class ItemModifiers extends Component {
     this.setState({ options: modifierOptions })
   }
 
+  addNewModifierHandler = (name, description) => {
+    let options = this.state.options
+    let newModifier = {
+      modifier: name,
+      price: 0.00
+    }
+    options.push(newModifier)
+    this.setState({ options })
+  }
+
   render() {
     return (
       <div>
@@ -82,7 +92,7 @@ export class ItemModifiers extends Component {
               {this.state.options.map((value, index) => (
                 <ItemModifierOption name={value.modifier} value={value.price} key={index} onChange={(newValue) => this.updateModifierPriceHandler(newValue, index)} />
               ))}
-              <button className='secondaryButton manageItemModifiersAddNewButton'>Add New Modifier</button>
+              <button className='secondaryButton manageItemModifiersAddNewButton' onMouseDown={() => this.props.displayEditModifiersHandler(200, 'Add', this.addNewModifierHandler)}>Add New Modifier</button>
             </div>
           </div>
           <div className='manageItemModifiersFooterContainer'>
@@ -99,4 +109,4 @@ const mapStateToProps = (state) => ({
   itemData: state.itemModifiers
 })
 
-export default connect(mapStateToProps, { displayItemModifiersHandler, displayConfirmationPrompt, closeConfirmationPrompt })(ItemModifiers)
+export default connect(mapStateToProps, { displayItemModifiersHandler, displayConfirmationPrompt, closeConfirmationPrompt, displayEditModifiersHandler })(ItemModifiers)
