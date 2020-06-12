@@ -44,6 +44,13 @@ export const manageCouponsHandler = (values) => {
   }
 }
 
+export const displayCouponDetailsHandler = (values) => {
+  return {
+    type: 'ADD_NEW_COUPON',
+    payload: values
+  }
+}
+
 export const viewPreviousOrdersHandler = (values) => {
   return {
     type: 'VIEW_PREVIOUS_ORDERS',
@@ -86,9 +93,16 @@ export const addNewModifierHandler = (values) => {
   }
 }
 
-export const displayCouponDetailsHandler = (values) => {
+export const composeEmailHandler = (zIndex, values) => {
   return {
-    type: 'ADD_NEW_COUPON',
-    payload: values
+    type: 'COMPOSE_NEW_EMAIL',
+    payload: { zIndex, values }
+  }
+}
+
+export const viewEmailDetailsHandler = (zIndex, values) => {
+  return {
+    type: 'VIEW_EMAIL_DETAILS',
+    payload: { zIndex, values }
   }
 }

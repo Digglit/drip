@@ -2,11 +2,54 @@
 
 
 .couponDetailsContainer {
-  height: 500px;
-  width: 400px;
+  height: 600px;
+  width: 500px;
   background-color: var(--primary-background-color);
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
   transition-duration: 250ms;
+  display: grid;
+  grid-template-rows: 70px auto 70px;
+}
+
+.couponDetailsBodyContainer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  overflow: hidden;
+  overflow-y: auto;
+  grid-template-rows: 80px 80px 80px 80px auto;
+}
+
+.couponDetailsBodyItemContainer {
+  margin-left: 10px;
+}
+
+.couponDetailsBodyText {
+  margin: 10px 0px;
+}
+
+.couponDetailsBodyInput {
+  width: 85%;
+}
+
+.couponDetailsAddItemButton {
+  padding: 8px 30px;
+}
+
+.couponDetailsFooterContainer {
+  display: grid;
+  grid-template-columns: auto 210px;
+  height: 100%;
+  width: 100%;
+  justify-items: end;
+  align-items: center;
+  border-top: 1px solid var(--primary-color);
+}
+
+.couponDetailsFooterButton {
+  height: 70%;
+  width: 200px;
+  margin-right: 10px;
 }

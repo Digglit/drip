@@ -6,7 +6,6 @@
   width: 90%;
   padding: 0% 5%;
   justify-self: center;
-  border-bottom: 1px solid var(--primary-color);
 }
 
 .textContainer {
@@ -25,7 +24,7 @@
   width: 80%;
   align-self: center;
   justify-self: center;
-  background-color: black;
+  background-color: var(--primary-background-color);
 }
 
 .salesOverviewButton {

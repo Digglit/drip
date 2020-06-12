@@ -1,0 +1,151 @@
+
+
+
+
+.emailPageContainer {
+  background-color: var(--secondary-background-color);
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.emailInterfaceContainer {
+  grid-template-rows: 55px 70px auto 70px;
+  height: 90%;
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  filter: drop-shadow(0px 2px 2px rgba(94, 67, 67, 0.3));
+}
+
+.emailAccountsContainer {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 250px 65px;
+}
+
+.emailAccountContainer {
+  background-color: var(--primary-background-color);
+  width: 250px;
+  height: calc(100% - 1px);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
+  transition-duration: 150ms;
+}
+
+.emailAccountContainer:hover {
+  background-color: var(--primary-color);
+  color: var(--header-font-color);
+}
+
+.emailAccountContainerSelected {
+  background-color: var(--primary-color);
+  color: var(--header-font-color);
+}
+
+.emailAccountText {
+  margin: 0px;
+  color: var(--header-font-color);
+}
+
+.emailAddAccountContainer {
+  background-color: var(--primary-background-color);
+  border: 1px solid var(--primary-color);
+  height: calc(100% - 1px);
+  justify-self: center;
+  width: 100%;
+  display: grid;
+  cursor: pointer;
+}
+
+.emailAddAccountPlus {
+  height: 100%;
+  position: relative;
+  justify-self: center;
+}
+
+.emailAddAccountPlusColor {
+  background-color: var(--primary-color);
+}
+
+.emailBodyContainer {
+  height: 100%;
+  width: 100%;
+  grid-row: 3;
+  background-color: var(--primary-background-color);
+  border-right: 1px solid var(--primary-color);
+  border-left: 1px solid var(--primary-color);
+  overflow-y: auto;
+}
+
+.emailSearchContainer {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 250px;
+  background-color: var(--primary-background-color);
+  border: 1px solid var(--primary-color);
+  z-index: 1;
+}
+
+.emailSearchInput {
+  height: 70%;
+  width: calc(100% - 25px);
+  align-self: center;
+  justify-self: center;
+}
+
+.emailSearchButton {
+  height: calc(70% + 4px);
+  width: 95%;
+  align-self: center;
+  justify-self: center;
+}
+
+.emailBodyEmailListContainer {
+  height: 100%;
+  width: 100%;
+}
+
+.emailItemContainer {
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid var(--primary-color);
+  display: grid;
+  grid-template-columns: 200px auto 120px;
+  align-items: center;
+  justify-items: center;
+  cursor: pointer;
+  transition-duration: 100ms;
+}
+
+.emailItemText {
+  margin: 0px;
+}
+
+.emailItemContainer:hover {
+  background-color: var(--secondary-background-color);
+}
+
+.emailFooterContainer {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-items: end;
+  background-color: var(--primary-background-color);
+  border: 1px solid var(--primary-color);
+}
+
+.emailFooterButton {
+  height: 80%;
+  width: 250px;
+  margin-right: 10px;
+}

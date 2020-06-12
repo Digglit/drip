@@ -9,7 +9,7 @@ const couponManager = (state = initialState, action) => {
     case 'VIEW_MANAGE_COUPONS':
       return state = { open: !state.open, zIndex: action.payload }
     default:
-      return state = initialState
+      return state
   }
 }
 

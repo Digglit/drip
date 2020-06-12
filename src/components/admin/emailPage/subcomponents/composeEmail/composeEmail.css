@@ -1,0 +1,79 @@
+
+
+
+
+.composeEmailContainer {
+  height: 80%;
+  width: 70%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--primary-background-color);
+  transition-duration: 250ms;
+  display: grid;
+  grid-template-rows: 70px auto 70px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.composeEmailInformationContainer {
+  height: calc(100% - 10px);
+  padding-top: 10px;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 8% 8% 8% calc(76% - 10px);
+  grid-template-columns: 80px auto 300px;
+}
+
+.composeEmailFooterContainer {
+  height: 100%;
+  width: 100%;
+  border-top: 1px solid var(--primary-color);
+  display: grid;
+  grid-template-columns: auto 270px;
+}
+
+.composeEmailFooterButton {
+  height: 70%;
+  width: 250px;
+  align-self: center;
+  justify-self: end;
+  margin-right: 10px;
+}
+
+.composeEmailText {
+  grid-column: 1;
+  align-self: start;
+  margin: 0px;
+  margin-top: 10px;
+  justify-self: center;
+}
+
+.composeEmailButton {
+  width: 80%;
+  justify-self: center;
+  height: calc(70% + 4px);
+}
+
+.composeEmailBodyText {
+  align-self: start;
+  margin-top: 10px;
+}
+
+.composeEmailInput {
+  align-self: start;
+  justify-self: left;
+  width: 100%;
+  height: 70%;
+}
+
+.composeEmailBodyArea {
+  height: 98.5%;
+  width: 95%;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  background-color: var(--primary-background-color);
+  border: 2px solid var(--primary-color);
+  color: var(--tertiary-color);
+  resize: none;
+}

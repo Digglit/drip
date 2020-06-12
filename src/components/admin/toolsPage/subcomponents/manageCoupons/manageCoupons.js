@@ -12,12 +12,12 @@ const ManageCoupons = (props) => {
       <div className={`manageCouponsContainer ${props.open ? '' : 'shrunkenContainer'}`} style={{ zIndex: props.zIndex + 1 }}>
         <ModuleHeader header={'Manage Coupons'} closeButton={() => props.manageCouponsHandler(0)} />
         <div className='manageCouponsSearchContainer'>
-          <Input customClass={'couponSearchInput'} placeholder={'Search'}/>
-          <button className='primaryButton createNewCouponButton' onMouseDown={() => props.displayCouponDetailsHandler(200)}>Create New Coupon</button>
+          <Input customClass={'couponSearchInput'} placeholder={'Search'} onChange={null} />
+          <button className='primaryButton createNewCouponButton' onMouseDown={() => props.displayCouponDetailsHandler(20)}>Create New Coupon</button>
         </div>
         <div className='couponCodeContainerWrapper'>
           <div className='couponCodeContainerHeader'>
-            <p className='couponCodeContainerHeaderText' style={{justifySelf: 'start', paddingLeft: '10px'}}>Coupon Code</p>
+            <p className='couponCodeContainerHeaderText' style={{ justifySelf: 'start', paddingLeft: '10px' }}>Coupon Code</p>
             <p className='couponCodeContainerHeaderText'>Start Date</p>
             <p className='couponCodeContainerHeaderText'>Exp Date</p>
             <p className='couponCodeContainerHeaderText'>Amount Reedemed</p>

@@ -1,9 +1,7 @@
 
-
-
 let initialState = {
   open: false,
-  zIndex: 0,
+  zIndex: 10,
   couponName: '',
   minPrice: 0,
   minQuantity: 0,
@@ -14,7 +12,7 @@ let initialState = {
 }
 
 const couponDetails = (state = initialState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case 'ADD_NEW_COUPON':
       let newCouponState = {
         open: !state.open,

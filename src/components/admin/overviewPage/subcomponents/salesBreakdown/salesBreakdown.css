@@ -1,0 +1,40 @@
+
+
+.salesBreakdownPageContainer {
+  background-color: var(--secondary-background-color);
+  height: 100%;
+  width: 100%;
+  padding: 50px;
+}
+
+.breakdownPageHeader {
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
+  display: inline-block;
+  font-size: 2.2em;
+  margin: 10px 0px 15px 0px;
+}
+
+.salesBreakdownPageGraphContainer {
+  background-color: var(--primary-background-color);
+  height: 400px;
+  width: 90%;
+  margin-top: 15px;
+}
+
+.salesBreakdownPageTextContainer {
+  width: 90%;
+  margin: 20px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.salesBreakdownPageText {
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.salesBreakdownPageViewMoreButton {
+  width: 250px;
+  height: 50px;
+}

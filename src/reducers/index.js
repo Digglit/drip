@@ -10,6 +10,8 @@ import itemModifiers from './itemModifiers'
 import driverDetails from './driverDetails'
 import editModifiers from './editModifiers'
 import couponDetails from './couponDetails'
+import composeEmail from './composeEmail'
+import emailDetails from './emailDetails'
 
 const rootReducer = combineReducers({
   pageDisplayed: pageDisplayer,
@@ -22,7 +24,9 @@ const rootReducer = combineReducers({
   itemModifiers,
   driverDetails,
   editModifiers,
-  couponDetails
+  couponDetails,
+  composeEmail,
+  emailDetails,
 })
 
 export default rootReducer
