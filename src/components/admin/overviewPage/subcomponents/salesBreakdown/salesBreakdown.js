@@ -42,7 +42,7 @@ class SalesBreakdown extends Component {
             <p className='salesBreakdownPageText'>Pickup: 33</p>
           </div>
         </div>
-        <button className='primaryButton salesBreakdownPageViewMoreButton'>View Breakdown</button>
+        <button className='primaryButton salesBreakdownPageViewMoreButton' onMouseDown={() => this.props.changePage(5)}>View Breakdown</button>
       </div>
     )
   }

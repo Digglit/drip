@@ -1,7 +1,70 @@
 
 
 .popularDishesPageContainer {
+  height: calc(100% - 50px);
+  width: calc(100% - 50px);
+  padding: 50px;
+  background-color: var(--secondary-background-color);
+}
+
+.popularDishesInterfaceContainer {
+  height: 80%;
+  width: 95%;
+  border: 1px solid var(--primary-color);
+  margin-top: 10px;
+  display: grid;
+  grid-template-rows: 7% 93%;
+  background-color: var(--primary-background-color);
+}
+
+.popularDishesHeaderContainer {
   height: 100%;
   width: 100%;
+  background-color: var(--primary-color);
+  display: grid;
+  grid-template-columns: 30% 17.5% 17.5% 17.5% 17.5%;
+  align-items: center;
+  justify-items: center;
+}
+
+.popularDishesHeaderText {
+  margin: 0px;
+  color: var(--header-font-color);
+}
+
+.popularDishesBodyContainer {
+  height: 100%;
+  width: 100%;
+}
+
+.popularDishesItemContainer {
+  display: inline-grid;
+  height: 55px;
+  width: 100%;
+  grid-template-columns: 30% 17.5% 17.5% 17.5% 17.5%;
+  align-items: center;
+  justify-items: center;
+  border-bottom: 1px solid var(--primary-color);
+  transition-duration: 150ms;
+}
+
+.popularDishesItemContainer:hover {
   background-color: var(--secondary-background-color);
+}
+
+.popularDishesItemText {
+  margin: 0px;
+}
+
+.popularDishesItemNameText {
+  justify-self: start;
+  margin-left: 10px;
+  border-bottom: 1px ridge var(--header-font-color);
+  cursor: pointer;
+  transition-duration: 150ms;
+}
+
+.popularDishesItemNameText:hover {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
 }

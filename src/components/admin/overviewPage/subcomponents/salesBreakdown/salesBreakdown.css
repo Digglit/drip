@@ -2,9 +2,12 @@
 
 .salesBreakdownPageContainer {
   background-color: var(--secondary-background-color);
-  height: 100%;
-  width: 100%;
+  height: calc(100% - 100px);
+  width: calc(100% - 100px);
   padding: 50px;
+  overflow: hidden;
+  overflow-y: auto;
+  position: relative;
 }
 
 .breakdownPageHeader {
@@ -18,12 +21,14 @@
 .salesBreakdownPageGraphContainer {
   background-color: var(--primary-background-color);
   height: 400px;
-  width: 90%;
+  width: 95%;
+  max-width: 1000px;
   margin-top: 15px;
 }
 
 .salesBreakdownPageTextContainer {
-  width: 90%;
+  width: 95%;
+  max-width: 1000px;
   margin: 20px 0px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
