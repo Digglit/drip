@@ -59,7 +59,7 @@
 .popularDishesItemNameText {
   justify-self: start;
   margin-left: 10px;
-  border-bottom: 1px ridge var(--header-font-color);
+  border-bottom: 1px ridge var(--tertiary-color);
   cursor: pointer;
   transition-duration: 150ms;
 }

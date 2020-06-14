@@ -106,3 +106,17 @@ export const viewEmailDetailsHandler = (zIndex, values) => {
     payload: { zIndex, values }
   }
 }
+
+export const displayMenuItemBreakdownHandler = (zIndex, values) => {
+  return {
+    type: 'DISPLAY_MENU_ITEM_BREAKDOWN',
+    payload: { zIndex, values }
+  }
+}
+
+export const viewCustomerDetailsHandler = (zIndex, values) => {
+  return {
+    type: 'VIEW_CUSTOMER_DETAILS',
+    payload: { zIndex, values }
+  }
+}

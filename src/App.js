@@ -18,6 +18,9 @@ import ComposeEmail from './components/admin/emailPage/subcomponents/composeEmai
 import EmailDetails from './components/admin/emailPage/subcomponents/emailDetails/emailDetails'
 import SalesBreakdown from './components/admin/overviewPage/subcomponents/salesBreakdown/salesBreakdown';
 import PopularDishesPage from './components/admin/overviewPage/subcomponents/popularDishesPage/popularDishesPage';
+import MenuItemBreakdown from './components/admin/overviewPage/subcomponents/popularDishesPage/subcomponents/menuItemBreakdown/menuItemBreakdown';
+import CustomerDataPage from './components/admin/overviewPage/subcomponents/customerDataPage/customerDataPage';
+import CustomerDetails from './components/admin/overviewPage/subcomponents/customerDataPage/subcomponents/customerDetails/customerDetails';
 
 function App() {
   const currentPageDisplayed = useSelector(state => state.pageDisplayed)
@@ -29,7 +32,8 @@ function App() {
           currentPageDisplayed === 2 ? <EmailPage /> :
             currentPageDisplayed === 3 ? <ToolsPage /> :
               currentPageDisplayed === 4 ? <SalesBreakdown /> :
-                <PopularDishesPage />
+                currentPageDisplayed === 5 ? <PopularDishesPage /> :
+                  <CustomerDataPage />
       }
       <ManageCoupons />
       <ViewPreviousOrders />
@@ -41,6 +45,8 @@ function App() {
       <CouponDetails />
       <ComposeEmail />
       <EmailDetails />
+      <MenuItemBreakdown />
+      <CustomerDetails />
     </div>
   );
 }

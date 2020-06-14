@@ -1,0 +1,9 @@
+
+
+
+.customerDataPageContainer {
+  background-color: var(--secondary-background-color);
+  height: calc(100% - 100px);
+  width: calc(100% - 100px);
+  padding: 50px;
+}

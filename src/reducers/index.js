@@ -12,6 +12,8 @@ import editModifiers from './editModifiers'
 import couponDetails from './couponDetails'
 import composeEmail from './composeEmail'
 import emailDetails from './emailDetails'
+import menuItemBreakdownDetails from './menuItemBreakdownDetails'
+import customerDetails from './customerDetails'
 
 const rootReducer = combineReducers({
   pageDisplayed: pageDisplayer,
@@ -27,6 +29,8 @@ const rootReducer = combineReducers({
   couponDetails,
   composeEmail,
   emailDetails,
+  menuItemBreakdownDetails,
+  customerDetails,
 })
 
 export default rootReducer

@@ -1,0 +1,434 @@
+[
+  {
+    "name": "Quesadilla",
+    "section": "Appetizers",
+    "quantitySold": 28,
+    "totalRevenue": 252,
+    "cartRemove": 11,
+    "breakdownData": {
+      "daily": {
+        "totalRevenue": 1,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "weekly": {
+        "totalRevenue": 2,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "monthly": {
+        "totalRevenue": 3,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "threeMonths": {
+        "totalRevenue": 4,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "sixMonths": {
+        "totalRevenue": 5,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "yearly": {
+        "totalRevenue": 6,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "allTime": {
+        "totalRevenue": 7,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      }
+    }
+  },
+  {
+    "name": "Chicken Tenders",
+    "section": "Appetizers",
+    "quantitySold": 24,
+    "totalRevenue": 168,
+    "cartRemove": 6,
+    "breakdownData": {
+      "daily": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "weekly": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "monthly": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "threeMonths": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "sixMonths": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "yearly": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "allTime": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      }
+    }
+  },
+  {
+    "name": "Wings",
+    "section": "Appetizers",
+    "quantitySold": 22,
+    "totalRevenue": 224,
+    "cartRemove": 7,
+    "breakdownData": {
+      "daily": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "weekly": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "monthly": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "threeMonths": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "sixMonths": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "yearly": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "allTime": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      }
+    }
+  },
+  {
+    "name": "Fries",
+    "section": "Appetizers",
+    "quantitySold": 20,
+    "totalRevenue": 100,
+    "cartRemove": 5,
+    "breakdownData": {
+      "daily": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "weekly": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "monthly": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "threeMonths": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "sixMonths": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "yearly": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "allTime": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      }
+    }
+  },
+  {
+    "name": "Chicken Philly",
+    "section": "Specialty Pies",
+    "quantitySold": 20,
+    "totalRevenue": 320,
+    "cartRemove": 7,
+    "breakdownData": {
+      "daily": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "weekly": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "monthly": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "threeMonths": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "sixMonths": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "yearly": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "allTime": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      }
+    }
+  },
+  {
+    "name": "Buffalo Chicken",
+    "section": "Subs & Wraps",
+    "quantitySold": 19,
+    "totalRevenue": 133,
+    "cartRemove": 5,
+    "breakdownData": {
+      "daily": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "weekly": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "monthly": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "threeMonths": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "sixMonths": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "yearly": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      },
+      "allTime": {
+        "totalRevenue": 252,
+        "addedToCart": 39,
+        "removedFromCart": 11,
+        "totalSold": 28,
+        "salesIncrease": 24,
+        "addToCartIncrease": 30,
+        "removeFromCartIncrease": 10
+      }
+    }
+  }
+]

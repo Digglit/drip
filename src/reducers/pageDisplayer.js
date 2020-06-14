@@ -1,4 +1,4 @@
-const pageDisplayer = (state = 5, action) => {
+const pageDisplayer = (state = 6, action) => {
   switch (action.type) {
     case 'CHANGE_PAGE':
       return state = action.payload
