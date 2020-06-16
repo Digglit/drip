@@ -48,7 +48,48 @@
 .notificationBodyContainer {
   position: relative;
   height: 100%;
+  overflow: hidden;
   overflow-y: auto;
+}
+
+.notificationItemContainer {
+  height: auto;
+  width: 92.5%;
+  background-color: var(--primary-background-color);
+  border: 1px solid var(--primary-color);
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: 85% 15%;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); */
+}
+
+.notificationItemContainerClosed {
+  left: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition-duration: 250ms;
+}
+
+.notificationItemTextContainer {
+  cursor: pointer;
+  transition-duration: 150ms;
+}
+
+.notificationItemTextContainer:hover {
+  background-color: var(--secondary-background-color);
+}
+
+.notificationItemText {
+  margin: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+}
+
+.notificationCloseButton {
+  font-size: 24px;
 }
 
 .logo {

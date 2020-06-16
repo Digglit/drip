@@ -14,6 +14,10 @@ import composeEmail from './composeEmail'
 import emailDetails from './emailDetails'
 import menuItemBreakdownDetails from './menuItemBreakdownDetails'
 import customerDetails from './customerDetails'
+import customTransaction from './customTransaction'
+import hoursOfOperation from './hoursOfOperation'
+import specialManager from './specialManager'
+import specialDetails from './specialDetails'
 
 const rootReducer = combineReducers({
   pageDisplayed: pageDisplayer,
@@ -31,6 +35,10 @@ const rootReducer = combineReducers({
   emailDetails,
   menuItemBreakdownDetails,
   customerDetails,
+  customTransaction,
+  hoursOfOperation,
+  specialManager,
+  specialDetails,
 })
 
 export default rootReducer

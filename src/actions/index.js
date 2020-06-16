@@ -51,6 +51,20 @@ export const displayCouponDetailsHandler = (values) => {
   }
 }
 
+export const manageSpecialsHandler = (values) => {
+  return {
+    type: 'VIEW_MANAGE_SPECIALS',
+    payload: values
+  }
+}
+
+export const displaySpecialDetailsHandler = (values) => {
+  return {
+    type: 'ADD_NEW_SPECIAL',
+    payload: values
+  }
+}
+
 export const viewPreviousOrdersHandler = (values) => {
   return {
     type: 'VIEW_PREVIOUS_ORDERS',
@@ -118,5 +132,25 @@ export const viewCustomerDetailsHandler = (zIndex, values) => {
   return {
     type: 'VIEW_CUSTOMER_DETAILS',
     payload: { zIndex, values }
+  }
+}
+
+export const closeCustomerDetailsHandler = () => {
+  return {
+    type: 'CLOSE_CUSTOMER_DETAILS',
+  }
+}
+
+export const displayCustomTransactionHandler = (zIndex) => {
+  return {
+    type: 'DISPLAY_CUSTOM_TRANSACTION',
+    payload: zIndex
+  }
+}
+
+export const displayHoursOfOperationHandler = (zIndex) => {
+  return {
+    type: 'DISPLAY_HOURS_OF_OPERATION',
+    payload: zIndex
   }
 }

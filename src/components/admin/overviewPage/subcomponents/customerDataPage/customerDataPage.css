@@ -7,3 +7,38 @@
   width: calc(100% - 100px);
   padding: 50px;
 }
+
+.customerDataPageButtonsContainer {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 95%;
+  height: 35px;
+}
+
+.customerDataPageEmailButton {
+  width: 250px;
+  height: 50px;
+  position: relative;
+  top: -20px;
+  right: -1px;
+  justify-self: end;
+}
+
+.customerDataHeaderContainer {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.customerDataPageCheckbox {
+  margin-right: 10px;
+  align-self: center;
+}
+
+.customerDataPageItemNameContainer {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items: left;
+  align-items: center;
+  justify-self: left;
+  margin-left: 10px;
+}

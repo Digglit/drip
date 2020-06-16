@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import './composeEmail.css'
-import { composeEmailHandler } from '../../../../../actions'
+import { composeEmailHandler, displayCouponDetailsHandler } from '../../../../../actions'
 import ModuleHeader from '../../../../global/moduleHeader/moduleHeader'
 import Input from '../../../../global/input/input'
 
@@ -15,7 +15,7 @@ class ComposeEmail extends Component {
           <div className='composeEmailInformationContainer'>
             <p className='composeEmailText'>From: </p>
             <Input placeholder={'Address'} customClass={'composeEmailInput'} />
-            <button className='composeEmailButton primaryButton'>Create New Coupon</button>
+            <button className='composeEmailButton primaryButton' onMouseDown={() => this.props.displayCouponDetailsHandler(this.props.zIndex + 10)}>Create New Coupon</button>
             <p className='composeEmailText'>To: </p>
             <Input placeholder={'Recipient'} customClass={'composeEmailInput'} />
             <p className='composeEmailText'>Subject: </p>
@@ -38,4 +38,4 @@ const mapStateToProps = (state) => ({
   zIndex: state.composeEmail.zIndex
 })
 
-export default connect(mapStateToProps, { composeEmailHandler })(ComposeEmail)
+export default connect(mapStateToProps, { composeEmailHandler, displayCouponDetailsHandler })(ComposeEmail)

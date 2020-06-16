@@ -39,7 +39,6 @@
   grid-template-columns: 15% 40% 45%;
   align-items: center;
   border-top: 1px solid var(--primary-color);
-  margin-top: 15px;
 }
 
 .customerDetailsOrderDataItemStartBorder {

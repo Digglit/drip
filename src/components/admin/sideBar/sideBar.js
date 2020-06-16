@@ -7,12 +7,40 @@ import { changePage } from '../../../actions'
 
 
 class SideBar extends Component {
+  constructor() {
+    super()
+    this.state = {
+      notifications: [
+        {
+          open: true,
+          message: 'People are abandoning Quesadilla most often. Find out why',
+          key: 'oidaufs90suaf98032jr'
+        },
+        {
+          open: true,
+          message: 'Veggie Plate has been 86\'d for 11 days now. Consider removing this item from the menu.',
+          key: '9a8sfuy-j30w2irj0-j'
+        }
+      ]
+    }
+  }
+
   changePageHandler = (newPage) => {
     if (this.props.pageDisplayed === newPage) {
       this.props.changePage(0)
     } else {
       this.props.changePage(newPage)
     }
+  }
+
+  closeNotificationHandler = (index, key) => {
+    let notifications = this.state.notifications
+    notifications[index].open = false
+    this.setState({ notifications })
+    let updatedNotifications = notifications.filter((value, index) => {
+      return key !== value.key
+    })
+    setTimeout(() => this.setState({ notifications: updatedNotifications }), 350)
   }
 
   render() {
@@ -27,6 +55,14 @@ class SideBar extends Component {
             <h3 className='primaryTextColor' style={{ marginLeft: '5px' }}>Notification Center</h3>
           </div>
           <div className='notificationBodyContainer'>
+            {this.state.notifications.map((value, index) => (
+              <div className={`notificationItemContainer ${value.open ? '' : 'notificationItemContainerClosed'}`}>
+                <div className='notificationItemTextContainer'>
+                  <p className='notificationItemText'>{value.message}</p>
+                </div>
+                <button className='notificationCloseButton primaryButton' onMouseDown={() => this.closeNotificationHandler(index, value.key)}>&#10005;</button>
+              </div>
+            ))}
             <img src={logo} alt='Restaurant logo' className='logo'></img>
           </div>
         </div>

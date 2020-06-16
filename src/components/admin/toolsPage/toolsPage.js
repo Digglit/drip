@@ -1,7 +1,18 @@
 import React, { Component } from 'react'
 import './toolsPage.css'
 import { connect } from 'react-redux'
-import { changePage, manageCouponsHandler, viewPreviousOrdersHandler, displayAddDriverHandler, closeConfirmationPrompt, displayConfirmationPrompt, displayDriverDetailsHandler } from '../../../actions'
+import {
+  changePage,
+  manageCouponsHandler,
+  viewPreviousOrdersHandler,
+  displayAddDriverHandler,
+  closeConfirmationPrompt,
+  displayConfirmationPrompt,
+  displayDriverDetailsHandler,
+  displayCustomTransactionHandler,
+  displayHoursOfOperationHandler,
+  manageSpecialsHandler,
+} from '../../../actions'
 import CornerCloseButton from '../../global/cornerCloseButton/cornerCloseButton'
 import ToolsContainer from './subcomponents/toolsContainer/toolsContainer'
 import Switch from '../../global/switch/switch'
@@ -109,7 +120,7 @@ class ToolsPage extends Component {
             content={
               <div className={this.state.expandedArray[1] ? '' : 'hiddenContent'} style={{ paddingBottom: '10px' }}>
                 <button className='secondaryButton toolsPageButton'>Create Order</button>
-                <button className='secondaryButton toolsPageButton'>Custom Transaction</button>
+                <button className='secondaryButton toolsPageButton' onMouseDown={() => this.props.displayCustomTransactionHandler(10)}>Custom Transaction</button>
                 <button className='secondaryButton toolsPageButton' onMouseDown={this.changeColorHandler}>Change Color</button>
                 <div className='toolsPageSwitchContainer'>
                   <h3 className='toolsPageText'>Mode:</h3>
@@ -159,7 +170,7 @@ class ToolsPage extends Component {
                 </div>
                 <button className='secondaryButton toolsPageButton'>Adjust Delivery Region</button>
                 <button className='secondaryButton toolsPageButton'>Launch Site Modifier</button>
-                <button className='secondaryButton toolsPageButton'>Adjust Hours of Operation</button>
+                <button className='secondaryButton toolsPageButton' onMouseDown={() => this.props.displayHoursOfOperationHandler(10)}>Adjust Hours of Operation</button>
               </div>
             }
           />
@@ -173,7 +184,7 @@ class ToolsPage extends Component {
             content={
               <div style={{ display: 'grid', paddingBottom: '10px' }} className={this.state.expandedArray[4] ? '' : 'hiddenContent'}>
                 <button className='secondaryButton toolsPageButton' onMouseDown={() => this.props.manageCouponsHandler(10)}>Manage Coupons</button>
-                <button className='secondaryButton toolsPageButton'>Manage Specials</button>
+                <button className='secondaryButton toolsPageButton' onMouseDown={() => this.props.manageSpecialsHandler(10)}>Manage Specials</button>
               </div>
             }
           />
@@ -200,4 +211,15 @@ const mapStateToProps = (state) => ({
 
 })
 
-export default connect(mapStateToProps, { changePage, manageCouponsHandler, viewPreviousOrdersHandler, displayAddDriverHandler, closeConfirmationPrompt, displayConfirmationPrompt, displayDriverDetailsHandler })(ToolsPage)
+export default connect(mapStateToProps, {
+  changePage,
+  manageCouponsHandler,
+  viewPreviousOrdersHandler,
+  displayAddDriverHandler,
+  closeConfirmationPrompt,
+  displayConfirmationPrompt,
+  displayDriverDetailsHandler,
+  displayCustomTransactionHandler,
+  displayHoursOfOperationHandler,
+  manageSpecialsHandler,
+})(ToolsPage)

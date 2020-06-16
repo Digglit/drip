@@ -21,6 +21,10 @@ import PopularDishesPage from './components/admin/overviewPage/subcomponents/pop
 import MenuItemBreakdown from './components/admin/overviewPage/subcomponents/popularDishesPage/subcomponents/menuItemBreakdown/menuItemBreakdown';
 import CustomerDataPage from './components/admin/overviewPage/subcomponents/customerDataPage/customerDataPage';
 import CustomerDetails from './components/admin/overviewPage/subcomponents/customerDataPage/subcomponents/customerDetails/customerDetails';
+import CustomTransaction from './components/admin/toolsPage/subcomponents/customTransaction/customTransaction'
+import HoursOfOperation from './components/admin/toolsPage/subcomponents/hoursOfOperation/hoursOfOperation'
+import ManageSpecials from './components/admin/toolsPage/subcomponents/manageSpecials/manageSpecials';
+import SpecialDetails from './components/admin/toolsPage/subcomponents/manageSpecials/subcomponents/couponDetails/specialDetails';
 
 function App() {
   const currentPageDisplayed = useSelector(state => state.pageDisplayed)
@@ -47,6 +51,10 @@ function App() {
       <EmailDetails />
       <MenuItemBreakdown />
       <CustomerDetails />
+      <CustomTransaction />
+      <HoursOfOperation />
+      <ManageSpecials />
+      <SpecialDetails />
     </div>
   );
 }
