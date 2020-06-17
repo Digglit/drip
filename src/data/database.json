@@ -1,0 +1,207 @@
+{
+  "financials": {
+    "totalSales": 0,
+    "deliverySales": 0,
+    "pickupSales": 0,
+    "totalOrders": 0,
+    "financialsBreakdown": {
+      "2020": {
+        "1": {
+          "1": {
+            "totalSales": 0,
+            "deliverySales": 0,
+            "pickupSales": 0,
+            "totalOrders": 0,
+            "orders": {
+              "100356":
+              {
+                "orderTotal": 0,
+                "orderItemQuantity": 0,
+                "tip": 0,
+                "orderDate": "",
+                "orderTime": "",
+                "driver": "",
+                "orderType": "",
+                "address": "",
+                "lat": 0,
+                "lng": 0,
+                "orderItems": [
+                  {
+                    "itemName": "",
+                    "itemKey": "",
+                    "itemSection": "",
+                    "itemDescription": "",
+                    "quantity": 0
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "customerProfiles": {
+    "angelaMichaels": {
+      "name": "",
+      "email": "",
+      "phoneNumber": "",
+      "address": "",
+      "totalSpending": 0,
+      "averageOrderPrice": 0,
+      "ordersPlaced": 0,
+      "itemsOrdered": 0,
+      "latestOrder": "",
+      "preferredOrderMethod": "Pickup",
+      "orderHistory": [
+        {
+          "date": "",
+          "orderNumber": 0
+        }
+      ]
+    }
+  },
+  "foodData": {
+    "menuItems": [
+      {
+        "sectionName": "",
+        "sectionItems": [
+          {
+            "name": "",
+            "key": "",
+            "imageUrl": "",
+            "description": "",
+            "itemAvailable": true,
+            "basePrice": 0,
+            "modifiers": [
+              {
+                "modifierTitle": "",
+                "allowMultipleSelected": false,
+                "maxSelectionAmount": 0,
+                "options": [
+                  {
+                    "modifierKey": "",
+                    "modifierPrice": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "itemOrderStatistics": {
+          "addToCart": 0,
+          "totalRevenue": 0,
+          "removedFromCart": 0,
+          "totalSold": 0
+        }
+      }
+    ],
+    "modifiers": [
+      {
+        "name": "",
+        "key": "",
+        "description": "",
+        "modifierAvailable": true
+      }
+    ]
+  },
+  "siteData": {
+    "toolsPage": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "primaryColor": "",
+    "darkMode": false,
+    "deliveryFee": 3,
+    "deliveryEnabled": true,
+    "pickupEnabled": true,
+    "deliveryRegion": [
+
+    ],
+    "coupons": [
+      {
+        "couponCode": "",
+        "specialType": "",
+        "discountAmount": 0,
+        "minOrderPrice": 0,
+        "minOrderQuantity": 0,
+        "amountRedeemed": 0,
+        "startDate": "",
+        "endDate": "",
+        "appliesToItems": [
+          "menuItemKey"
+        ]
+      }
+    ],
+    "specials": [
+      {
+        "specialtyName": "",
+        "specialtyType": "",
+        "discountAmount": 0,
+        "minOrderPrice": 0,
+        "minOrderQuantity": 0,
+        "amountRedeemed": 0,
+        "startDate": "",
+        "endDate": "",
+        "appliesToItems": [
+          "menuItemKey"
+        ]
+      }
+    ],
+    "driversDetails": {
+      "drivers": [
+        {
+          "name": "",
+          "loggedIn": false,
+          "deliveries": 0,
+          "averageDeliveryTime": "",
+          "rating": 0,
+          "totalHours": 0,
+          "revenueFacilitated": 0,
+          "tipsEarned": 0,
+          "email": "",
+          "phoneNumber": "",
+          "carMake": "",
+          "carModel": "",
+          "carYear": 0,
+          "carColor": "",
+          "licensePlateNumber": "",
+          "orderHistory": {
+            "2020": {
+              "1": {
+                "11": [
+                  {
+                    "tip": 0,
+                    "orderNumber": 0,
+                    "orderTime": "",
+                    "rating": "",
+                    "deliveryTime": ""
+                  }
+                ]
+              }
+            }
+          },
+          "sessions": {
+            "2020": {
+              "1": {
+                "11": [
+                  {
+                    "startTime": "",
+                    "endTime": "",
+                    "ordersCompleted": 0,
+                    "totalTips": 0,
+                    "totalSessionTime": 0
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    } 
+  }
+}

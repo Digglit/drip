@@ -14,6 +14,12 @@ class DriverDataPage extends Component {
     }
   }
 
+  getHoursTotal = () => {
+    let drivers = this.props.drivers
+    let totalHours
+
+  }
+
   render() {
     return (
       <div className='driverDataPageContainer'>

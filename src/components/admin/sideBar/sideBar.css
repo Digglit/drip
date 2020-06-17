@@ -63,7 +63,7 @@
   margin-top: 15px;
   display: grid;
   grid-template-columns: 85% 15%;
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); */
+  z-index: 1;
 }
 
 .notificationItemContainerClosed {
@@ -76,6 +76,7 @@
 .notificationItemTextContainer {
   cursor: pointer;
   transition-duration: 150ms;
+  background-color: var(--primary-background-color);
 }
 
 .notificationItemTextContainer:hover {
