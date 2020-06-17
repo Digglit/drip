@@ -13,6 +13,8 @@ class HoursOfOperation extends Component {
       times: ['12 AM', '1 AM', '2 AM', '3 AM', '4 AM', '5 AM', '6 AM', '7 AM', '8 AM', '9 AM', '10 AM', '11 AM', '12 PM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM', '6 PM', '7 PM', '8 PM', '9 PM', '10 PM', '11 PM'],
       timeSelected: 0,
       modeSelected: 0,
+      currentRowHovered: -1,
+      currentColumnHovered: -1,
       hoursOfOperation: [
         [
           [
@@ -574,12 +576,19 @@ class HoursOfOperation extends Component {
     this.setState({ hoursOfOperation })
   }
 
+  updateRowHoveredHandler = (event, index, column) => {
+    if (event.buttons === 1) {
+      this.updateOperationHoursHandler(column - 1, index)
+    }
+    this.setState({ currentRowHovered: index, currentColumnHovered: column })
+  }
+
   getDailyContainers = (props) => {
     let rowHolder = []
     if (props.column === 0) {
       for (let i = 0; i < 24; ++i) {
         rowHolder.push(
-          <div className='hoursOfOperationCellContainer' key={i}>
+          <div className={`hoursOfOperationCellContainer ${this.state.currentRowHovered === i ? 'rowHovered' : ''}`} key={i}>
             <p className='hoursOfOperationCellText'>{this.state.times[(i + this.state.timeSelected) % 24]}</p>
           </div>
         )
@@ -597,13 +606,13 @@ class HoursOfOperation extends Component {
           <div className={`hoursOfOperationCellContainer hoursOfOperationClickableCell ${props.hoursOfOperation[i] ? 'hoursOfOperationSelectedCell' : ''}`}
             onMouseDown={(e) => this.updateOperationHoursHandler(props.column - 1, i)}
             key={i}
-            onMouseEnter={(e) => e.buttons === 1 ? this.updateOperationHoursHandler(props.column - 1, i) : null}
+            onMouseEnter={(e) => this.updateRowHoveredHandler(e, i, props.column)}
           ></div>
         )
       }
       let column = (
         <div className='hoursOfOperationDayContainer'>
-          <div className='hoursOfOperationCellContainer'>
+          <div className={`hoursOfOperationCellContainer ${this.state.currentColumnHovered === props.column ? 'rowHovered' : ''}`}>
             <p className='hoursOfOperationCellText'>{props.day}</p>
           </div>
           {rowHolder}

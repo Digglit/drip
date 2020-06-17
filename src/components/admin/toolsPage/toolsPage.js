@@ -142,10 +142,10 @@ class ToolsPage extends Component {
                   <h2 className='toolsPageText'>Current Drivers:</h2>
                 </div>
                 <div className='toolsPageDriversContainer'>
-                  {this.state.drivers.map((value, index) => (
+                  {this.props.drivers.map((value, index) => (
                     <div className='toolsPageDriverContainer' key={index}>
-                      <h4 className='toolsPageDriverText' onMouseDown={() => this.props.displayDriverDetailsHandler(10, value)}>{value}</h4>
-                      <button className='secondaryButton toolsPageDriverButton' name={value} onMouseDown={(e) => this.confirmActionHandler(e.target.name)}>Log Out</button>
+                      <h4 className='toolsPageDriverText' onMouseDown={() => this.props.displayDriverDetailsHandler(10, index)}>{value.name}</h4>
+                      <button className='secondaryButton toolsPageDriverButton' name={value.name} onMouseDown={(e) => this.confirmActionHandler(e.target.name)}>Log Out</button>
                     </div>
                   ))}
                 </div>
@@ -208,7 +208,7 @@ class ToolsPage extends Component {
 }
 
 const mapStateToProps = (state) => ({
-
+  drivers: state.driverDetails.drivers
 })
 
 export default connect(mapStateToProps, {

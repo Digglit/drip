@@ -78,11 +78,12 @@
   align-items: center;
   justify-items: center;
   border-top: 1px solid var(--primary-color);
+  transition-duration: 150ms;
+  color: var(--tertiary-color);
 }
 
 .hoursOfOperationClickableCell {
   cursor: pointer;
-  transition-duration: 150ms;
 }
 
 .hoursOfOperationClickableCell:hover {
@@ -95,9 +96,15 @@
   border-left: 1px solid var(--primary-background-color);
 }
 
+.rowHovered {
+  background-color: var(--primary-color);
+  color: var(--header-font-color);
+}
+
 .hoursOfOperationCellText {
   margin: 0px;
   font-size: 14px;
+  color: inherit;
 }
 
 .hoursOfOperationFooterContainer {

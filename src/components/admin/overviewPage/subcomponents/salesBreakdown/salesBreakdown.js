@@ -4,6 +4,7 @@ import './salesBreakdown.css'
 import { changePage } from '../../../../../actions'
 import CornerCloseButton from '../../../../global/cornerCloseButton/cornerCloseButton'
 import TimeframeBreakdownButtons from '../../../../global/timeframeBreakdownButtons/timeframeBreakdownButtons'
+import Graph from '../../../../global/graph/graph'
 
 class SalesBreakdown extends Component {
   constructor() {
@@ -20,7 +21,7 @@ class SalesBreakdown extends Component {
         <h1 className='breakdownPageHeader'>Online Sales Overview</h1>
         <TimeframeBreakdownButtons timeframeSelected={this.state.timeframeSelected} updateTimeframe={(newTime) => this.setState({ timeframeSelected: newTime })} />
         <div className='salesBreakdownPageGraphContainer'>
-
+          <Graph />
         </div>
         <div className='salesBreakdownPageTextContainer'>
           <div>

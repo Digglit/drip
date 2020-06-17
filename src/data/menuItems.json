@@ -1,0 +1,609 @@
+[ {
+  "id" : 1,
+  "menuItem" : [ {
+    "description" : "White button mushroom caps filled with select cheeses, ham and spices – Chef’s Selection",
+    "exceptions" : 0,
+    "id" : 0,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/bigm-1575344194069.appspot.com/o/menuItemImages%2F0%2F0?alt=media&token=367c1736-c4c3-4ea8-910a-c762c6d9bbff",
+    "itemAvailable" : true,
+    "name" : "Stuffed Mushroom Heads",
+    "price" : 8,
+    "sectionIndex" : 0
+  }, {
+    "description" : "Our take on China’s famous egg roll! Available in Buffalo Chicken and loaded potato. Includes 3 rolls. ",
+    "exceptions" : 0,
+    "id" : 1,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/bigm-1575344194069.appspot.com/o/menuItemImages%2F0%2F1?alt=media&token=7cbfcff4-5f18-49da-a596-bbd2c1610112",
+    "itemAvailable" : true,
+    "name" : "BigM Rolls",
+    "price" : 7,
+    "sectionIndex" : 0
+  }, {
+    "description" : "Flour tortilla, roasted seasoned chicken, red/green peppers, tomato topped with cheddar/mozzarella/provolone cheese blend. Served with salsa and sour cream. A crowd favorite",
+    "exceptions" : 0,
+    "id" : 2,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/bigm-1575344194069.appspot.com/o/menuItemImages%2F0%2F2?alt=media&token=2002b6d8-55f8-4fa1-acbe-adfe9403dbf5",
+    "itemAvailable" : true,
+    "name" : "Quesadilla",
+    "price" : 9,
+    "sectionIndex" : 0
+  }, {
+    "description" : "We use penned up prison chickens and they are delicious! Choice of BBQ, Garlic Parmesan, Hot or Mild, Dry Rub, Buffalo or Honey Mustard. Add celery and Blue cheese or ranch for 1.5",
+    "exception" : [ {
+      "exceptionButton" : "Next",
+      "exceptionDescription" : [ "Sauce: BBQ", "Sauce: Garlic Parmesan", "Sauce: Hot", "Sauce: Mild", "Sauce: Dry Rub", "Sauce: Buffalo", "Sauce: Honey Mustard" ],
+      "exceptionInput" : [ "BBQ", "Garlic Parmesan", "Hot", "Mild", "Dry Rub", "Buffalo", "Honey Mustard" ],
+      "exceptionInputPrices" : [ 0, 0, 0, 0, 0, 0, 0 ],
+      "exceptionText" : "Your choice of sauce"
+    }, {
+      "exceptionButton" : "Next",
+      "exceptionDescription" : [ "Celery and Ranch", "Celery and Blue Cheese", "" ],
+      "exceptionInput" : [ "Ranch", "Blue Cheese", "No Thanks" ],
+      "exceptionInputPrices" : [ 1.5, 1.5, 0 ],
+      "exceptionText" : "Add Celery and Blue cheese or ranch for $1.50"
+    }, {
+      "exceptionButton" : "Add to Cart",
+      "exceptionDescription" : [ "6 wings", "12 wings" ],
+      "exceptionInput" : [ "6 wings, $7", "12 wings, $13.50" ],
+      "exceptionInputPrices" : [ 7, 13.5 ],
+      "exceptionText" : "How many would you like?"
+    } ],
+    "exceptions" : 3,
+    "id" : 3,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/bigm-1575344194069.appspot.com/o/menuItemImages%2F0%2F3?alt=media&token=fdb57480-e47f-465d-82be-7e12cbce649f",
+    "itemAvailable" : true,
+    "name" : "Wings",
+    "price" : 0,
+    "sectionIndex" : 0
+  }, {
+    "description" : "5 sticks, includes our delicious house marinara!",
+    "exceptions" : 0,
+    "id" : 4,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/bigm-1575344194069.appspot.com/o/menuItemImages%2F0%2F4?alt=media&token=add130b2-96de-47ac-8f08-16f1dd64b793",
+    "itemAvailable" : true,
+    "name" : "Mozzo Sticks",
+    "price" : 7,
+    "sectionIndex" : 0
+  }, {
+    "description" : "Get em smothered in cheeses, bacon, onion, jalapenos sprinkled with asiago and sour cream on the side",
+    "exception" : [ {
+      "exceptionButton" : "Add to Cart",
+      "exceptionDescription" : [ "Smothered", "Traditional" ],
+      "exceptionInput" : [ "Smothered", "Traditional" ],
+      "exceptionInputPrices" : [ 3, 0 ],
+      "exceptionText" : "Smothered or Traditional?"
+    } ],
+    "exceptions" : 1,
+    "id" : 5,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/bigm-1575344194069.appspot.com/o/menuItemImages%2F0%2F5?alt=media&token=98f0a14a-fba0-495c-b496-75d9eca97d04",
+    "itemAvailable" : true,
+    "name" : "Basket of Fresh Cut Fries",
+    "price" : 5,
+    "sectionIndex" : 0
+  }, {
+    "description" : "Freshly dipped, fried and seasoned to perfection! Choice of sauces includes BBQ Honey Mustard, Buffalo or Ranch",
+    "exception" : [ {
+      "exceptionButton" : "Add to cart",
+      "exceptionDescription" : [ "Sauce: BBQ", "Sauce: Honey Mustard", "Sauce: Buffalo", "Sauce: Ranch" ],
+      "exceptionInput" : [ "BBQ", "Honey Mustard", "Buffalo", "Ranch" ],
+      "exceptionInputPrices" : [ 0, 0, 0, 0 ],
+      "exceptionText" : "Your choice of sauce"
+    } ],
+    "exceptions" : 1,
+    "id" : 6,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/bigm-1575344194069.appspot.com/o/menuItemImages%2F0%2F6?alt=media&token=9ec6a294-1b1c-4fa7-ab48-0c85c8e11acb",
+    "itemAvailable" : true,
+    "name" : "Chicken Tenders",
+    "price" : 7,
+    "sectionIndex" : 0
+  }, {
+    "description" : "Mixed greens, roma tomatoes, black olive, onions, egg, carrots, cucumber and Italian croutons dressing include vinaigrette, ranch, Italian or honey mustard",
+    "exception" : [ {
+      "exceptionButton" : "Next",
+      "exceptionDescription" : [ "Dressing: Vinaigrette", "Dressing: Ranch", "Dressing: Italian", "Dressing: Honey Mustard" ],
+      "exceptionInput" : [ "Vinaigrette", "Ranch", "Italian", "Honey Mustard" ],
+      "exceptionInputPrices" : [ 0, 0, 0, 0 ],
+      "exceptionText" : "Your choice of dressing"
+    }, {
+      "exceptionButton" : "Add to Cart",
+      "exceptionDescription" : [ "Chicken", "Shrimp", "" ],
+      "exceptionInput" : [ "Chicken", "Shrimp", "No Thanks" ],
+      "exceptionInputPrices" : [ 3, 3, 0 ],
+      "exceptionText" : "Add Chicken or Shrimp for $3?"
+    } ],
+    "exceptions" : 2,
+    "id" : 7,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/bigm-1575344194069.appspot.com/o/menuItemImages%2F0%2F7?alt=media&token=597b8a14-330e-413d-bb15-e7512bbdf854",
+    "itemAvailable" : true,
+    "name" : "BigM House Salad",
+    "price" : 9,
+    "sectionIndex" : 0
+  }, {
+    "description" : "Our signature dough topped with fresh garlic and Big M’s select cheese blend served with our signature pizza sauce",
+    "exceptions" : 0,
+    "id" : 8,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/bigm-1575344194069.appspot.com/o/menuItemImages%2F0%2F8?alt=media&token=7cf25c1a-3f53-4090-b3a4-339f4e4d45d4",
+    "itemAvailable" : true,
+    "name" : "Cheesy Bread",
+    "price" : 6,
+    "sectionIndex" : 0
+  }, {
+    "description" : "fresh made hummus served with cucumbers, celery, red/green peppers, and tortillas",
+    "exceptions" : 0,
+    "id" : 9,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/bigm-1575344194069.appspot.com/o/menuItemImages%2F0%2F9?alt=media&token=24a18f3a-d289-4567-af56-fe200af738a6",
+    "itemAvailable" : false,
+    "name" : "Hummus Veggie Plate",
+    "price" : 8,
+    "sectionIndex" : 0
+  } ],
+  "title" : "Appetizers"
+}, {
+  "id" : 2,
+  "menuItem" : [ {
+    "description" : "Grilled marinated chicken, roasted garlic, black olives, red and green peppers and fresh mozzarella and onions",
+    "exceptions" : 0,
+    "id" : 0,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/bigm-1575344194069.appspot.com/o/menuItemImages%2F1%2F0?alt=media&token=b842b178-04a9-4c02-bee6-628f1d84e6c8",
+    "itemAvailable" : true,
+    "name" : "Chicken Philly",
+    "price" : 16,
+    "sectionIndex" : 1
+  }, {
+    "description" : "Grilled marinated chicken, signature sauce, fresh mozzarella, grated parmesan, roma tomatoes, asiago cheese topped w balsamic glaze",
+    "exceptions" : 0,
+    "id" : 1,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/bigm-1575344194069.appspot.com/o/menuItemImages%2F1%2F1?alt=media&token=c456ff82-94a1-4aa9-8718-00c94d161882",
+    "itemAvailable" : true,
+    "name" : "Chicken Parmesan",
+    "price" : 16,
+    "sectionIndex" : 1
+  }, {
+    "description" : "Layer of buffalo ranch dressing on a bed of Big M’s select cheeses, marinated buffalo chicken drizzled with buffalo sauce topped with asiago and parmesan cheeses and fresh basil… you can make it with BBQ sauce too!",
+    "exception" : [ {
+      "exceptionButton" : "Add to cart",
+      "exceptionDescription" : [ "Sauce: Buffalo", "Sauce: BBQ" ],
+      "exceptionInput" : [ "Buffalo", "BBQ" ],
+      "exceptionInputPrices" : [ 0, 0 ],
+      "exceptionText" : "Your choice of sauce"
+    } ],
+    "exceptions" : 1,
+    "id" : 2,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/bigm-1575344194069.appspot.com/o/menuItemImages%2F1%2F2?alt=media&token=b9f4cdf1-b103-492d-9327-94c3feaca8a2",
+    "itemAvailable" : true,
+    "name" : "Buffalo Chicken",
+    "price" : 16,
+    "sectionIndex" : 1
+  }, {
+    "description" : "Premium pepperoni, pulled sausage, banana peppers, black olives, sautéed mushrooms and onions",
+    "exceptions" : 0,
+    "id" : 3,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/bigm-1575344194069.appspot.com/o/menuItemImages%2F1%2F3?alt=media&token=505977a0-5967-4321-9c2c-e5f98cf8da84",
+    "itemAvailable" : true,
+    "name" : "Supreme",
+    "price" : 18,
+    "sectionIndex" : 1
+  }, {
+    "description" : "Canadian ham, premium pepperoni, pulled sausage and real bacon ",
+    "exceptions" : 0,
+    "id" : 4,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/bigm-1575344194069.appspot.com/o/menuItemImages%2F1%2F4?alt=media&token=ea27f788-4a82-42e6-bb58-3f4ab47cc551",
+    "itemAvailable" : true,
+    "name" : "Meat Lovers",
+    "price" : 18,
+    "sectionIndex" : 1
+  }, {
+    "description" : "Fresh pineapple, Canadian ham, mandarin oranges, fresh mozzarella on a bed of select Big M’s cheeses drizzled with a cherry balsamic glaze",
+    "exceptions" : 0,
+    "id" : 5,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/bigm-1575344194069.appspot.com/o/menuItemImages%2F1%2F5?alt=media&token=612706a7-22ad-4ce7-8390-c74da8f193cb",
+    "itemAvailable" : true,
+    "name" : "Hawaiian",
+    "price" : 18,
+    "sectionIndex" : 1
+  }, {
+    "description" : "Roma tomatoes, fresh mozzarella, fresh basil and roasted garlic and a bed of olive oil blend",
+    "exceptions" : 0,
+    "id" : 6,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/bigm-1575344194069.appspot.com/o/menuItemImages%2F1%2F6?alt=media&token=eedb630b-fddf-476b-9999-8880b2351f95",
+    "itemAvailable" : true,
+    "name" : "Margarita",
+    "price" : 16,
+    "sectionIndex" : 1
+  }, {
+    "description" : "Roasted red and green peppers, roasted cherry tomatoes, banana peppers, black olives, onions and fresh mushrooms",
+    "exceptions" : 0,
+    "id" : 7,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/bigm-1575344194069.appspot.com/o/menuItemImages%2F1%2F7?alt=media&token=7de244a8-c061-4657-b588-722f12995966",
+    "itemAvailable" : true,
+    "name" : "Vegetarian",
+    "price" : 16,
+    "sectionIndex" : 1
+  } ],
+  "title" : "Specialty Pies"
+}, {
+  "id" : 3,
+  "menuItem" : [ {
+    "description" : "Grilled marinated chicken, roasted garlic, black olives, red and green peppers and fresh mozzarella and onions",
+    "exception" : [ {
+      "exceptionButton" : "Next",
+      "exceptionDescription" : [ "6 inch", "12 inch" ],
+      "exceptionInput" : [ "6 inch, $7", "12 inch, $11" ],
+      "exceptionInputPrices" : [ 0, 4 ],
+      "exceptionText" : "6 or 12 inch?"
+    }, {
+      "exceptionButton" : "Next",
+      "exceptionDescription" : [ "Sub", "Wrap" ],
+      "exceptionInput" : [ "Sub", "Wrap" ],
+      "exceptionInputPrices" : [ 0, 0 ],
+      "exceptionText" : "Sub or Wrap?"
+    }, {
+      "exceptionButton" : "Add to Cart",
+      "exceptionDescription" : [ "Fries", "Chips" ],
+      "exceptionInput" : [ "Fries", "No Thanks" ],
+      "exceptionInputPrices" : [ 2, 0 ],
+      "exceptionText" : "Upgrade to fries for $2?"
+    } ],
+    "exceptions" : 3,
+    "id" : 0,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/bigm-1575344194069.appspot.com/o/menuItemImages%2F2%2Fundefined?alt=media&token=7db92739-29cc-4bf4-8f26-b7e58c1c1c07",
+    "itemAvailable" : true,
+    "name" : "Chicken Philly",
+    "price" : 7,
+    "sectionIndex" : 2
+  }, {
+    "description" : "Grilled marinated chicken, signature sauce, fresh mozzarella, grated parmesan, roma tomatoes, asiago cheese topped w balsamic glaze",
+    "exception" : [ {
+      "exceptionButton" : "Next",
+      "exceptionDescription" : [ "6 inch", "12 inch" ],
+      "exceptionInput" : [ "6 inch, $7", "12 inch, $11" ],
+      "exceptionInputPrices" : [ 0, 4 ],
+      "exceptionText" : "6 or 12 inch?"
+    }, {
+      "exceptionButton" : "Next",
+      "exceptionDescription" : [ "Sub", "Wrap" ],
+      "exceptionInput" : [ "Sub", "Wrap" ],
+      "exceptionInputPrices" : [ 0, 0 ],
+      "exceptionText" : "Sub or Wrap?"
+    }, {
+      "exceptionButton" : "Add to Cart",
+      "exceptionDescription" : [ "Fries", "Chips" ],
+      "exceptionInput" : [ "Fries", "No Thanks" ],
+      "exceptionInputPrices" : [ 2, 0 ],
+      "exceptionText" : "Add fries for $2?"
+    } ],
+    "exceptions" : 3,
+    "id" : 1,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/bigm-1575344194069.appspot.com/o/menuItemImages%2F2%2F1?alt=media&token=f18f2057-02c7-409a-8161-03d5c0d100cb",
+    "itemAvailable" : true,
+    "name" : "Chicken Parmesan",
+    "price" : 7,
+    "sectionIndex" : 2
+  }, {
+    "description" : "Layer of buffalo ranch dressing on a bed of Big M’s select cheeses, marinated buffalo chicken drizzled with buffalo sauce topped with asiago and parmesan cheeses and fresh basil… you can make it with BBQ sauce too!",
+    "exception" : [ {
+      "exceptionButton" : "Next",
+      "exceptionDescription" : [ "Sauce: Buffalo", "Sauce: BBQ" ],
+      "exceptionInput" : [ "Buffalo", "BBQ" ],
+      "exceptionInputPrices" : [ 0, 0 ],
+      "exceptionText" : "Your choice of sauce"
+    }, {
+      "exceptionButton" : "Next",
+      "exceptionDescription" : [ "6 inch", "12 inch" ],
+      "exceptionInput" : [ "6 inch, $7", "12 inch, $11" ],
+      "exceptionInputPrices" : [ 0, 4 ],
+      "exceptionText" : "6 or 12 inch?"
+    }, {
+      "exceptionButton" : "Add to Cart",
+      "exceptionDescription" : [ "Sub", "Wrap" ],
+      "exceptionInput" : [ "Sub", "Wrap" ],
+      "exceptionInputPrices" : [ 0, 0 ],
+      "exceptionText" : "Sub or Wrap?"
+    } ],
+    "exceptions" : 3,
+    "id" : 2,
+    "image" : "",
+    "itemAvailable" : true,
+    "name" : "Buffalo Chicken",
+    "price" : 7,
+    "sectionIndex" : 2
+  }, {
+    "description" : "(served only as a wrap) Homemade hummus, grilled chicken, lettuce, roma tomatoes and cucumbers",
+    "exception" : [ {
+      "exceptionButton" : "Add to Cart",
+      "exceptionDescription" : [ "Fries", "Chips" ],
+      "exceptionInput" : [ "Fries", "No thanks" ],
+      "exceptionInputPrices" : [ 2, 0 ],
+      "exceptionText" : "Upgrade to fries for $2?"
+    } ],
+    "exceptions" : 1,
+    "id" : 3,
+    "image" : "",
+    "itemAvailable" : false,
+    "name" : "Chicken Hummus",
+    "price" : 7,
+    "sectionIndex" : 2
+  }, {
+    "description" : "Premium Italian meatballs, house marinara sauce, roasted garlic, roasted peppers, onions and our provolone/mozzarella cheese blend sprinkled with asiago cheese",
+    "exception" : [ {
+      "exceptionButton" : "Next",
+      "exceptionDescription" : [ "6 inch", "12 inch" ],
+      "exceptionInput" : [ "6 inch", "12 inch" ],
+      "exceptionInputPrices" : [ 0, 4 ],
+      "exceptionText" : "6 or 12 inch?"
+    }, {
+      "exceptionButton" : "Add to Cart",
+      "exceptionDescription" : [ "Fries", "Chips" ],
+      "exceptionInput" : [ "Fries", "No thanks" ],
+      "exceptionInputPrices" : [ 2, 0 ],
+      "exceptionText" : "Add fries for $2?"
+    } ],
+    "exceptions" : 2,
+    "id" : 4,
+    "image" : "",
+    "itemAvailable" : true,
+    "name" : "Meatball",
+    "price" : 7,
+    "sectionIndex" : 2
+  }, {
+    "description" : "Premium Italian sausage, house marinara sauce, premium pepperoni, roasted garlic, roasted roma tomatoes and our provolone/mozzarella cheese blend sprinkled with asiago cheese",
+    "exception" : [ {
+      "exceptionButton" : "Next",
+      "exceptionDescription" : [ "6 inch", "12 inch" ],
+      "exceptionInput" : [ "6 inch", "12 inch" ],
+      "exceptionInputPrices" : [ 0, 4 ],
+      "exceptionText" : "6 or 12 inch?"
+    }, {
+      "exceptionButton" : "Next",
+      "exceptionDescription" : [ "Sub", "Wrap" ],
+      "exceptionInput" : [ "Sub", "Wrap" ],
+      "exceptionInputPrices" : [ 0, 0 ],
+      "exceptionText" : "Sub or wrap?"
+    }, {
+      "exceptionButton" : "Add to Cart",
+      "exceptionDescription" : [ "Fries", "Chips" ],
+      "exceptionInput" : [ "Fries", "No thanks" ],
+      "exceptionInputPrices" : [ 2, 0 ],
+      "exceptionText" : "Add fries for $2?"
+    } ],
+    "exceptions" : 3,
+    "id" : 5,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/bigm-1575344194069.appspot.com/o/menuItemImages%2F2%2F5?alt=media&token=3c1248fd-e297-40ad-9d44-ef8faacf68e2",
+    "itemAvailable" : true,
+    "name" : "Italian Sausage",
+    "price" : 7,
+    "sectionIndex" : 2
+  }, {
+    "description" : "Smoked turkey lettuce, roma tomatoes, cucumbers onions and our house mayonnaise",
+    "exception" : [ {
+      "exceptionButton" : "Next",
+      "exceptionDescription" : [ "6 inch", "12 inch" ],
+      "exceptionInput" : [ "6 inch", "12 inch" ],
+      "exceptionInputPrices" : [ 0, 4 ],
+      "exceptionText" : "6 or 12 inch?"
+    }, {
+      "exceptionButton" : "Next",
+      "exceptionDescription" : [ "sub", "wrap" ],
+      "exceptionInput" : [ "sub", "wrap" ],
+      "exceptionInputPrices" : [ 0, 0 ],
+      "exceptionText" : "Sub or wrap?"
+    }, {
+      "exceptionButton" : "Add to Cart",
+      "exceptionDescription" : [ "fries", "chips" ],
+      "exceptionInput" : [ "Fries", "No thanks" ],
+      "exceptionInputPrices" : [ 2, 0 ],
+      "exceptionText" : "Add fries for $2?"
+    } ],
+    "exceptions" : 3,
+    "id" : 6,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/bigm-1575344194069.appspot.com/o/menuItemImages%2F2%2Fundefined?alt=media&token=c200d1b3-5aa3-493c-b4cb-f20f8aef326a",
+    "itemAvailable" : false,
+    "name" : "Turkey",
+    "price" : 7,
+    "sectionIndex" : 2
+  }, {
+    "description" : "Roasted red and green peppers, roasted cherry tomatoes, banana peppers, black olives, onions and fresh mushrooms",
+    "exception" : [ {
+      "exceptionButton" : "Next",
+      "exceptionDescription" : [ "6 inch", "12 inch" ],
+      "exceptionInput" : [ "6 inch", "12 inch" ],
+      "exceptionInputPrices" : [ 0, 4 ],
+      "exceptionText" : "6 or 12 inch?"
+    }, {
+      "exceptionButton" : "Next",
+      "exceptionDescription" : [ "sub", "wrap" ],
+      "exceptionInput" : [ "sub", "wrap" ],
+      "exceptionInputPrices" : [ 0, 0 ],
+      "exceptionText" : "Sub or wrap"
+    }, {
+      "exceptionButton" : "Add to Cart",
+      "exceptionDescription" : [ "fries", "chips" ],
+      "exceptionInput" : [ "Fries", "No thanks" ],
+      "exceptionInputPrices" : [ 2, 0 ],
+      "exceptionText" : "Add fries for $2?"
+    } ],
+    "exceptions" : 3,
+    "id" : 7,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/bigm-1575344194069.appspot.com/o/menuItemImages%2F2%2F7?alt=media&token=0d68eab2-a2d1-4858-9b9d-c5d550f1663f",
+    "itemAvailable" : true,
+    "name" : "Vegetarian",
+    "price" : 7,
+    "sectionIndex" : 2
+  }, {
+    "description" : "delicious lamb and beef blended meat fresh cut from the spit served on a traditional Greek pita with roma tomato and onion covered in our homemade tzatziki sauce.",
+    "exception" : [ {
+      "exceptionButton" : "Add to Cart",
+      "exceptionDescription" : [ "Fries", "Chips" ],
+      "exceptionInput" : [ "Fries", "No thanks" ],
+      "exceptionInputPrices" : [ 2, 0 ],
+      "exceptionText" : "Add fries for $2?"
+    } ],
+    "exceptions" : 1,
+    "id" : 8,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/bigm-1575344194069.appspot.com/o/menuItemImages%2F2%2F8?alt=media&token=2522e612-3eb0-48d9-a2a0-2cc4862a9b92",
+    "itemAvailable" : true,
+    "name" : "Gyros",
+    "price" : 8,
+    "sectionIndex" : 2
+  }, {
+    "description" : "Pulled pork, Canadian ham, fresh roasted turkey, pickles, mozzarella cheese and yellow mustard grilled to perfection!",
+    "exception" : [ {
+      "exceptionButton" : "Add to Cart",
+      "exceptionDescription" : [ "Fries", "Chips" ],
+      "exceptionInput" : [ "Fries", "No thanks" ],
+      "exceptionInputPrices" : [ 2, 0 ],
+      "exceptionText" : "Add fries for $2?"
+    } ],
+    "exceptions" : 1,
+    "id" : 9,
+    "image" : "",
+    "itemAvailable" : true,
+    "name" : "Cubano",
+    "price" : 13,
+    "sectionIndex" : 2
+  } ],
+  "title" : "Subs & Wraps"
+}, {
+  "id" : 4,
+  "menuItem" : [ {
+    "description" : "Served with fries on a Brioche bun. Includes your choice of cheese and toppings",
+    "exception" : [ {
+      "exceptionButton" : "Next",
+      "exceptionDescription" : [ "Single", "Double" ],
+      "exceptionInput" : [ "Single", "Double" ],
+      "exceptionInputPrices" : [ 7.5, 10.5 ],
+      "exceptionText" : "One Patty or Two?"
+    }, {
+      "exceptionButton" : "Next",
+      "exceptionDescription" : [ "American Cheese", "Swiss Cheese", "Cheddar Cheese", "Mozzarella Cheese", "No Cheese" ],
+      "exceptionInput" : [ "American", "Swiss", "Cheddar", "Mozzarella", "No Cheese" ],
+      "exceptionInputPrices" : [ 0, 0, 0, 0, 0 ],
+      "exceptionText" : "Your Choice of Cheese"
+    }, {
+      "exceptionButton" : "Add to Cart",
+      "exceptionDescription" : [ "Lettuce", "Tomatoes", "Onions", "Pickles", "Sautéed mushrooms" ],
+      "exceptionInput" : [ "Lettuce", "Tomatoes", "Onions", "Pickles", "Sautéed mushrooms" ],
+      "exceptionInputPrices" : [ 0, 0, 0, 0, 0 ],
+      "exceptionText" : "Choose your toppings"
+    } ],
+    "exceptions" : 3,
+    "id" : 0,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/bigm-1575344194069.appspot.com/o/menuItemImages%2F3%2F0?alt=media&token=437a7925-d57d-494c-ac0e-f9aa22405687",
+    "itemAvailable" : true,
+    "name" : "Build-A-Burger",
+    "price" : 0,
+    "sectionIndex" : 3
+  }, {
+    "description" : "2 smashed patties smothered in white and yellow American cheese",
+    "exceptions" : 0,
+    "id" : 1,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/bigm-1575344194069.appspot.com/o/menuItemImages%2F3%2F1?alt=media&token=bd7ffe52-0c90-49a7-80fb-ec06aabeb268",
+    "itemAvailable" : true,
+    "name" : "The Big M",
+    "price" : 12,
+    "sectionIndex" : 3
+  }, {
+    "description" : "world famous polish pierogies and swiss cheese sandwiched between 2 smashed patties smothered in Casey’s famous bearnaise sauce! You might want to use a fork and a knife",
+    "exceptions" : 0,
+    "id" : 2,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/bigm-1575344194069.appspot.com/o/menuItemImages%2F3%2F2?alt=media&token=3cd3dbed-4ee8-459f-8276-c922c3364d90",
+    "itemAvailable" : true,
+    "name" : "Clevelander",
+    "price" : 12,
+    "sectionIndex" : 3
+  } ],
+  "title" : "Burgers"
+}, {
+  "menuItem" : [ {
+    "description" : "Refreshing Mix Of Deep Eddy's Grapefruit & Club Soda",
+    "exceptions" : 0,
+    "id" : 0,
+    "image" : "",
+    "itemAvailable" : true,
+    "name" : "Eddy's Island",
+    "price" : 5,
+    "sectionIndex" : 4
+  }, {
+    "description" : "Perfect Blend of Vodka, Gin, White Rum, Triple Sec, Tequila & A Splash Of Coke",
+    "exceptions" : 0,
+    "id" : 1,
+    "image" : "",
+    "itemAvailable" : true,
+    "name" : "Mulberry Island Iced Tea",
+    "price" : 6,
+    "sectionIndex" : 4
+  }, {
+    "description" : "Jameson & Lime Juice, Topped With Ginger Beer",
+    "exceptions" : 0,
+    "id" : 2,
+    "image" : "",
+    "itemAvailable" : true,
+    "name" : "Big M's Mule",
+    "price" : 5,
+    "sectionIndex" : 4
+  }, {
+    "description" : "Jameson, Peach Schnapps, Lemonade & Sprite. Think \"Green Tea\" Shot Just Bigger",
+    "exceptions" : 0,
+    "id" : 3,
+    "image" : "",
+    "itemAvailable" : true,
+    "name" : "Green Tea",
+    "price" : 5,
+    "sectionIndex" : 4
+  }, {
+    "description" : "Deep Eddy Peach & Lemonade, Topped With Mango Club Soda",
+    "exceptions" : 0,
+    "id" : 4,
+    "image" : "",
+    "itemAvailable" : true,
+    "name" : "Fuzzy M",
+    "price" : 5,
+    "sectionIndex" : 4
+  }, {
+    "description" : "Tequila, Triple Sec, Lime Juice, Sour, Oj, Pineapple & Splash Of Sprite",
+    "exceptions" : 0,
+    "id" : 5,
+    "image" : "",
+    "itemAvailable" : true,
+    "name" : "Classic Margarita",
+    "price" : 5,
+    "sectionIndex" : 4
+  }, {
+    "description" : "Ole Smokey Mango Habanero Adds A Kicken Twist To Our Classic Margarita",
+    "exceptions" : 0,
+    "id" : 6,
+    "image" : "",
+    "itemAvailable" : true,
+    "name" : "Mango Habanero Margarita",
+    "price" : 6,
+    "sectionIndex" : 4
+  }, {
+    "description" : "Ole Smokey Mango Habanero, Vodka And A Unique Twist Of Spices & Flavorings",
+    "exceptions" : 0,
+    "id" : 7,
+    "image" : "",
+    "itemAvailable" : true,
+    "name" : "BigM Bloody Mary",
+    "price" : 6,
+    "sectionIndex" : 4
+  }, {
+    "description" : "Effen Cucumber Vodka, Lime Juice, Agave Mix & Our Unique Blend Of Flavorings",
+    "exceptions" : 0,
+    "id" : 8,
+    "image" : "",
+    "itemAvailable" : true,
+    "name" : "Cucumber Lime Bloody Mary",
+    "price" : 5,
+    "sectionIndex" : 4
+  }, {
+    "description" : "Tequila & Lime Juice Gives Any Classic Bloody Mary A Run For Its Money",
+    "exceptions" : 0,
+    "id" : 9,
+    "image" : "",
+    "itemAvailable" : true,
+    "name" : "Bloody Mary",
+    "price" : 5,
+    "sectionIndex" : 4
+  } ],
+  "title" : "Drinks"
+} ]

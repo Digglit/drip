@@ -1,0 +1,46 @@
+
+
+.driverDataPageContainer {
+  height: calc(100% - 100px);
+  width: calc(100% - 100px);
+  background-color: var(--secondary-background-color);
+  padding: 50px;
+  overflow: hidden;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.driverDataPageGraphContainer {
+  background-color: var(--primary-background-color);
+  height: 400px;
+  width: 95%;
+  max-width: 1000px;
+  margin-top: 15px;
+}
+
+.driverDataPageBreakdownContainer {
+  height: 40%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  max-width: 1000px;
+  margin-top: 20px;
+}
+
+.driverDataPageText {
+  font-size: 18px;
+}
+
+.driverDataPageTableContainer {
+  height: 80%;
+}
+
+.driverDataPageTable {
+  height: 100%;
+  width: 95%;
+  border: 1px solid var(--primary-color);
+  margin-top: 10px;
+  display: grid;
+  grid-template-rows: 7% 93%;
+  background-color: var(--primary-background-color);
+}

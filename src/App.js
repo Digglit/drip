@@ -25,6 +25,7 @@ import CustomTransaction from './components/admin/toolsPage/subcomponents/custom
 import HoursOfOperation from './components/admin/toolsPage/subcomponents/hoursOfOperation/hoursOfOperation'
 import ManageSpecials from './components/admin/toolsPage/subcomponents/manageSpecials/manageSpecials';
 import SpecialDetails from './components/admin/toolsPage/subcomponents/manageSpecials/subcomponents/couponDetails/specialDetails';
+import DriverDataPage from './components/admin/overviewPage/subcomponents/driverDataPage/driverDataPage';
 
 function App() {
   const currentPageDisplayed = useSelector(state => state.pageDisplayed)
@@ -37,7 +38,8 @@ function App() {
             currentPageDisplayed === 3 ? <ToolsPage /> :
               currentPageDisplayed === 4 ? <SalesBreakdown /> :
                 currentPageDisplayed === 5 ? <PopularDishesPage /> :
-                  <CustomerDataPage />
+                  currentPageDisplayed === 6 ? <CustomerDataPage /> :
+                    <DriverDataPage />
       }
       <ManageCoupons />
       <ViewPreviousOrders />
