@@ -17,6 +17,9 @@ import CornerCloseButton from '../../global/cornerCloseButton/cornerCloseButton'
 import ToolsContainer from './subcomponents/toolsContainer/toolsContainer'
 import Switch from '../../global/switch/switch'
 import NumberInput from '../../global/numberInput/numberInput'
+import { motion } from 'framer-motion'
+import { pageTransition, transitionDuration } from '../../global/pageTransition'
+
 
 class ToolsPage extends Component {
   constructor() {
@@ -87,7 +90,7 @@ class ToolsPage extends Component {
 
   render() {
     return (
-      <div className='toolsPageContainer'>
+      <motion.div className='toolsPageContainer' initial={pageTransition.initial} animate={pageTransition.in} exit={pageTransition.out} transition={{ duration: transitionDuration }}>
         <div className='toolsPageWrapper'>
           <CornerCloseButton onClick={() => this.props.changePage(0)} />
 
@@ -202,7 +205,7 @@ class ToolsPage extends Component {
             }
           />
         </div>
-      </div>
+      </motion.div>
     )
   }
 }

@@ -63,6 +63,7 @@ button:focus {
   grid-template-columns: 300px auto;
   overflow: hidden;
   height: 100vh;
+  background-color: var(--secondary-background-color);
 }
 
 .primaryButton, .secondaryButton:hover {

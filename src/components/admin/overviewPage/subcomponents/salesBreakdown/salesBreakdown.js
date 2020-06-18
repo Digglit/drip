@@ -5,6 +5,8 @@ import { changePage } from '../../../../../actions'
 import CornerCloseButton from '../../../../global/cornerCloseButton/cornerCloseButton'
 import TimeframeBreakdownButtons from '../../../../global/timeframeBreakdownButtons/timeframeBreakdownButtons'
 import Graph from '../../../../global/graph/graph'
+import { motion } from 'framer-motion'
+import { pageTransition, transitionDuration } from '../../../../global/pageTransition'
 
 class SalesBreakdown extends Component {
   constructor() {
@@ -16,7 +18,7 @@ class SalesBreakdown extends Component {
 
   render() {
     return (
-      <div className='salesBreakdownPageContainer'>
+      <motion.div className='salesBreakdownPageContainer' initial={pageTransition.initial} animate={pageTransition.in} exit={pageTransition.out} transition={{ duration: transitionDuration }}>
         <CornerCloseButton onClick={() => this.props.changePage(0)} />
         <h1 className='breakdownPageHeader'>Online Sales Overview</h1>
         <TimeframeBreakdownButtons timeframeSelected={this.state.timeframeSelected} updateTimeframe={(newTime) => this.setState({ timeframeSelected: newTime })} />
@@ -44,7 +46,7 @@ class SalesBreakdown extends Component {
           </div>
         </div>
         <button className='primaryButton salesBreakdownPageViewMoreButton' onMouseDown={() => this.props.changePage(5)}>View Breakdown</button>
-      </div>
+      </motion.div>
     )
   }
 }

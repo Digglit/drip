@@ -22,7 +22,6 @@
   background-color: var(--primary-background-color);
   display: grid;
   grid-template-rows: 95px auto 250px;
-  z-index: 1;
 }
 
 .sideBarHeader {

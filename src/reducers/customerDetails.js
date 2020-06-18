@@ -3,7 +3,7 @@
 
 let initialState = {
   open: false,
-  zIndex: 0,
+  zIndex: 20,
   customerData: {
     name: '',
     email: '',
@@ -44,10 +44,9 @@ const customerDetails = (state = initialState, action) => {
     case 'VIEW_CUSTOMER_DETAILS':
       return state = { open: !state.open, zIndex: action.payload.zIndex, customerData: action.payload.values }
     case 'CLOSE_CUSTOMER_DETAILS':
-      let newState = {
-
-      }
-      return state = initialState
+      let newState = { ...state }
+      newState.open = !state.open
+      return state = newState
     default:
       return state
   }

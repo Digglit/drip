@@ -5,6 +5,8 @@ import { changePage, viewCustomerDetailsHandler, composeEmailHandler } from '../
 import CornerCloseButton from '../../../../global/cornerCloseButton/cornerCloseButton'
 import TimeframeBreakdownButtons from '../../../../global/timeframeBreakdownButtons/timeframeBreakdownButtons'
 import Checkbox from '../../../../global/checkbox/checkbox'
+import { motion } from 'framer-motion'
+import { pageTransition, transitionDuration } from '../../../../global/pageTransition'
 
 class CustomerDataPage extends Component {
   constructor() {
@@ -252,7 +254,7 @@ class CustomerDataPage extends Component {
 
   render() {
     return (
-      <div className='customerDataPageContainer'>
+      <motion.div className='customerDataPageContainer' initial={pageTransition.initial} animate={pageTransition.in} exit={pageTransition.out} transition={{ duration: transitionDuration }}>
         <CornerCloseButton onClick={() => this.props.changePage(0)} />
         <h1 className='breakdownPageHeader'>Online Customer Breakdown</h1>
         <div className='customerDataPageButtonsContainer'>
@@ -293,7 +295,7 @@ class CustomerDataPage extends Component {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
     )
   }
 }

@@ -7,34 +7,51 @@
     "financialsBreakdown": {
       "2020": {
         "1": {
-          "1": {
-            "totalSales": 0,
-            "deliverySales": 0,
-            "pickupSales": 0,
-            "totalOrders": 0,
-            "orders": {
-              "100356":
-              {
-                "orderTotal": 0,
-                "orderItemQuantity": 0,
-                "tip": 0,
-                "orderDate": "",
-                "orderTime": "",
-                "driver": "",
-                "orderType": "",
-                "address": "",
-                "lat": 0,
-                "lng": 0,
-                "orderItems": [
-                  {
-                    "itemName": "",
-                    "itemKey": "",
-                    "itemSection": "",
-                    "itemDescription": "",
-                    "quantity": 0
-                  }
-                ]
-              }
+          "monthlySales": 0,
+          "monthlyDeliverySales": 0,
+          "monthlyPickupSales": 0,
+          "monthlyTipTotal": 0,
+          "monthlyDeliveryTips": 0,
+          "monthlyPickupTips": 0,
+          "monthlyOrderTotal": 0,
+          "monthlyDeliveryOrders": 0,
+          "monthlyPickupOrders": 0,
+          "monthlyOrders": {
+            "1": {
+              "totalSales": 0,
+              "deliverySales": 0,
+              "pickupSales": 0,
+              "totalTips": 0,
+              "deliveryTips": 0,
+              "pickupTips": 0,
+              "totalOrders": 0,
+              "deliveryOrders": 0,
+              "pickupOrders": 0,
+              "orders": [
+                {
+                  "orderTotal": 0,
+                  "orderNumber": 0,
+                  "name": "",
+                  "orderItemQuantity": 0,
+                  "tip": 0,
+                  "orderDate": "",
+                  "orderTime": "",
+                  "driver": "",
+                  "orderType": "",
+                  "address": "",
+                  "lat": 0,
+                  "lng": 0,
+                  "orderItems": [
+                    {
+                      "itemName": "",
+                      "itemKey": "",
+                      "itemSection": "",
+                      "itemDescription": "",
+                      "quantity": 0
+                    }
+                  ]
+                }
+              ]
             }
           }
         }
@@ -119,9 +136,7 @@
     "deliveryFee": 3,
     "deliveryEnabled": true,
     "pickupEnabled": true,
-    "deliveryRegion": [
-
-    ],
+    "deliveryRegion": [],
     "coupons": [
       {
         "couponCode": "",
@@ -202,6 +217,6 @@
           }
         }
       ]
-    } 
+    }
   }
 }

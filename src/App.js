@@ -26,21 +26,28 @@ import HoursOfOperation from './components/admin/toolsPage/subcomponents/hoursOf
 import ManageSpecials from './components/admin/toolsPage/subcomponents/manageSpecials/manageSpecials';
 import SpecialDetails from './components/admin/toolsPage/subcomponents/manageSpecials/subcomponents/couponDetails/specialDetails';
 import DriverDataPage from './components/admin/overviewPage/subcomponents/driverDataPage/driverDataPage';
+import ItemDrawer from './components/admin/menuPage/menuSection/subcomponents/itemDrawer/itemDrawer'
+import CreateOrderDrawer from './components/admin/menuPage/menuSection/subcomponents/createOrderDrawer/createOrderDrawer'
+import { AnimatePresence } from 'framer-motion'
 
 function App() {
   const currentPageDisplayed = useSelector(state => state.pageDisplayed)
   return (
     <div className="App">
       <SideBar />
-      {currentPageDisplayed === 0 ? <OverviewPage /> :
-        currentPageDisplayed === 1 ? <MenuPage /> :
-          currentPageDisplayed === 2 ? <EmailPage /> :
-            currentPageDisplayed === 3 ? <ToolsPage /> :
-              currentPageDisplayed === 4 ? <SalesBreakdown /> :
-                currentPageDisplayed === 5 ? <PopularDishesPage /> :
-                  currentPageDisplayed === 6 ? <CustomerDataPage /> :
-                    <DriverDataPage />
-      }
+      <AnimatePresence exitBeforeEnter>
+        {currentPageDisplayed === 0 ? <OverviewPage key='asfdfrgadfg' /> :
+          currentPageDisplayed === 1 ? <MenuPage key='qw34g3q4g' /> :
+            currentPageDisplayed === 2 ? <EmailPage key='weragsaerg' /> :
+              currentPageDisplayed === 3 ? <ToolsPage key='aerg43qyg' /> :
+                currentPageDisplayed === 4 ? <SalesBreakdown key='eshwtw5T' /> :
+                  currentPageDisplayed === 5 ? <PopularDishesPage key='aewrt34t3wt' /> :
+                    currentPageDisplayed === 6 ? <CustomerDataPage key='sfhgsetg5gg43' /> :
+                      <DriverDataPage />
+        }
+      </AnimatePresence>
+      <ItemDrawer />
+      <CreateOrderDrawer />
       <ManageCoupons />
       <ViewPreviousOrders />
       <AddNewDriver />

@@ -19,7 +19,7 @@ let initialState = {
 const menuDrawerOpenStatus = (state = initialState, action) => {
   switch (action.type) {
     case 'OPEN_MENU_ITEM_DRAWER':
-      let newState = state
+      let newState = { ...state }
       newState.open = !newState.open
       return state = newState
     case 'OPEN_MENU_ITEM_DRAWER_WITH_DETAILS':

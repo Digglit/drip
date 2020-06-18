@@ -5,6 +5,9 @@ import { changePage, displayMenuItemBreakdownHandler } from '../../../../../acti
 import CornerCloseButton from '../../../../global/cornerCloseButton/cornerCloseButton'
 import TimeframeBreakdownButtons from '../../../../global/timeframeBreakdownButtons/timeframeBreakdownButtons'
 import menuItems from './subcomponents/menuItemBreakdown/menuItems.json'
+import { motion } from 'framer-motion'
+import { pageTransition, transitionDuration } from '../../../../global/pageTransition'
+
 
 class PopularDishesPage extends Component {
   constructor() {
@@ -17,7 +20,7 @@ class PopularDishesPage extends Component {
 
   render() {
     return (
-      <div className='popularDishesPageContainer'>
+      <motion.div className='popularDishesPageContainer' initial={pageTransition.initial} animate={pageTransition.in} exit={pageTransition.out} transition={{ duration: transitionDuration }}>
         <CornerCloseButton onClick={() => this.props.changePage(0)} />
         <h1 className='breakdownPageHeader'>Online Sales Breakdown</h1>
         <TimeframeBreakdownButtons timeframeSelected={this.state.timeframeSelected} updateTimeframe={(newTime) => this.setState({ timeframeSelected: newTime })} />
@@ -51,7 +54,7 @@ class PopularDishesPage extends Component {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
     )
   }
 }

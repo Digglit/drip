@@ -41,25 +41,21 @@
 
 .previousOrderContainer {
   height: 70px;
-  width: calc(95% - 25px);
+  width: calc(95% - 20px);
   margin: 0% 2.5%;
   border-bottom: 1px solid var(--primary-color);
   position: relative;
   display: grid;
-  grid-template-columns: 5% 25% 35% 35%;
-  padding-right: 25px;
+  grid-template-columns: 25% 27.5% 27.5% 20%;
+  padding: 0px 10px;
   align-items: center;
-  justify-items: end;
+  justify-items: center;
 }
 
-.previousOrderPlusExpander {
-  left: -10px;
-  position: relative;
-  justify-self: start;
-}
-
-.previousOrderPlusExpanderColor {
-  background-color: var(--tertiary-color);
+.previousOrdersViewOrderButton {
+  height: 65%;
+  width: 90%;
+  justify-self: end;
 }
 
 .previousOrdersFooter {

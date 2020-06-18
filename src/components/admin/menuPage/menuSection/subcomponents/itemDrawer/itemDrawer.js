@@ -39,20 +39,23 @@ class ItemDrawer extends Component {
 
   render() {
     return (
-      <div className='itemDrawerContainer' id='drawerContainer' ref={this.drawerRef} style={{ right: `-${this.props.drawerOpen ? 0 : this.state.drawerPosition}px` }}>
-        <CornerCloseButton onClick={this.closeDrawerHandler} />
-        <div className='itemDrawerHeaderContainer'>
-          <img className='itemDrawerHeaderImage' alt='Food Item' src={this.props.image} />
-          <div className='itemDrawerHeaderTextContainer'>
-            <button className='itemDrawerHeaderImageModificationButton'>Add Image</button>
-            <button className='itemDrawerHeaderImageModificationButton itemDrawerHeaderRemoveItemButton'>Remove Item</button>
+      <div>
+        <div className={`menuOverlay ${false ? '' : 'hide'}`} onMouseDown={this.closeDrawerHandler} />
+        <div className='itemDrawerContainer' id='drawerContainer' ref={this.drawerRef} style={{ right: `-${false ? 0 : this.state.drawerPosition}px` }}>
+          <CornerCloseButton onClick={this.closeDrawerHandler} />
+          <div className='itemDrawerHeaderContainer'>
+            <img className='itemDrawerHeaderImage' alt='Food Item' src={this.props.image} />
+            <div className='itemDrawerHeaderTextContainer'>
+              <button className='itemDrawerHeaderImageModificationButton'>Add Image</button>
+              <button className='itemDrawerHeaderImageModificationButton itemDrawerHeaderRemoveItemButton'>Remove Item</button>
+            </div>
           </div>
-        </div>
-        <ItemDrawerBody />
+          <ItemDrawerBody />
 
-        <div className='itemDrawerFooter'>
-          <button className='secondaryButton itemDrawerFooterButton' onMouseDown={this.closeDrawerHandler}>Cancel</button>
-          <button className='primaryButton itemDrawerFooterButton'>Save Changes</button>
+          <div className='itemDrawerFooter'>
+            <button className='secondaryButton itemDrawerFooterButton' onMouseDown={this.closeDrawerHandler}>Cancel</button>
+            <button className='primaryButton itemDrawerFooterButton'>Save Changes</button>
+          </div>
         </div>
       </div>
     )
@@ -62,7 +65,8 @@ class ItemDrawer extends Component {
 const mapStateToProps = state => {
   return {
     drawerOpen: state.menuDrawerOpenStatus.open,
-    image: state.menuDrawerOpenStatus.image
+    image: state.menuDrawerOpenStatus.image,
+    backdropDisplay: state.backdropDisplay,
   }
 }
 

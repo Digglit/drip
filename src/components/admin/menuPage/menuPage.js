@@ -4,7 +4,8 @@ import { connect } from 'react-redux'
 import MenuSection from './menuSection/menuSection'
 import { displayBackdrop, openMenuItemDrawer, displayConfirmationPrompt, closeConfirmationPrompt } from '../../../actions'
 import MenuFooter from './menuSection/subcomponents/menuFooter/menuFooter'
-import ItemDrawer from './menuSection/subcomponents/itemDrawer/itemDrawer'
+import { motion } from 'framer-motion'
+import { pageTransition, transitionDuration } from '../../global/pageTransition'
 
 class MenuPage extends Component {
   backdropClickHandler = () => {
@@ -27,7 +28,7 @@ class MenuPage extends Component {
 
   render() {
     return (
-      <div className='menuPagecontainer'>
+      <motion.div className='menuPagecontainer' initial={pageTransition.initial} animate={pageTransition.in} exit={pageTransition.out} transition={{ duration: transitionDuration }}>
         <div className='menuContainer'>
           <MenuSection />
           <MenuSection />
@@ -35,9 +36,7 @@ class MenuPage extends Component {
           <MenuSection />
           <MenuFooter />
         </div>
-        <div className={`menuOverlay ${this.props.backdropDisplay ? '' : 'hide'}`} onMouseDown={this.closeDrawerHandler} />
-        <ItemDrawer />
-      </div>
+      </motion.div>
     )
   }
 }

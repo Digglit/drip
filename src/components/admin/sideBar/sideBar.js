@@ -56,7 +56,7 @@ class SideBar extends Component {
           </div>
           <div className='notificationBodyContainer'>
             {this.state.notifications.map((value, index) => (
-              <div className={`notificationItemContainer ${value.open ? '' : 'notificationItemContainerClosed'}`}>
+              <div className={`notificationItemContainer ${value.open ? '' : 'notificationItemContainerClosed'}`} key={index}>
                 <div className='notificationItemTextContainer'>
                   <p className='notificationItemText'>{value.message}</p>
                 </div>

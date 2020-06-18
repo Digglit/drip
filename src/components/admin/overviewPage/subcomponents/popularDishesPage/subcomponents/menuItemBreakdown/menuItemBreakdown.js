@@ -53,7 +53,7 @@ class MenuItemBreakdown extends Component {
           <div className='menuItemBreakdownBodyContainer'>
             <h2 className='menuItemBreakdownHeader' style={{ marginBottom: '15px' }}>Sales</h2>
             <TimeframeBreakdownButtons timeframeSelected={this.state.timeframeSelected} updateTimeframe={(newTime) => this.updateTimeframeHandler(newTime)} />
-            <p className='menuItemBreakdownText'>Total Revenu: ${this.props.breakdownData[this.state.currentTimeframe].totalRevenue}</p>
+            <p className='menuItemBreakdownText'>Total Revenue: ${this.props.breakdownData[this.state.currentTimeframe].totalRevenue}</p>
             <p className='menuItemBreakdownText'>Added To Cart: {this.props.breakdownData[this.state.currentTimeframe].addedToCart}</p>
             <p className='menuItemBreakdownText'>Removed From Cart: {this.props.breakdownData[this.state.currentTimeframe].removedFromCart}</p>
             <p className='menuItemBreakdownText'>Total Sold: {this.props.breakdownData[this.state.currentTimeframe].totalSold}</p>

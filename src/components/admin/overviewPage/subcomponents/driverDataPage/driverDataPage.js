@@ -5,6 +5,8 @@ import { changePage, displayDriverDetailsHandler } from '../../../../../actions'
 import CornerCloseButton from '../../../../global/cornerCloseButton/cornerCloseButton'
 import TimeframeBreakdownButtons from '../../../../global/timeframeBreakdownButtons/timeframeBreakdownButtons'
 import Graph from '../../../../global/graph/graph'
+import { motion } from 'framer-motion'
+import { pageTransition, transitionDuration } from '../../../../global/pageTransition'
 
 class DriverDataPage extends Component {
   constructor() {
@@ -14,15 +16,9 @@ class DriverDataPage extends Component {
     }
   }
 
-  getHoursTotal = () => {
-    let drivers = this.props.drivers
-    let totalHours
-
-  }
-
   render() {
     return (
-      <div className='driverDataPageContainer'>
+      <motion.div className='driverDataPageContainer' initial={pageTransition.initial} animate={pageTransition.in} exit={pageTransition.out} transition={{ duration: transitionDuration }}>
         <CornerCloseButton onClick={() => this.props.changePage(0)} />
         <h1 className='breakdownPageHeader'>Driver Insights</h1>
         <TimeframeBreakdownButtons timeframeSelected={this.state.timeframeSelected} updateTimeframe={(newTime) => this.setState({ timeframeSelected: newTime })} />
@@ -44,41 +40,39 @@ class DriverDataPage extends Component {
             <p className='driverDataPageText'>ZackG is doing a great job! With 26 deliveries this week, he is consistently receiving a 5-star rating!</p>
           </div>
         </div>
-        <div className='driverDataPageTableContainer'>
-          <div className='driverDataPageTable'>
-            <div className='popularDishesHeaderContainer'>
-              <div className='customerDataHeaderContainer' style={{ justifySelf: 'start', marginLeft: '10px' }}>
-                <p className='popularDishesHeaderText'>Name</p>
-              </div>
-              <div className='customerDataHeaderContainer'>
-                <p className='popularDishesHeaderText'>Deliveries</p>
-              </div>
-              <div className='customerDataHeaderContainer'>
-                <p className='popularDishesHeaderText'>Avg. Delivery Time</p>
-              </div>
-              <div className='customerDataHeaderContainer'>
-                <p className='popularDishesHeaderText'>Rating</p>
-              </div>
-              <div className='customerDataHeaderContainer'>
-                <p className='popularDishesHeaderText'>Hours</p>
-              </div>
+        <div className='driverDataPageTable'>
+          <div className='popularDishesHeaderContainer'>
+            <div className='customerDataHeaderContainer' style={{ justifySelf: 'start', marginLeft: '10px' }}>
+              <p className='popularDishesHeaderText'>Name</p>
             </div>
-            <div className='popularDishesBodyContainer'>
-              {this.props.drivers.map((value, index) => (
-                <div className='popularDishesItemContainer'>
-                  <div className='customerDataPageItemNameContainer' style={{ marginLeft: '0px' }}>
-                    <p className='popularDishesItemText popularDishesItemNameText' onMouseDown={() => this.props.displayDriverDetailsHandler(10, index)}>{value.name}</p>
-                  </div>
-                  <p className='popularDishesItemText'>{value.deliveries}</p>
-                  <p className='popularDishesItemText'>{value.averageDeliveryTime}</p>
-                  <p className='popularDishesItemText'>{value.rating}</p>
-                  <p className='popularDishesItemText'>{value.totalHours}</p>
-                </div>
-              ))}
+            <div className='customerDataHeaderContainer'>
+              <p className='popularDishesHeaderText'>Deliveries</p>
+            </div>
+            <div className='customerDataHeaderContainer'>
+              <p className='popularDishesHeaderText'>Avg. Delivery Time</p>
+            </div>
+            <div className='customerDataHeaderContainer'>
+              <p className='popularDishesHeaderText'>Rating</p>
+            </div>
+            <div className='customerDataHeaderContainer'>
+              <p className='popularDishesHeaderText'>Hours</p>
             </div>
           </div>
+          <div className='popularDishesBodyContainer'>
+            {this.props.drivers.map((value, index) => (
+              <div className='popularDishesItemContainer'>
+                <div className='customerDataPageItemNameContainer' style={{ marginLeft: '0px' }}>
+                  <p className='popularDishesItemText popularDishesItemNameText' onMouseDown={() => this.props.displayDriverDetailsHandler(10, index)}>{value.name}</p>
+                </div>
+                <p className='popularDishesItemText'>{value.deliveries}</p>
+                <p className='popularDishesItemText'>{value.averageDeliveryTime}</p>
+                <p className='popularDishesItemText'>{value.rating}</p>
+                <p className='popularDishesItemText'>{value.totalHours}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      </motion.div>
     )
   }
 }

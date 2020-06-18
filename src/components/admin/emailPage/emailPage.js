@@ -5,6 +5,9 @@ import './emailPage.css'
 import CornerCloseButton from '../../global/cornerCloseButton/cornerCloseButton'
 import PlusExpander from '../../global/plusExpander/plusExpander'
 import Input from '../../global/input/input'
+import { motion } from 'framer-motion'
+import { pageTransition, transitionDuration } from '../../global/pageTransition'
+
 
 class EmailPage extends Component {
   constructor() {
@@ -35,7 +38,7 @@ class EmailPage extends Component {
 
   render() {
     return (
-      <div className='emailPageContainer'>
+      <motion.div className='emailPageContainer' initial={pageTransition.initial} animate={pageTransition.in} exit={pageTransition.out} transition={{ duration: transitionDuration }}>
         <CornerCloseButton onClick={() => this.props.changePage(0)} />
         <div className='emailInterfaceContainer'>
           <div className='emailAccountsContainer'>
@@ -63,7 +66,7 @@ class EmailPage extends Component {
             <button className='emailFooterButton primaryButton' onMouseDown={() => this.props.composeEmailHandler(10, '')}>New Message</button>
           </div>
         </div>
-      </div>
+      </motion.div>
     )
   }
 }
