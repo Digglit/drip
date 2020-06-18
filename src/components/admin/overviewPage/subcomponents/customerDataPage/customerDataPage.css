@@ -42,3 +42,31 @@
   justify-self: left;
   margin-left: 10px;
 }
+
+.customerDataPageInterfaceContainer {
+  height: 80%;
+  width: 95%;
+  border: 1px solid var(--primary-color);
+  margin-top: 10px;
+  display: grid;
+  grid-template-rows: 11% 7% 82%;
+  background-color: var(--primary-background-color);
+}
+
+.customerDataPageSearchContainer {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  align-items: center;
+}
+
+.customerDataPageSearchInput {
+  height: calc(60% - 6px);
+  width: 95%;
+  justify-self: center;
+}
+
+.customerDataPageSearchButton {
+  height: 60%;
+  width: 90%;
+  justify-self: start;
+}

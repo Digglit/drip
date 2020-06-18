@@ -1,0 +1,47 @@
+
+
+.cornerCheckoutButtonContainer {
+  background-color: var(--primary-color);
+  height: 50px;
+  width: 285px;
+  display: grid;
+  position: absolute;
+  right: 0px;
+  top: 15px;
+  z-index: 1;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  grid-template-columns: 105px auto 2px 50px;
+  align-items: center;
+  justify-items: center;
+}
+
+.cornerCheckoutButtonText {
+  font-size: 32px;
+  align-self: center;
+  justify-self: center;
+  color: var(--header-font-color);
+  margin: 0px;
+  position: relative;
+  top: -2px;
+  cursor: pointer;
+}
+
+.cornerCheckoutDivider {
+  height: 70%;
+  width: 2px;
+  background-color: var(--header-font-color);
+}
+
+.cornerCheckoutButton {
+  height: 70%;
+  width: calc(100% - 14px);
+  margin: 0px 7px;
+  color: var(--primary-color);
+  background-color: var(--header-font-color);
+  border: 0px;
+}
+
+.cornerCheckoutCartTotal {
+  color: var(--header-font-color);
+  margin: 0px;
+}

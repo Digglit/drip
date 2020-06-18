@@ -7,6 +7,7 @@ import TimeframeBreakdownButtons from '../../../../global/timeframeBreakdownButt
 import Checkbox from '../../../../global/checkbox/checkbox'
 import { motion } from 'framer-motion'
 import { pageTransition, transitionDuration } from '../../../../global/pageTransition'
+import Input from '../../../../global/input/input'
 
 class CustomerDataPage extends Component {
   constructor() {
@@ -261,11 +262,15 @@ class CustomerDataPage extends Component {
           <TimeframeBreakdownButtons timeframeSelected={this.state.timeframeSelected} updateTimeframe={(newTime) => this.setState({ timeframeSelected: newTime })} />
           <button className='customerDataPageEmailButton primaryButton' onMouseDown={this.sendEmailHandler}>Send Email</button>
         </div>
-        <div className='popularDishesInterfaceContainer'>
+        <div className='customerDataPageInterfaceContainer'>
+          <div className='customerDataPageSearchContainer'>
+            <Input customClass={'customerDataPageSearchInput'} placeholder={'Name, Order Number, Date...'}/>
+            <button className='customerDataPageSearchButton primaryButton'>Search</button>
+          </div>
           <div className='popularDishesHeaderContainer'>
             <div className='customerDataHeaderContainer' style={{ justifySelf: 'start', marginLeft: '10px' }}>
               <Checkbox customClass={'customerDataPageCheckbox'} checked={this.state.selectAllCustomers} onMouseDown={() => this.setState({ selectAllCustomers: !this.state.selectAllCustomers })} />
-              <p className='popularDishesHeaderText'>Name</p>
+              <p className='popularDishesHeaderText' style={{marginLeft: '10px'}}>Name</p>
             </div>
             <div className='customerDataHeaderContainer'>
               <p className='popularDishesHeaderText'>Orders</p>

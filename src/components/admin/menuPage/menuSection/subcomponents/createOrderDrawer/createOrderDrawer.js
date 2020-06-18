@@ -3,6 +3,7 @@ import './createOrderDrawer.css'
 import { connect } from 'react-redux'
 import { openMenuItemDrawer, displayBackdrop, displayConfirmationPrompt, closeConfirmationPrompt } from '../../../../../../actions'
 import CornerCloseButton from '../../../../../global/cornerCloseButton/cornerCloseButton'
+import NumberIncrementer from '../../../../../global/numberIncrementer/numberIncrementer'
 
 class CreateOrderDrawer extends Component {
 
@@ -11,6 +12,7 @@ class CreateOrderDrawer extends Component {
     this.state = {
       drawerPosition: window.innerWidth,
       modifierSelected: [-1, -1, -1],
+      quantity: 1,
       modifiers: [
         {
           title: 'Your Choice Of Sauce',
@@ -62,6 +64,11 @@ class CreateOrderDrawer extends Component {
     this.setState({ modifierSelected })
   }
 
+  adjustQuantityHandler = (button) => {
+    if (button) this.setState({quantity: this.state.quantity + 1})
+    else if (this.state.quantity > 1) this.setState({quantity: this.state.quantity - 1})
+  }
+
   render() {
     return (
       <div>
@@ -87,6 +94,13 @@ class CreateOrderDrawer extends Component {
                 ))}
               </div>
             ))}
+            <br />
+            <p className='createOrderBodyText'>Quantity: </p>
+            <NumberIncrementer value={this.state.quantity} adjustNumberHandler={this.adjustQuantityHandler}/>
+            <br />
+            <h3 className='createOrderBodyModifierTitle'>Additional Notes</h3>
+            <br />
+            <textarea className='createOrderBodyTextArea' placeholder='Ex: Seafood allergy, No red sauce, No cheese'/>
           </div>
           <div className='itemDrawerFooter'>
             <button className='secondaryButton itemDrawerFooterButton' onMouseDown={this.confirmedFunction}>Cancel</button>
