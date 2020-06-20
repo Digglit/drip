@@ -1,18 +1,19 @@
 import React, { Component } from 'react'
 import './specialDetails.css'
 import { connect } from 'react-redux'
-import { displaySpecialDetailsHandler } from '../../../../../../../actions'
+import { displaySpecialDetailsHandler, displaySpecialDetails } from '../../../../../../../actions'
 import ModuleHeader from '../../../../../../global/moduleHeader/moduleHeader'
 import Input from '../../../../../../global/input/input'
 import DropDown from '../../../../../../global/dropDown/dropDown'
+import { motion } from 'framer-motion'
 
-class specialDetails extends Component {
+class SpecialDetails extends Component {
   render() {
     return (
-      <div>
-        <div className={this.props.open ? 'menuOverlay' : 'menuOverlay hide'} onMouseDown={() => this.props.displaySpecialDetailsHandler(10)} style={{ zIndex: this.props.zIndex }} />
+      <motion.div>
+        <div className={this.props.open ? 'menuOverlay' : 'menuOverlay hide'} onMouseDown={() => this.props.displaySpecialDetails()} style={{ zIndex: this.props.zIndex }} />
         <div className={`couponDetailsContainer ${this.props.open ? '' : 'shrunkenContainer'}`} style={{ zIndex: this.props.zIndex + 1 }}>
-          <ModuleHeader header={'Create New Special'} closeButton={() => this.props.displaySpecialDetailsHandler(10)} />
+          <ModuleHeader header={'Create New Special'} closeButton={() => this.props.displaySpecialDetails()} />
           <div className='couponDetailsBodyContainer'>
             <div className='couponDetailsBodyItemContainer'>
               <p className='couponDetailsBodyText'>Special Name:</p>
@@ -51,11 +52,11 @@ class specialDetails extends Component {
             </div>
           </div>
           <div className='couponDetailsFooterContainer'>
-            <button className='secondaryButton couponDetailsFooterButton' onMouseDown={() => this.props.displaySpecialDetailsHandler(10)}>Cancel</button>
+            <button className='secondaryButton couponDetailsFooterButton' onMouseDown={() => this.props.displaySpecialDetails()}>Cancel</button>
             <button className='primaryButton couponDetailsFooterButton'>Save Special</button>
           </div>
         </div>
-      </div>
+      </motion.div>
     )
   }
 }
@@ -66,4 +67,4 @@ const mapStateToProps = (state) => ({
 
 })
 
-export default connect(mapStateToProps, { displaySpecialDetailsHandler })(specialDetails)
+export default connect(mapStateToProps, { displaySpecialDetailsHandler, displaySpecialDetails })(SpecialDetails)

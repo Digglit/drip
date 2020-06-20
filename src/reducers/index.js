@@ -18,6 +18,9 @@ import customTransaction from './customTransaction'
 import hoursOfOperation from './hoursOfOperation'
 import specialManager from './specialManager'
 import specialDetails from './specialDetails'
+import orderCheckout from './orderCheckout'
+import menuPageState from './menuPageState'
+import modalDisplay from './modalDisplay'
 
 const rootReducer = combineReducers({
   pageDisplayed: pageDisplayer,
@@ -39,6 +42,9 @@ const rootReducer = combineReducers({
   hoursOfOperation,
   specialManager,
   specialDetails,
+  orderCheckout,
+  menuPageState,
+  modalDisplay
 })
 
 export default rootReducer

@@ -14,4 +14,16 @@ export const pageTransition = {
   }
 }
 
+export const modalTransition = {
+  in: {
+    opacity: 1,
+  },
+  out: {
+    opacity: 0,
+  },
+  initial: {
+    opacity: 1,
+  }
+}
+
 export const transitionDuration = .2

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './sideBar.css'
 import logo from '../../../assets/BIGmPIZZAredrevised.png'
 import { connect } from 'react-redux'
-import { changePage } from '../../../actions'
+import { changePage, placeOrderHandler } from '../../../actions'
 
 
 
@@ -26,6 +26,9 @@ class SideBar extends Component {
   }
 
   changePageHandler = (newPage) => {
+    if (newPage === 1) {
+      this.props.placeOrderHandler(0)
+    }
     if (this.props.pageDisplayed === newPage) {
       this.props.changePage(0)
     } else {
@@ -43,6 +46,13 @@ class SideBar extends Component {
     setTimeout(() => this.setState({ notifications: updatedNotifications }), 350)
   }
 
+  menuPageHandler = () => {
+    if (!this.props.placingOrder) {
+      this.changePageHandler(1)
+    } else {
+      this.props.placeOrderHandler(0)
+    }
+  }
   render() {
     return (
       <div className='sideBarContainer'>
@@ -67,7 +77,7 @@ class SideBar extends Component {
           </div>
         </div>
         <div className='notificationFooter'>
-          <button className={`sideBarButton ${this.props.pageDisplayed === 1 ? 'primaryButton' : 'secondaryButton'}`} onMouseDown={() => this.changePageHandler(1)}>Modify Menu</button>
+          <button className={`sideBarButton ${this.props.pageDisplayed === 1 && !this.props.placingOrder ? 'primaryButton' : 'secondaryButton'}`} onMouseDown={this.menuPageHandler}>Modify Menu</button>
           <button className={`sideBarButton ${this.props.pageDisplayed === 2 ? 'primaryButton' : 'secondaryButton'}`} onMouseDown={() => this.changePageHandler(2)}>Email</button>
           <button className={`sideBarButton ${this.props.pageDisplayed === 3 ? 'primaryButton' : 'secondaryButton'}`} onMouseDown={() => this.changePageHandler(3)}>Tools</button>
           <button className='sideBarButton primaryButton'>Logout</button>
@@ -78,7 +88,8 @@ class SideBar extends Component {
 }
 
 const mapStateToProps = state => ({
-  pageDisplayed: state.pageDisplayed
+  pageDisplayed: state.pageDisplayed,
+  placingOrder: state.menuPageState
 })
 
-export default connect(mapStateToProps, { changePage })(SideBar)
+export default connect(mapStateToProps, { changePage, placeOrderHandler })(SideBar)

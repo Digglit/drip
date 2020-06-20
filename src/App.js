@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { useSelector } from 'react-redux'
+import { useSelector, connect } from 'react-redux'
 import SideBar from './components/admin/sideBar/sideBar'
 import OverviewPage from './components/admin/overviewPage/overviewPage'
 import MenuPage from './components/admin/menuPage/menuPage'
@@ -30,7 +30,7 @@ import ItemDrawer from './components/admin/menuPage/menuSection/subcomponents/it
 import CreateOrderDrawer from './components/admin/menuPage/menuSection/subcomponents/createOrderDrawer/createOrderDrawer'
 import { AnimatePresence } from 'framer-motion'
 
-function App() {
+function App(props) {
   const currentPageDisplayed = useSelector(state => state.pageDisplayed)
   return (
     <div className="App">
@@ -46,26 +46,32 @@ function App() {
                       <DriverDataPage />
         }
       </AnimatePresence>
-      <ItemDrawer />
-      <CreateOrderDrawer />
-      <ManageCoupons />
-      <ViewPreviousOrders />
-      <AddNewDriver />
-      <ConfirmActionModule />
-      <ItemModifiers />
-      <DriverDetails />
-      <EditModifiers />
-      <CouponDetails />
-      <ComposeEmail />
-      <EmailDetails />
-      <MenuItemBreakdown />
-      <CustomerDetails />
-      <CustomTransaction />
-      <HoursOfOperation />
-      <ManageSpecials />
-      <SpecialDetails />
+      <AnimatePresence>
+        {props.placingOrder ? <CreateOrderDrawer key='afh9aswfh0jiw3ef0' /> : <ItemDrawer key='sdfh0j30rjiwf0' />}
+        {props.modal.manageCoupons ? <ManageCoupons key='098ufa0j2043t9j' /> : null}
+        {props.modal.viewPreviousOrders ? <ViewPreviousOrders key='fsjh0h0923jrf0k3f' /> : null}
+        {props.modal.addNewDriver ? <AddNewDriver key='oaijsdfgokjapg' /> : null}
+        {props.modal.confirmActionModule ? <ConfirmActionModule key='kjdshafgoiejrgoerg' /> : null}
+        {props.modal.itemModifiers ? <ItemModifiers key='sjdhfgoiwjeogwg' /> : null}
+        {props.modal.driverDetails ? <DriverDetails key='a0eijfg90j234fm4g' /> : null}
+        {props.modal.editModifiers ? <EditModifiers key='wsf0j9302porkookw4g' /> : null}
+        {props.modal.couponDetails ? <CouponDetails key='oifjmk3mfkpp2j3f-0' /> : null}
+        {props.modal.composeEmail ? <ComposeEmail key='fm230pjkmf0-3gmog' /> : null}
+        {props.modal.emailDetails ? <EmailDetails key='weorfjk0wfj03rf' /> : null}
+        {props.modal.menuItemBreakdown ? <MenuItemBreakdown key='o3jromwflkmwlkgf' /> : null}
+        {props.modal.customerDetails ? <CustomerDetails key='sdofknmo2k3mtg0g' /> : null}
+        {props.modal.customTransaction ? <CustomTransaction key='weoi0fj023jf0jf' /> : null}
+        {props.modal.hoursOfOperation ? <HoursOfOperation key='oisjgf902j3gmm4g' /> : null}
+        {props.modal.manageSpecials ? <ManageSpecials key='f9i2hj3ri0jwefmoskfg' /> : null}
+        {props.modal.specialDetails ? <SpecialDetails key='fiowjpo1k3mgpoj4g90' /> : null}
+      </AnimatePresence>
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+  placingOrder: state.menuPageState,
+  modal: state.modalDisplay.modals
+})
+
+export default connect(mapStateToProps, null)(App);

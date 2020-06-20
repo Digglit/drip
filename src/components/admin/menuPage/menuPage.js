@@ -2,12 +2,13 @@ import React, { Component } from 'react'
 import './menuPage.css'
 import { connect } from 'react-redux'
 import MenuSection from './menuSection/menuSection'
-import { displayBackdrop, openMenuItemDrawer, displayConfirmationPrompt, closeConfirmationPrompt, changePage } from '../../../actions'
+import { displayBackdrop, openMenuItemDrawer, displayConfirmationPrompt, closeConfirmationPrompt, changePage, displayCheckoutHandler } from '../../../actions'
 import MenuFooter from './menuSection/subcomponents/menuFooter/menuFooter'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { pageTransition, transitionDuration } from '../../global/pageTransition'
 import CornerCloseButton from '../../global/cornerCloseButton/cornerCloseButton'
 import CornerCheckoutButton from '../../global/cornerCheckoutButton/cornerCheckoutButton'
+import CheckoutPage from './subcomponents/checkoutPage/checkoutPage'
 
 class MenuPage extends Component {
   backdropClickHandler = () => {
@@ -31,15 +32,25 @@ class MenuPage extends Component {
   render() {
     return (
       <motion.div className='menuPagecontainer' initial={pageTransition.initial} animate={pageTransition.in} exit={pageTransition.out} transition={{ duration: transitionDuration }}>
-        {/* <CornerCloseButton onClick={() => this.props.changePage(0)}/> */}
-        <CornerCheckoutButton onClick={() => this.props.changePage(0)}/>
-        <div className='menuContainer'>
-          <MenuSection />
-          <MenuSection />
-          <MenuSection />
-          <MenuSection />
-          <MenuFooter />
-        </div>
+        <AnimatePresence exitBeforeEnter>
+          {this.props.checkoutDisplayOpen ?
+            <motion.div className='checkoutContainer' key='afuy098uw0f' initial={pageTransition.initial} animate={pageTransition.in} exit={pageTransition.out} transition={{ duration: transitionDuration }}>
+              <CheckoutPage />
+            </motion.div>
+            :
+            <motion.div className='menuContainer' key='a0s9df09jwf' initial={pageTransition.initial} animate={pageTransition.in} exit={pageTransition.out} transition={{ duration: transitionDuration }}>
+              {this.props.placingOrder ?
+                <CornerCheckoutButton onClick={() => this.props.changePage(3)} /> :
+                <CornerCloseButton onClick={() => this.props.changePage(0)} />
+              }
+              <MenuSection />
+              <MenuSection />
+              <MenuSection />
+              <MenuSection />
+              <MenuFooter />
+            </motion.div>
+          }
+        </AnimatePresence>
       </motion.div>
     )
   }
@@ -47,6 +58,9 @@ class MenuPage extends Component {
 
 const mapStateToProps = state => ({
   backdropDisplay: state.backdropDisplay,
+  checkoutDisplayOpen: state.orderCheckout.open,
+  checkoutDisplayZIndex: state.orderCheckout.zIndex,
+  placingOrder: state.menuPageState
 })
 
-export default connect(mapStateToProps, { displayBackdrop, openMenuItemDrawer, displayConfirmationPrompt, closeConfirmationPrompt, changePage })(MenuPage)
+export default connect(mapStateToProps, { displayBackdrop, openMenuItemDrawer, displayConfirmationPrompt, closeConfirmationPrompt, changePage, displayCheckoutHandler })(MenuPage)

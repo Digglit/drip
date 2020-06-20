@@ -12,6 +12,8 @@ import {
   displayCustomTransactionHandler,
   displayHoursOfOperationHandler,
   manageSpecialsHandler,
+  placeOrderHandler,
+  displayManageCoupons
 } from '../../../actions'
 import CornerCloseButton from '../../global/cornerCloseButton/cornerCloseButton'
 import ToolsContainer from './subcomponents/toolsContainer/toolsContainer'
@@ -88,6 +90,11 @@ class ToolsPage extends Component {
 
   }
 
+  placeOrderHandler = () => {
+    this.props.placeOrderHandler(1)
+    this.props.changePage(1)
+  }
+
   render() {
     return (
       <motion.div className='toolsPageContainer' initial={pageTransition.initial} animate={pageTransition.in} exit={pageTransition.out} transition={{ duration: transitionDuration }}>
@@ -122,7 +129,7 @@ class ToolsPage extends Component {
             height={''}
             content={
               <div className={this.state.expandedArray[1] ? '' : 'hiddenContent'} style={{ paddingBottom: '10px' }}>
-                <button className='secondaryButton toolsPageButton'>Create Order</button>
+                <button className='secondaryButton toolsPageButton' onMouseDown={this.placeOrderHandler}>Create Order</button>
                 <button className='secondaryButton toolsPageButton' onMouseDown={() => this.props.displayCustomTransactionHandler(10)}>Custom Transaction</button>
                 <button className='secondaryButton toolsPageButton' onMouseDown={this.changeColorHandler}>Change Color</button>
                 <div className='toolsPageSwitchContainer'>
@@ -186,7 +193,7 @@ class ToolsPage extends Component {
             height={''}
             content={
               <div style={{ display: 'grid', paddingBottom: '10px' }} className={this.state.expandedArray[4] ? '' : 'hiddenContent'}>
-                <button className='secondaryButton toolsPageButton' onMouseDown={() => this.props.manageCouponsHandler(10)}>Manage Coupons</button>
+                <button className='secondaryButton toolsPageButton' onMouseDown={this.props.displayManageCoupons}>Manage Coupons</button>
                 <button className='secondaryButton toolsPageButton' onMouseDown={() => this.props.manageSpecialsHandler(10)}>Manage Specials</button>
               </div>
             }
@@ -225,4 +232,6 @@ export default connect(mapStateToProps, {
   displayCustomTransactionHandler,
   displayHoursOfOperationHandler,
   manageSpecialsHandler,
+  placeOrderHandler,
+  displayManageCoupons
 })(ToolsPage)

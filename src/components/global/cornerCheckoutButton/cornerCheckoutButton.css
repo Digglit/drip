@@ -3,14 +3,14 @@
 .cornerCheckoutButtonContainer {
   background-color: var(--primary-color);
   height: 50px;
-  width: 285px;
+  width: 200px;
   display: grid;
   position: absolute;
   right: 0px;
   top: 15px;
   z-index: 1;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
-  grid-template-columns: 105px auto 2px 50px;
+  grid-template-columns: auto 2px 50px;
   align-items: center;
   justify-items: center;
 }
@@ -44,4 +44,5 @@
 .cornerCheckoutCartTotal {
   color: var(--header-font-color);
   margin: 0px;
+  font-size: 18px;
 }

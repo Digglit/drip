@@ -4,10 +4,13 @@ import { manageCouponsHandler, displayCouponDetailsHandler } from '../../../../.
 import ModuleHeader from '../../../../global/moduleHeader/moduleHeader'
 import './manageCoupons.css'
 import Input from '../../../../global/input/input'
+import { motion } from 'framer-motion'
+import { modalTransition, transitionDuration } from '../../../../global/pageTransition'
 
 const ManageCoupons = (props) => {
+  console.log(props)
   return (
-    <div>
+    <motion.div initial={modalTransition.initial} animate={modalTransition.in} exit={modalTransition.out} transition={{ duration: transitionDuration }}>
       <div className={props.open ? 'menuOverlay' : 'menuOverlay hide'} onMouseDown={() => props.manageCouponsHandler(0)} style={{ zIndex: props.zIndex }} />
       <div className={`manageCouponsContainer ${props.open ? '' : 'shrunkenContainer'}`} style={{ zIndex: props.zIndex + 1 }}>
         <ModuleHeader header={'Manage Coupons'} closeButton={() => props.manageCouponsHandler(0)} />
@@ -35,13 +38,13 @@ const ManageCoupons = (props) => {
           <button className='primaryButton couponCodeFooterButton' onMouseDown={() => props.manageCouponsHandler(0)}>Close</button>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
 const mapStateToProps = (state) => ({
-  open: state.couponManager.open,
-  zIndex: state.couponManager.zIndex,
+  zIndex: 10,
+  open: state.modalDisplay.modals.manageCoupons
 })
 
 export default connect(mapStateToProps, { manageCouponsHandler, displayCouponDetailsHandler })(ManageCoupons)

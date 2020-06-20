@@ -70,7 +70,9 @@
   height: 150px;
   margin-left: 15px;
   width: 90%;
+  color: var(--tertiary-color);
   margin-bottom: 20px;
   border: 1px solid var(--primary-color);
+  background-color: var(--primary-background-color);
   padding: 5px;
 }

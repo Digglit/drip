@@ -40,8 +40,8 @@ class ItemDrawer extends Component {
   render() {
     return (
       <div>
-        <div className={`menuOverlay ${false ? '' : 'hide'}`} onMouseDown={this.closeDrawerHandler} />
-        <div className='itemDrawerContainer' id='drawerContainer' ref={this.drawerRef} style={{ right: `-${false ? 0 : this.state.drawerPosition}px` }}>
+        <div className={`menuOverlay ${this.props.backdropDisplay ? '' : 'hide'}`} onMouseDown={this.closeDrawerHandler} />
+        <div className='itemDrawerContainer' id='drawerContainer' ref={this.drawerRef} style={{ right: `-${this.props.drawerOpen ? 0 : this.state.drawerPosition}px` }}>
           <CornerCloseButton onClick={this.closeDrawerHandler} />
           <div className='itemDrawerHeaderContainer'>
             <img className='itemDrawerHeaderImage' alt='Food Item' src={this.props.image} />

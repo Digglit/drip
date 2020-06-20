@@ -154,3 +154,34 @@ export const displayHoursOfOperationHandler = (zIndex) => {
     payload: zIndex
   }
 }
+
+export const displayCheckoutHandler = (zIndex) => {
+  return {
+    type: 'DISPLAY_CHECKOUT',
+    payload: zIndex
+  }
+}
+
+export const placeOrderHandler = (menuType) => {
+  if (!menuType) {
+    return {
+      type: 'MODIFY_MENU'
+    }
+  } else {
+    return {
+      type: 'PLACE_ORDER'
+    }
+  }
+}
+
+export const displayManageCoupons = () => {
+  return {
+    type: 'MANAGE_COUPONS',
+  }
+}
+
+export const displaySpecialDetails = () => {
+  return {
+    type: 'SPECIAL_DETAILS'
+  }
+}
