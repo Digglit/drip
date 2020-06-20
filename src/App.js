@@ -46,32 +46,29 @@ function App(props) {
                       <DriverDataPage />
         }
       </AnimatePresence>
-      <AnimatePresence>
-        {props.placingOrder ? <CreateOrderDrawer key='afh9aswfh0jiw3ef0' /> : <ItemDrawer key='sdfh0j30rjiwf0' />}
-        {props.modal.manageCoupons ? <ManageCoupons key='098ufa0j2043t9j' /> : null}
-        {props.modal.viewPreviousOrders ? <ViewPreviousOrders key='fsjh0h0923jrf0k3f' /> : null}
-        {props.modal.addNewDriver ? <AddNewDriver key='oaijsdfgokjapg' /> : null}
-        {props.modal.confirmActionModule ? <ConfirmActionModule key='kjdshafgoiejrgoerg' /> : null}
-        {props.modal.itemModifiers ? <ItemModifiers key='sjdhfgoiwjeogwg' /> : null}
-        {props.modal.driverDetails ? <DriverDetails key='a0eijfg90j234fm4g' /> : null}
-        {props.modal.editModifiers ? <EditModifiers key='wsf0j9302porkookw4g' /> : null}
-        {props.modal.couponDetails ? <CouponDetails key='oifjmk3mfkpp2j3f-0' /> : null}
-        {props.modal.composeEmail ? <ComposeEmail key='fm230pjkmf0-3gmog' /> : null}
-        {props.modal.emailDetails ? <EmailDetails key='weorfjk0wfj03rf' /> : null}
-        {props.modal.menuItemBreakdown ? <MenuItemBreakdown key='o3jromwflkmwlkgf' /> : null}
-        {props.modal.customerDetails ? <CustomerDetails key='sdofknmo2k3mtg0g' /> : null}
-        {props.modal.customTransaction ? <CustomTransaction key='weoi0fj023jf0jf' /> : null}
-        {props.modal.hoursOfOperation ? <HoursOfOperation key='oisjgf902j3gmm4g' /> : null}
-        {props.modal.manageSpecials ? <ManageSpecials key='f9i2hj3ri0jwefmoskfg' /> : null}
-        {props.modal.specialDetails ? <SpecialDetails key='fiowjpo1k3mgpoj4g90' /> : null}
-      </AnimatePresence>
+      {props.placingOrder ? <CreateOrderDrawer key='afh9aswfh0jiw3ef0' /> : <ItemDrawer key='sdfh0j30rjiwf0' />}
+      <ManageCoupons key='098ufa0j2043t9j' />
+      <ViewPreviousOrders key='fsjh0h0923jrf0k3f' />
+      <AddNewDriver key='oaijsdfgokjapg' />
+      <ConfirmActionModule key='kjdshafgoiejrgoerg' />
+      <ItemModifiers key='sjdhfgoiwjeogwg' />
+      <DriverDetails key='a0eijfg90j234fm4g' />
+      <EditModifiers key='wsf0j9302porkookw4g' />
+      <CouponDetails key='oifjmk3mfkpp2j3f-0' />
+      <ComposeEmail key='fm230pjkmf0-3gmog' />
+      <EmailDetails key='weorfjk0wfj03rf' />
+      <MenuItemBreakdown key='o3jromwflkmwlkgf' />
+      <CustomerDetails key='sdofknmo2k3mtg0g' />
+      <CustomTransaction key='weoi0fj023jf0jf' />
+      <HoursOfOperation key='oisjgf902j3gmm4g' />
+      <ManageSpecials key='f9i2hj3ri0jwefmoskfg' />
+      <SpecialDetails key='fiowjpo1k3mgpoj4g90' />
     </div>
   );
 }
 
 const mapStateToProps = (state) => ({
-  placingOrder: state.menuPageState,
-  modal: state.modalDisplay.modals
+  placingOrder: state.menuPageState
 })
 
 export default connect(mapStateToProps, null)(App);

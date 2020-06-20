@@ -12,8 +12,7 @@ import {
   displayCustomTransactionHandler,
   displayHoursOfOperationHandler,
   manageSpecialsHandler,
-  placeOrderHandler,
-  displayManageCoupons
+  placeOrderHandler
 } from '../../../actions'
 import CornerCloseButton from '../../global/cornerCloseButton/cornerCloseButton'
 import ToolsContainer from './subcomponents/toolsContainer/toolsContainer'
@@ -193,7 +192,7 @@ class ToolsPage extends Component {
             height={''}
             content={
               <div style={{ display: 'grid', paddingBottom: '10px' }} className={this.state.expandedArray[4] ? '' : 'hiddenContent'}>
-                <button className='secondaryButton toolsPageButton' onMouseDown={this.props.displayManageCoupons}>Manage Coupons</button>
+                <button className='secondaryButton toolsPageButton' onMouseDown={() => this.props.manageCouponsHandler(10)}>Manage Coupons</button>
                 <button className='secondaryButton toolsPageButton' onMouseDown={() => this.props.manageSpecialsHandler(10)}>Manage Specials</button>
               </div>
             }
@@ -232,6 +231,5 @@ export default connect(mapStateToProps, {
   displayCustomTransactionHandler,
   displayHoursOfOperationHandler,
   manageSpecialsHandler,
-  placeOrderHandler,
-  displayManageCoupons
+  placeOrderHandler
 })(ToolsPage)

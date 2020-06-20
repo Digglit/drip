@@ -20,7 +20,6 @@ import specialManager from './specialManager'
 import specialDetails from './specialDetails'
 import orderCheckout from './orderCheckout'
 import menuPageState from './menuPageState'
-import modalDisplay from './modalDisplay'
 
 const rootReducer = combineReducers({
   pageDisplayed: pageDisplayer,
@@ -44,7 +43,6 @@ const rootReducer = combineReducers({
   specialDetails,
   orderCheckout,
   menuPageState,
-  modalDisplay
 })
 
 export default rootReducer

@@ -22,7 +22,7 @@ export const modalTransition = {
     opacity: 0,
   },
   initial: {
-    opacity: 1,
+    opacity: 0,
   }
 }
 
