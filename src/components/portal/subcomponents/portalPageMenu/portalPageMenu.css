@@ -1,0 +1,37 @@
+
+
+.portalPageMenuContainer {
+  height: 100%;
+  width: calc(100vw - 300px);
+  position: relative;
+  overflow: hidden;
+}
+
+.portalMenuContainer {
+  display: grid;
+  grid-template-rows: repeat(var(--menu-rows), 285px);
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  position: relative;
+  background-color: var(--secondary-background-color);
+  overflow-x: hidden;
+}
+
+.portalMenuFooterContainer {
+  position: sticky;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+  background-color: var(--primary-background-color);
+  display: grid;
+  border-top: 1px solid var(--primary-color);
+}
+
+.portalMenuFooterButton {
+  align-self: center;
+  justify-self: end;
+  margin-right: 10px;
+  width: 200px;
+  height: 75%;
+}

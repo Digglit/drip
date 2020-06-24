@@ -9,6 +9,7 @@ import { pageTransition, transitionDuration } from '../../global/pageTransition'
 import CornerCloseButton from '../../global/cornerCloseButton/cornerCloseButton'
 import CornerCheckoutButton from '../../global/cornerCheckoutButton/cornerCheckoutButton'
 import CheckoutPage from './subcomponents/checkoutPage/checkoutPage'
+import MenuItem from './menuSection/subcomponents/menuItem/menuItem'
 
 class MenuPage extends Component {
   backdropClickHandler = () => {
@@ -43,10 +44,10 @@ class MenuPage extends Component {
                 <CornerCheckoutButton onClick={() => this.props.changePage(3)} /> :
                 <CornerCloseButton onClick={() => this.props.changePage(0)} />
               }
-              <MenuSection />
-              <MenuSection />
-              <MenuSection />
-              <MenuSection />
+              <MenuSection MenuItem={MenuItem} />
+              <MenuSection MenuItem={MenuItem} />
+              <MenuSection MenuItem={MenuItem} />
+              <MenuSection MenuItem={MenuItem} />
               <MenuFooter />
             </motion.div>
           }

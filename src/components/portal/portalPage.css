@@ -1,0 +1,100 @@
+
+/* Development Preferred Dark Scheme */
+
+/* :root {
+  --primary-color: rgb(22, 135, 143);
+  --secondary-color: #FF6B6B;
+  --tertiary-color: rgb(255, 255, 255);
+  --primary-background-color: rgb(35, 35, 35);
+  --secondary-background-color: rgb(20, 20, 20);
+  --header-font-color: rgb(255, 255, 255);
+  --backdrop-overlay-color: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+} */
+
+/* Main Color Scheme */
+
+:root {
+  --primary-color: #BE2525;
+  --secondary-color: #FF6B6B;
+  --tertiary-color: black;
+  --primary-background-color: white;
+  --header-font-color: white;
+  --secondary-background-color: rgb(235, 235, 235);
+  --backdrop-overlay-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+
+/* 
+rgb(190, 37, 70) -- dark pink
+rgb(22, 135, 143) -- turquoise 
+*/
+
+h1, h2, h3, h4 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.25em;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+p {
+  color: var(--tertiary-color);
+}
+
+button {
+  cursor: pointer;
+  font-size: 16px;
+  transition-duration: 150ms;
+}
+
+button:focus {
+  outline: none;
+}
+
+.portalPageContainer {
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 80px auto;
+  grid-template-columns: 300px auto;
+  height: 100vh;
+  background-color: var(--secondary-background-color);
+}
+
+.primaryButton, .secondaryButton:hover {
+  background-color: var(--primary-color);
+  color: white;
+  border: 1px solid var(--primary-color);
+}
+
+.secondaryButton {
+  background-color: var(--primary-background-color);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.shrunkenContainer {
+  transform: translate(-50%, -50%) scale(.95);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.portalPageBackdrop {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--backdrop-overlay-color);
+  transition-duration: 250ms;
+  cursor: pointer;
+}

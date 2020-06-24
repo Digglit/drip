@@ -28,7 +28,7 @@ class DriverDetails extends Component {
       <div>
         <div className={this.props.open ? 'menuOverlay' : 'menuOverlay hide'} onMouseDown={() => this.props.displayDriverDetailsHandler(0)} style={{ zIndex: this.props.zIndex }} />
         <div className={`driverDetailsContainer ${this.props.open ? '' : 'shrunkenContainer'}`} style={{ zIndex: this.props.zIndex + 1 }}>
-          <ModuleHeader header={`${this.props.driverDetails.name}'s Driver Details`} closeButton={() => this.props.displayDriverDetailsHandler(0)} />
+          <ModuleHeader header={`${this.props.driverDetails.name}'s Driver Details`} closeButton={() => this.props.displayDriverDetailsHandler(0, 0)} />
           <div className='driverDetailsBodyContainer'>
             <h3 className='driverDetailsHeaderText'>Delivery Information</h3>
             <p className='driverDetailsBodyText'>Deliveries: {this.props.driverDetails.deliveries}</p>
@@ -48,7 +48,7 @@ class DriverDetails extends Component {
             <button className='primaryButton modifyDriverButton' onMouseDown={this.removeDriverHandler}>Remove Driver</button>
           </div>
           <div className='driverDetailsFooterContainer'>
-            <button className='primaryButton driverDetailsFooterButton' onMouseDown={() => this.props.displayDriverDetailsHandler(0)}>Close</button>
+            <button className='primaryButton driverDetailsFooterButton' onMouseDown={() => this.props.displayDriverDetailsHandler(0, 0)}>Close</button>
           </div>
         </div>
       </div>

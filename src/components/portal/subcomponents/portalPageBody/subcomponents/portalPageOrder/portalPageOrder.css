@@ -1,0 +1,82 @@
+.portalPageOrderContainer {
+  display: inline-grid;
+  height: calc(100% - 20px);
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 300px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin-left: 10px;
+  grid-template-rows: 35px 75px calc(100% - 170px) 60px;
+}
+
+.portalPageOrderTitleContainer {
+  height: 35px;
+  width: 100%;
+  background-color: var(--primary-color);
+  display: grid;
+  align-items: center;
+}
+
+.portalPageOrderTitleText {
+  margin: 0px;
+  color: var(--header-font-color);
+  margin-left: 10px;
+}
+
+.portalPageOrderHeaderContainer {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  height: 75px;
+  grid-template-rows: 40px 35px;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.portalPageOrderText {
+  margin: 0px;
+  font-size: 18px;
+}
+
+.portalPageOrderTopText {
+  border-bottom: 1px solid var(--primary-color);
+  padding: 0px 15px;
+  padding-bottom: 5px;
+  margin-top: 10px;
+}
+
+.portalPageOrderBodyContainer {
+  overflow: hidden;
+  display: grid;
+
+}
+
+.portalPageOrderBodyItem {
+  width: 90%;
+  position: relative;
+  left: 50%;
+  max-height: 51px;
+  transform: translate(-50%, 0%);
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.portalPageOrderItemText {
+  font-size: 18px;
+  margin: 12px 0px;
+}
+
+.portalPageOrderFooterContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  border-top: 1px solid var(--primary-color);
+}
+
+.portalPageOrderFooterButton {
+  height: 80%;
+  width: 95%;
+  font-size: 15px;
+}

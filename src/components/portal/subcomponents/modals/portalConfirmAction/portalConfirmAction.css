@@ -1,0 +1,51 @@
+
+
+.portalConfirmActionContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 200px;
+  width: 400px;
+  background-color: var(--primary-background-color);
+  border: 1px solid var(--primary-color);
+  z-index: 3;
+  display: grid;
+  grid-template-rows: 46px auto 70px;
+}
+
+.confirmActionModuleHeaderContainer {
+  margin-left: 10px;
+}
+
+.confirmActionModuleHeaderText {
+  color: var(--primary-color);
+  margin-top: 13px;
+  border-bottom: 1px solid var(--primary-color);
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+.confirmActionModuleBodyText {
+  margin-left: 10px;
+}
+
+.confirmActionModuleButtonsContainer {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  justify-items: center;
+}
+
+.confirmActionModuleButton {
+  height: 70%;
+  width: 90%;
+}
+
+.confirmActionModuleSoloButton {
+  height: 70%;
+  width: 90%;
+  grid-column: 2;
+}

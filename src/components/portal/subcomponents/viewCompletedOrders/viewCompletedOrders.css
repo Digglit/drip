@@ -1,0 +1,63 @@
+
+
+.viewCompletedOrdersPageContainer {
+  display: grid;
+  grid-template-rows: 35% auto 75px;
+  background-color: var(--primary-background-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.viewCompletedOrdersHeaderContainer {
+
+}
+
+.viewCompletedOrdersOrdersContainer {
+  overflow-y: auto;
+  border-top: 1px solid var(--primary-color);
+}
+
+.viewCompletedOrdersOrder {
+  display: grid;
+  height: 75px;
+  width: 100%;
+  grid-template-columns: 25% 25% 25% 25%;
+  justify-items: start;
+  align-items: center;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.viewCompletedOrdersOrderText {
+  margin: 0px;
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.viewCompletedOrderOrderButton {
+  height: 80%;
+  width: 200px;
+  justify-self: end;
+  margin-right: 5px;
+}
+
+.viewCompletedOrdersFooterContainer {
+  background-color: var(--primary-background-color);
+  border-top: 1px solid var(--primary-color);
+  display: grid;
+  align-items: center;
+  grid-template-columns: 50% 50%;
+}
+
+.viewCompletedOrdersFooterText {
+  justify-self: start;
+  margin: 0px;
+  margin-left: 20px;
+  font-size: 24px;
+  color: var(--primary-color);
+}
+
+.viewCompletedOrdersFooterButton {
+  justify-self: end;
+  height: 80%;
+  width: 250px;
+  margin-right: 10px;
+}

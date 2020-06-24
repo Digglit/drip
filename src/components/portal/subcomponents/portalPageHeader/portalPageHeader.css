@@ -1,0 +1,35 @@
+
+
+.portalPageHeaderContainer {
+  height: 80px;
+  width: 100%;
+  /* border-bottom: 1px solid var(--primary-color); */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  display: grid;
+  grid-template-columns: 420px 420px auto;
+  background-color: var(--primary-background-color);
+  grid-column-start: 1;
+  grid-column-end: 3;
+  z-index: 1;
+}
+
+.portalPageTimeContainer {
+  display: grid;
+  grid-template-columns: 220px auto;
+  align-items: center;
+  justify-items: start;
+}
+
+.portalPageHeaderText {
+  justify-self: end;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.portalPageHeaderButton {
+  align-self: center;
+  justify-self: end;
+  height: 50px;
+  width: 200px;
+  margin-right: 10px;
+}

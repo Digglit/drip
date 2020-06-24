@@ -1,0 +1,19 @@
+
+
+.portalPageBodyContainer {
+  display: grid;
+  grid-template-rows: 50% 50%;
+}
+
+.portalPageBodyLogoImage {
+  position: absolute;
+  height: 250px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.35;
+}
+
+.portalPageBodyRowContainer {
+  display: inline;
+}

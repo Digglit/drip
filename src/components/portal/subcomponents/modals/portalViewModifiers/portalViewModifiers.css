@@ -1,0 +1,45 @@
+
+
+.portalViewModifiersContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 70vh;
+  max-height: 500px;
+  width: 700px;
+  background-color: var(--primary-background-color);
+  display: grid;
+  grid-template-rows: 70px auto 75px;
+}
+
+.portalViewModifiersBodyContainer {
+  overflow-y: auto;
+}
+
+.portalViewModifiersOption {
+  display: grid;
+  grid-template-columns: 85% 15%;
+  align-items: center;
+  height: 65px;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.portalViewModifiersOptionText {
+  margin: 0px;
+  margin-left: 15px;
+  font-size: 20px;
+}
+
+.portalViewModifiersFooterContainer {
+  display: grid;
+  align-items: center;
+  justify-items: end;
+  border-top: 1px solid var(--primary-color);
+}
+
+.portalViewModifiersFooterButton {
+  margin-right: 10px;
+  height: 70%;
+  width: 200px;
+}

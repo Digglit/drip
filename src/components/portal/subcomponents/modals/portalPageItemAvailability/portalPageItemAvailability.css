@@ -1,0 +1,100 @@
+
+
+.portalPageItemAvailabilityContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 600px;
+  width: 600px;
+  background-color: var(--primary-background-color);
+  display: grid;
+  grid-template-rows: 150px 80px auto 75px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.portalPageItemAvailabilityHeaderContainer {
+  height: 150px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.portalPageItemAvailabilityHeaderImage {
+  height: 225%;
+  width: 100%;
+  position: absolute;
+  top: -50%;
+}
+
+.portalPageItemAvailabilityHeaderTextContainer {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  width: 100%;
+}
+
+.portalPageItemAvailabilityHeaderText {
+  margin: 5px 10px;
+  color: var(--header-font-color);
+}
+
+.portalPageItemAvailabilityBodyContainerOne {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.portalPageItemAvailabilityBodyContainerTwo {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.portalPageItemAvailabilityText {
+  display: inline-block;
+  margin: 0px;
+  margin-right: 10px;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+.portalPageItemAvailabilityModifiersContainer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding-right: 15px;
+  margin: 10px 0px;
+}
+
+.portalPageItemModifierTitle {
+  margin-top: 20px;
+  margin-left: 10px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.portalPageItemAvailabilitySwitchContainer {
+  display: grid;
+  align-items: center;
+  justify-items: start;
+  height: 50px;
+  grid-template-columns: auto 75px;
+}
+
+.portalPageItemAvailabilityModifierText {
+  margin-left: 15px;
+}
+
+.portalPageItemAvailabilityFooter {
+  border-top: 1px solid var(--primary-color);
+  display: grid;
+  justify-items: end;
+  align-items: center;
+}
+
+.portalPageItemAvailabilityFooterButton {
+  height: 70%;
+  width: 200px;
+  margin-right: 10px;
+}

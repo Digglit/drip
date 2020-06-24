@@ -25,7 +25,7 @@ export default class DropDown extends Component {
 
   render() {
     return (
-      <div className={`dropDownContainer ${this.props.customClass}`} style={{ width: `${this.props.width}px` }} onMouseDown={() => this.setState({ expanded: !this.state.expanded })} onBlur={this.state.expanded ? () => this.setState({ expanded: !this.state.expanded }) : null}>
+      <div className={`dropDownContainer ${this.props.customClass ? this.props.customClass : ''}`} style={{ width: `${this.props.width}px` }} onMouseDown={() => this.setState({ expanded: !this.state.expanded })} onBlur={this.state.expanded ? () => this.setState({ expanded: !this.state.expanded }) : null}>
         <div className='dropDownBody'>
           <p className='dropDownBodyText'>{this.props.items[this.props.itemSelected]}</p>
         </div>
