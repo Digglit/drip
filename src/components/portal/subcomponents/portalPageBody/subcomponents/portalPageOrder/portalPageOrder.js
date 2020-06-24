@@ -26,7 +26,7 @@ function PortalPageOrder(props) {
       </div>
       <div className='portalPageOrderBodyContainer'>
         {props.items.map((value, index) => (
-          <div className='portalPageOrderBodyItem' key={index}>
+          <div className='portalPageOrderBodyItem' key={index} style={{top: `${index * 50}px`}}>
             <p className='portalPageOrderItemText'>{value}</p>
           </div>
         ))}

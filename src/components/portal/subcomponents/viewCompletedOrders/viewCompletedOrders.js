@@ -12,14 +12,28 @@ class ViewCompletedOrders extends Component {
       <motion.div className='viewCompletedOrdersPageContainer' initial={pageTransition.initial} animate={pageTransition.in} exit={pageTransition.out} transition={{ duration: transitionDuration }}>
         <CornerCloseButton onClick={() => this.props.changePage(0)} />
         <div className='viewCompletedOrdersHeaderContainer'>
-
+          <div>
+            <h2 className='viewCompletedOrdersHeader'>Today's Tips</h2>
+            <p className='viewCompletedOrdersHeaderText'>Pickup: $4.80</p>
+            <p className='viewCompletedOrdersHeaderText'>Delivery: $4.80</p>
+            <h2 className='viewCompletedOrdersHeader' style={{position: 'absolute', bottom: 15,}}>Today's Tips</h2>
+          </div>
+          <div className='viewCompletedOrdersGraph' />
         </div>
         <div className='viewCompletedOrdersOrdersContainer'>
+          <div className='viewCompletedOrdersOrdersHeader'>
+            <p className='viewCompletedOrdersOrdersHeaderText'>Name</p>
+            <p className='viewCompletedOrdersOrdersHeaderText'>Order Number</p>
+            <p className='viewCompletedOrdersOrdersHeaderText'>Order Time</p>
+            <p className='viewCompletedOrdersOrdersHeaderText' style={{justifySelf: 'center', marginLeft: 0}}>Customer Details</p>
+          </div>
+          <div className='viewCompletedOrdersOrdersBody'>
           <div className='viewCompletedOrdersOrder'>
             <p className='viewCompletedOrdersOrderText'>Julia Michaels</p>
-            <p className='viewCompletedOrdersOrderText'>Order Number: 100385</p>
-            <p className='viewCompletedOrdersOrderText'>Order Time: 7:45 PM</p>
+            <p className='viewCompletedOrdersOrderText'>100385</p>
+            <p className='viewCompletedOrdersOrderText'>7:45 PM</p>
             <button className='viewCompletedOrderOrderButton secondaryButton'>View Customer</button>
+          </div>
           </div>
         </div>
         <div className='viewCompletedOrdersFooterContainer'>
@@ -34,9 +48,5 @@ class ViewCompletedOrders extends Component {
 const mapStateToProps = (state) => ({
 
 })
-
-const mapDispatchToProps = {
-
-}
 
 export default connect(mapStateToProps, { changePage })(ViewCompletedOrders)

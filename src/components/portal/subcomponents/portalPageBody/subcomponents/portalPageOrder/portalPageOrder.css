@@ -50,14 +50,14 @@
 .portalPageOrderBodyContainer {
   overflow: hidden;
   display: grid;
-
+  position: relative;
 }
 
 .portalPageOrderBodyItem {
   width: 90%;
-  position: relative;
+  position: absolute;
   left: 50%;
-  max-height: 51px;
+  height: 50px;
   transform: translate(-50%, 0%);
   border-bottom: 1px solid var(--primary-color);
 }

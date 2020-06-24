@@ -10,7 +10,7 @@
   background-color: var(--primary-background-color);
   grid-column-start: 1;
   grid-column-end: 3;
-  z-index: 1;
+  z-index: 2;
 }
 
 .portalPageTimeContainer {
