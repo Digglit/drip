@@ -13,6 +13,8 @@ import PortalDriverDetails from './subcomponents/modals/portalDriverDetails/port
 import ViewCompletedOrders from './subcomponents/viewCompletedOrders/viewCompletedOrders'
 import PortalConfirmAction from './subcomponents/modals/portalConfirmAction/portalConfirmAction'
 import PortalViewModifiers from './subcomponents/modals/portalViewModifiers/portalViewModifiers'
+import ViewOrderDetails from './subcomponents/modals/viewOrderDetails/viewOrderDetails'
+import CreateCustomTransaction from './subcomponents/modals/createCustomTransaction/createCustomTransaction'
 
 class PortalPage extends Component {
   render() {
@@ -39,6 +41,12 @@ class PortalPage extends Component {
         </AnimatePresence>
         <AnimatePresence>
           {this.props.modals.viewModifiers ? <PortalViewModifiers zIndex={11} key='awef8h09834tj' /> : null}
+        </AnimatePresence>
+        <AnimatePresence>
+          {this.props.modals.orderDetails ? <ViewOrderDetails zIndex={11} key='9fw8hj290j4t30g' /> : null}
+        </AnimatePresence>
+        <AnimatePresence>
+          {this.props.modals.customTransaction ? <CreateCustomTransaction zIndex={11} key='w0ef90uf90jwe0fjh' /> : null}
         </AnimatePresence>
       </div>
     )

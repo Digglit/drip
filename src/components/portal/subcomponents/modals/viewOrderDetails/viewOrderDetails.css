@@ -1,0 +1,124 @@
+
+
+.portalViewOrderDetailsContainer {
+  height: 550px;
+  width: 850px;
+  background-color: var(--primary-background-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-rows: 80px auto 75px;
+}
+
+.portalViewOrderDetailsHeaderContainer {
+  background-color: var(--primary-color);
+  height: 80px;
+  display: grid;
+  grid-template-columns: auto 35% 27.5%;
+  position: relative;
+}
+
+.portalViewOrderDetailsHeaderTextContainer {
+  display: grid;
+  align-items: center;
+  margin: 10px 0px 10px 10px;
+  border-right: 1px solid var(--header-font-color);
+}
+
+.portalViewOrderDetailsHeaderText {
+  margin: 0px;
+  font-size: 18px;
+  color: var(--header-font-color);
+}
+
+.portalViewOrderDetailsHeaderCloseButton {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0%, -50%);
+  height: 100%;
+  width: 50px;
+  font-size: 32px;
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--header-font-color);
+  border: none;
+}
+
+.portalViewOrderDetailsBodyContainer {
+  overflow-y: auto;
+}
+
+.portalViewOrderDetailsItemContainer {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  border-bottom: 1px solid var(--primary-color);
+  min-height: 75px;
+}
+
+.portalViewOrderDetailsItemContentsContainer {
+  display: grid;
+  align-items: center;
+}
+
+.portalViewOrderDetailsItemContentsText {
+  margin: 0px;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.portalViewOrderDetailsItemContentsDescriptionText {
+  margin: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+.portalViewOrderDetailsItemNotesContainer {
+  display: grid;
+  grid-template-rows: 22px auto;
+  border-left: 1px solid var(--primary-color);
+  overflow: hidden;
+}
+
+.portalViewOrderDetailsItemNotesHeaderContainer {
+  background-color: var(--primary-color);
+}
+
+.portalViewOrderDetailsItemNotesHeaderText {
+  margin: 0px;
+  color: var(--header-font-color);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.portalViewOrderDetailsItemNotesText {
+  margin-left: 10px;
+}
+
+.portalViewOrderDetailsFooterContainer {
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+  align-items: center;
+  border-top: 1px solid var(--primary-color);
+}
+
+.portalViewOrderDetailsFooterDropdownContainer {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-items: center;
+  justify-self: center;
+  width: 80%;
+}
+
+.portalViewOrderDetailsFooterText {
+  margin: 0px;
+}
+
+.portalViewOrderDetailsFooterButton {
+  height: 70%;
+  width: 95%;
+  margin-right: 10px;
+}

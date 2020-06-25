@@ -6,7 +6,7 @@
   transform: translate(0, -50%);
   width: 300px;
   overflow: hidden;
-  background-color: white;
+  background-color: var(--primary-background-color);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   margin-left: 10px;
   grid-template-rows: 35px 75px calc(100% - 170px) 60px;

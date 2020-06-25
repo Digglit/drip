@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import './portalToolsPage.css'
 import { motion } from 'framer-motion'
 import { pageTransition, transitionDuration } from '../../../global/pageTransition'
-import { changePage, displayDriverDetails, createOrderHandler } from '../../../../actions/portal'
+import { changePage, displayDriverDetails, createOrderHandler, displayCustomTransaction } from '../../../../actions/portal'
 import ToolsContainer from '../../../admin/toolsPage/subcomponents/toolsContainer/toolsContainer'
 import Switch from '../../../global/switch/switch'
 import CornerCloseButton from '../../../global/cornerCloseButton/cornerCloseButton'
@@ -14,7 +14,12 @@ class PortalToolsPage extends Component {
     this.state = {
       deliveryEnabled: true,
       pickupEnabled: true,
-      expandedArray: [true, true, true]
+      expandedArray: [true, true, true],
+      currentColor: 0,
+      colors: ['rgb(22, 135, 143)', 'rgb(190, 37, 70)', 'rgb(66, 87, 32)', 'rgb(92, 21, 133)', 'rgb(2, 177, 129)', 'rgb(1, 32, 77)', 'rgb(167, 67, 0)', 'rgb(190, 37, 37)', 'rgb(202, 93, 29)'],
+      currentMode: true,
+      lightMode: ['rgb(0, 0, 0)', 'rgb(255, 255, 255)', 'rgb(235, 235, 235)', 'rgba(0, 0, 0, 0.5)'],
+      darkMode: ['rgb(255, 255, 255)', 'rgb(35, 35, 35)', 'rgb(20, 20, 20)', 'rgba(0, 0, 0, 0.5)'],
     }
   }
 
@@ -27,6 +32,30 @@ class PortalToolsPage extends Component {
   placeOrderHandler = () => {
     this.props.createOrderHandler()
     this.props.changePage(1)
+  }
+
+  changeColorHandler = () => {
+    let colorAmount = this.state.colors.length - 1
+    document.documentElement.style.setProperty('--primary-color', this.state.colors[this.state.currentColor])
+    if (this.state.currentColor === colorAmount) {
+      this.setState({ currentColor: 0 })
+    } else {
+      this.setState({ currentColor: this.state.currentColor + 1 })
+    }
+  }
+
+  darkModeHandler = () => {
+    let colorScheme
+    if (this.state.currentMode) {
+      colorScheme = [...this.state.darkMode]
+    } else {
+      colorScheme = [...this.state.lightMode]
+    }
+    document.documentElement.style.setProperty('--tertiary-color', colorScheme[0])
+    document.documentElement.style.setProperty('--primary-background-color', colorScheme[1])
+    document.documentElement.style.setProperty('--secondary-background-color', colorScheme[2])
+    document.documentElement.style.setProperty('--backdrop-overlay-color', colorScheme[3])
+    this.setState({ currentMode: !this.state.currentMode })
   }
 
   render() {
@@ -62,7 +91,12 @@ class PortalToolsPage extends Component {
           content={
             <div className={this.state.expandedArray[1] ? '' : 'hiddenContent'} style={{ paddingBottom: '10px' }}>
               <button className='secondaryButton toolsPageButton' onMouseDown={this.placeOrderHandler}>Create Order</button>
-              <button className='secondaryButton toolsPageButton' onMouseDown={() => this.props.displayCustomTransactionHandler(10)}>Custom Transaction</button>
+              <button className='secondaryButton toolsPageButton' onMouseDown={this.props.displayCustomTransaction}>Custom Transaction</button>
+              <button className='secondaryButton toolsPageButton' onMouseDown={this.changeColorHandler}>Change Color</button>
+              <div className='toolsPageSwitchContainer'>
+                <h3 className='toolsPageText'>Mode:</h3>
+                <Switch additionalStyles={{ justifySelf: 'end' }} onSwitch={this.darkModeHandler} switched={!this.state.currentMode} />
+              </div>
             </div>
           }
         />
@@ -98,4 +132,4 @@ const mapStateToProps = (state) => ({
   drivers: state.driverDetails.drivers
 })
 
-export default connect(mapStateToProps, { changePage, displayDriverDetails, createOrderHandler })(PortalToolsPage)
+export default connect(mapStateToProps, { changePage, displayDriverDetails, createOrderHandler, displayCustomTransaction })(PortalToolsPage)

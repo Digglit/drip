@@ -1,7 +1,7 @@
 
 /* Development Preferred Dark Scheme */
 
-/* :root {
+:root {
   --primary-color: rgb(22, 135, 143);
   --secondary-color: #FF6B6B;
   --tertiary-color: rgb(255, 255, 255);
@@ -10,11 +10,11 @@
   --header-font-color: rgb(255, 255, 255);
   --backdrop-overlay-color: rgba(0, 0, 0, 0.6);
   overflow: hidden;
-} */
+}
 
 /* Main Color Scheme */
 
-:root {
+/* :root {
   --primary-color: #BE2525;
   --secondary-color: #FF6B6B;
   --tertiary-color: black;
@@ -23,7 +23,7 @@
   --secondary-background-color: rgb(235, 235, 235);
   --backdrop-overlay-color: rgba(0, 0, 0, 0.5);
   overflow: hidden;
-}
+} */
 
 
 /* 

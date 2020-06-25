@@ -44,3 +44,15 @@ export const checkoutHandler = () => {
     type: 'DISPLAY_CHECKOUT'
   }
 }
+
+export const displayOrderDetails = () => {
+  return {
+    type: 'DISPLAY_ORDER_DETAILS'
+  }
+}
+
+export const displayCustomTransaction = () => {
+  return {
+    type: 'DISPLAY_CUSTOM_TRANSACTION'
+  }
+}

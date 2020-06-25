@@ -1,0 +1,94 @@
+
+
+
+.portalCustomTransactionContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 550px;
+  width: 800px;
+  background-color: var(--primary-background-color);
+  display: grid;
+  grid-template-rows: 70px auto;
+}
+
+.portalCustomTransactionBody {
+  display: grid;
+  grid-template-columns: 55% 45%;
+}
+
+.portalCustomTransactionInfoContainer {
+  display: grid;
+  grid-template-rows: 80px auto 75px;
+}
+
+.portalCustomTransactionAmountContainer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  width: 80%;
+  justify-self: center;
+}
+
+.portalCustomTransactionInfoText {
+
+}
+
+.portalCustomTransactionCardContainer {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 50% 50%;
+  height: 60%;
+  width: 80%;
+  justify-self: center;
+  align-self: center;
+}
+
+.portalCustomTransactionCardInputContainer {
+  width: calc(100% - 20px);
+  justify-self: start;
+}
+
+.portalCustomTransactionCardInput {
+  width: 100%;
+}
+
+.portalCustomTransactionButtonContainer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  justify-items: center;
+}
+
+.portalCustomTransactionButton {
+  height: 80%;
+  width: 95%;
+}
+
+.portalCustomTransactionKeypadContainer {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  height: 100%;
+  width: 100%;
+}
+
+.portalCustomTransactionKeypadKey {
+  border-left: 1px solid var(--primary-color);
+  border-top: 1px solid var(--primary-color);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  cursor: pointer;
+  transition-duration: 200ms;
+}
+
+.portalCustomTransactionKeypadKey:hover {
+  background-color: var(--primary-color)
+}
+
+.portalCustomTransactionKeypadText {
+  margin: 0px;
+  font-size: 32px;
+}

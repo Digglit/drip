@@ -1,7 +1,7 @@
 import React from 'react'
 import './portalPageOrder.css'
 import { connect } from 'react-redux'
-import { displayConfirmAction } from '../../../../../../actions/portal'
+import { displayConfirmAction, displayOrderDetails } from '../../../../../../actions/portal'
 
 function PortalPageOrder(props) {
 
@@ -9,7 +9,7 @@ function PortalPageOrder(props) {
     let confirmation = {
       header: 'Confirm',
       body: 'Move order for Maria Meyer to working?',
-      confirmFunction: null,
+      confirmFunction: props.displayConfirmAction,
       confirmAction: true,
     }
     props.displayConfirmAction(confirmation)
@@ -26,17 +26,17 @@ function PortalPageOrder(props) {
       </div>
       <div className='portalPageOrderBodyContainer'>
         {props.items.map((value, index) => (
-          <div className='portalPageOrderBodyItem' key={index} style={{top: `${index * 50}px`}}>
+          <div className='portalPageOrderBodyItem' key={index} style={{ top: `${index * 50}px` }}>
             <p className='portalPageOrderItemText'>{value}</p>
           </div>
         ))}
       </div>
       <div className='portalPageOrderFooterContainer'>
-        <button className='portalPageOrderFooterButton secondaryButton'>View Details</button>
+        <button className='portalPageOrderFooterButton secondaryButton' onMouseDown={props.displayOrderDetails}>View Details</button>
         <button className='portalPageOrderFooterButton primaryButton' onMouseDown={confirmActionHandler}>Move To Working</button>
       </div>
     </div>
   )
 }
 
-export default connect(null, { displayConfirmAction })(PortalPageOrder)
+export default connect(null, { displayConfirmAction, displayOrderDetails })(PortalPageOrder)
