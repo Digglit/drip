@@ -10,38 +10,6 @@ class CustomerDetails extends Component {
   constructor() {
     super()
     this.state = {
-      orderData: [
-        {
-          date: '3/22/20',
-          orderNumber: 100364,
-          orderTotal: 36,
-          tip: 3.3,
-          time: '5:36 PM',
-          orderQuantity: 4,
-          orderType: 'Pickup',
-          address: '1270 Angel View Drive',
-          orderItems: [
-            {
-              itemName: 'Fries',
-              itemSection: 'Appetizers',
-              itemDescription: 'Traditional',
-              itemQuantity: 2
-            },
-            {
-              itemName: 'Wings',
-              itemSection: 'Appetizers',
-              itemDescription: 'Garlic Parmesan, Ranch, 12-Piece',
-              itemQuantity: 1
-            },
-            {
-              itemName: 'Chicken Parmesan',
-              itemSection: 'Subs & Wraps',
-              itemDescription: 'Sub, 6-inch, fries',
-              itemQuantity: 1
-            }
-          ]
-        },
-      ],
       orderHistory: [
         {
           itemName: 'Fries',

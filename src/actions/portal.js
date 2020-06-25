@@ -56,3 +56,10 @@ export const displayCustomTransaction = () => {
     type: 'DISPLAY_CUSTOM_TRANSACTION'
   }
 }
+
+export const displayCustomerDetails = (values) => {
+  return {
+    type: 'DISPLAY_CUSTOMER_DETAILS',
+    payload: values
+  }
+}

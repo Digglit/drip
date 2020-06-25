@@ -64,6 +64,8 @@
   background-color: var(--primary-background-color);
   border-right: 1px solid var(--primary-color);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+  position: relative;
+  transition-duration: 250ms;
 }
 
 .portalPageSideBarFooterOpenButton {

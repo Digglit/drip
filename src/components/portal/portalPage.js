@@ -15,6 +15,7 @@ import PortalConfirmAction from './subcomponents/modals/portalConfirmAction/port
 import PortalViewModifiers from './subcomponents/modals/portalViewModifiers/portalViewModifiers'
 import ViewOrderDetails from './subcomponents/modals/viewOrderDetails/viewOrderDetails'
 import CreateCustomTransaction from './subcomponents/modals/createCustomTransaction/createCustomTransaction'
+import PortalCustomerDetails from './subcomponents/modals/portalCustomerDetails/portalCustomerDetails'
 
 class PortalPage extends Component {
   render() {
@@ -47,6 +48,9 @@ class PortalPage extends Component {
         </AnimatePresence>
         <AnimatePresence>
           {this.props.modals.customTransaction ? <CreateCustomTransaction zIndex={11} key='w0ef90uf90jwe0fjh' /> : null}
+        </AnimatePresence>
+        <AnimatePresence>
+          {this.props.modals.customerDetails ? <PortalCustomerDetails zIndex={11} key='oisjdgf09uio34i0gj' /> : null}
         </AnimatePresence>
       </div>
     )

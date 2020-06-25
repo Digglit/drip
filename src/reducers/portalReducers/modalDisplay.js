@@ -9,6 +9,7 @@ let initialState = {
     viewModifiers: false,
     orderDetails: false,
     customTransaction: false,
+    customerDetails: false,
   }
 }
 
@@ -48,6 +49,11 @@ const modalDisplay = (state = initialState, action) => {
       if (!state.modalsOpen) newModalsOpen = 1
       newModals = { ...state.modals }
       newModals.customTransaction = !newModals.customTransaction
+      return state = { modalsOpen: newModalsOpen, modals: newModals }
+    case 'DISPLAY_CUSTOMER_DETAILS':
+      if (!state.modalsOpen) newModalsOpen = 1
+      newModals = { ...state.modals }
+      newModals.customerDetails = !newModals.customerDetails
       return state = { modalsOpen: newModalsOpen, modals: newModals }
     default:
       return state

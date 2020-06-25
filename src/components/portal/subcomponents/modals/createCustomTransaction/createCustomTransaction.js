@@ -22,7 +22,7 @@ class CreateCustomTransaction extends Component {
               <Input />
             </div>
             <div className='portalCustomTransactionCardContainer'>
-              <div className='portalCustomTransactionCardInputContainer' style={{ gridColumnStart: 1, gridColumnEnd: 3, width: '100%' }}>
+              <div className='portalCustomTransactionCardInputContainer' style={{ gridColumnStart: 1, gridColumnEnd: 3 }}>
                 <p className='portalCustomTransactionInfoText'>Card Number</p>
                 <Input customClass={'portalCustomTransactionCardInput'} />
               </div>

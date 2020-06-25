@@ -8,7 +8,8 @@ class PortalPageSideBar extends Component {
   constructor() {
     super()
     this.state = {
-      items: ['Stuffed Mushroom Heads', 'BigM House Salad', 'Chicken Tenders', 'Hawaiian Pizza', 'Mozzarella Sticks']
+      items: ['Stuffed Mushroom Heads', 'BigM House Salad', 'Chicken Tenders', 'Hawaiian Pizza', 'Mozzarella Sticks'],
+      sideBarExpanded: false
     }
   }
 
@@ -39,10 +40,10 @@ class PortalPageSideBar extends Component {
             </div>
           ))}
         </div>
-        <div className='portalPageSideBarFooter'>
-          <div className='portalPageSideBarFooterOpenButton'>
+        <div className='portalPageSideBarFooter' style={this.state.sideBarExpanded ? {bottom: 0} : {bottom: '-187px'}}>
+          <div className='portalPageSideBarFooterOpenButton' onMouseDown={() => this.setState({sideBarExpanded: !this.state.sideBarExpanded})}>
             {/* <p className='portalPageSideBarFooterOpenButtonText'>^</p> */}
-            <div className='portalPageSideBarFooterOpenArrow' />
+            <div className='portalPageSideBarFooterOpenArrow' style={this.state.sideBarExpanded ? {transform: 'rotate(180deg)'} : null}/>
           </div>
           <button className={`portalPageSideBarFooterButton ${this.props.pageDisplayed === 1 && !this.props.creatingOrder ? 'primaryButton' : 'secondaryButton'}`} style={{ marginTop: 3 }} onMouseDown={this.viewItemsHandler}>View All Items</button>
           <button className={`portalPageSideBarFooterButton ${this.props.pageDisplayed === 2 ? 'primaryButton' : 'secondaryButton'}`} onMouseDown={() => this.props.pageDisplayed === 2 ? this.props.changePage(0) : this.props.changePage(2)}>Tools</button>
