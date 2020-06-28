@@ -1,0 +1,14 @@
+
+
+.portalItemDrawerContainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  max-width: 750px;
+  right: 0;
+  top: 0;
+  background-color: var(--primary-background-color);
+  border-left: 1px solid var(--primary-color);
+  display: grid;
+  grid-template-rows: 225px auto 75px;
+}

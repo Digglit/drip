@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import './portalPageSideBar.css'
 import { changePage } from '../../../../actions/portal'
-import { createOrderHandler } from '../../../../actions/portal'
+import { createOrderHandler, modifyOrderHandler } from '../../../../actions/portal'
 
 class PortalPageSideBar extends Component {
   constructor() {
@@ -14,7 +14,7 @@ class PortalPageSideBar extends Component {
   }
 
   viewItemsHandler = () => {
-    if (this.props.pageDisplayed === 1 && !this.props.creatingOrder) {
+    if (this.props.pageDisplayed === 1 && (!this.props.creatingOrder || !this.props.modifyOrder)) {
       this.props.changePage(0)
     } else if (this.props.pageDisplayed !== 1 && this.props.creatingOrder) {
       this.props.changePage(1)
@@ -40,12 +40,12 @@ class PortalPageSideBar extends Component {
             </div>
           ))}
         </div>
-        <div className='portalPageSideBarFooter' style={this.state.sideBarExpanded ? {bottom: 0} : {bottom: '-187px'}}>
-          <div className='portalPageSideBarFooterOpenButton' onMouseDown={() => this.setState({sideBarExpanded: !this.state.sideBarExpanded})}>
+        <div className='portalPageSideBarFooter' style={this.state.sideBarExpanded ? { bottom: 0 } : { bottom: '-187px' }}>
+          <div className='portalPageSideBarFooterOpenButton' onMouseDown={() => this.setState({ sideBarExpanded: !this.state.sideBarExpanded })}>
             {/* <p className='portalPageSideBarFooterOpenButtonText'>^</p> */}
-            <div className='portalPageSideBarFooterOpenArrow' style={this.state.sideBarExpanded ? {transform: 'rotate(180deg)'} : null}/>
+            <div className='portalPageSideBarFooterOpenArrow' style={this.state.sideBarExpanded ? { transform: 'rotate(180deg)' } : null} />
           </div>
-          <button className={`portalPageSideBarFooterButton ${this.props.pageDisplayed === 1 && !this.props.creatingOrder ? 'primaryButton' : 'secondaryButton'}`} style={{ marginTop: 3 }} onMouseDown={this.viewItemsHandler}>View All Items</button>
+          <button className={`portalPageSideBarFooterButton ${this.props.pageDisplayed === 1 && !this.props.creatingOrder && !this.props.modifyOrder ? 'primaryButton' : 'secondaryButton'}`} style={{ marginTop: 3 }} onMouseDown={this.viewItemsHandler}>View All Items</button>
           <button className={`portalPageSideBarFooterButton ${this.props.pageDisplayed === 2 ? 'primaryButton' : 'secondaryButton'}`} onMouseDown={() => this.props.pageDisplayed === 2 ? this.props.changePage(0) : this.props.changePage(2)}>Tools</button>
           <button className={`portalPageSideBarFooterButton ${this.props.pageDisplayed === 3 ? 'primaryButton' : 'secondaryButton'}`} style={{ marginBottom: 3 }} onMouseDown={() => this.props.pageDisplayed === 3 ? this.props.changePage(0) : this.props.changePage(3)}>View Completed Orders</button>
         </div>
@@ -56,7 +56,8 @@ class PortalPageSideBar extends Component {
 
 const mapStateToProps = (state) => ({
   pageDisplayed: state.pageDisplay.currentPage,
-  creatingOrder: state.createOrder
+  creatingOrder: state.createOrder,
+  modifyOrder: state.modifyOrder
 })
 
-export default connect(mapStateToProps, { changePage, createOrderHandler })(PortalPageSideBar)
+export default connect(mapStateToProps, { changePage, createOrderHandler, modifyOrderHandler })(PortalPageSideBar)

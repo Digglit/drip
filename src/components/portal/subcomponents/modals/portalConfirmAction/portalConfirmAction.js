@@ -7,6 +7,12 @@ import { motion } from 'framer-motion'
 import { modalTransition, transitionDuration } from '../../../../global/pageTransition'
 
 const ConfirmActionModule = (props) => {
+
+  const confirmAction = () => {
+    props.confirmFunction()
+    props.displayConfirmAction()
+  }
+
   return (
     <motion.div className='portalConfirmActionContainer' style={{ zIndex: props.zIndex + 1 }} initial={modalTransition.initial} animate={modalTransition.in} exit={modalTransition.out} transition={{ duration: transitionDuration }}>
       <CornerCloseButton customStyle={{ boxShadow: 'none', height: '40px' }} customTextStyle={{ fontSize: '28px' }} onClick={props.displayConfirmAction} />
@@ -17,8 +23,8 @@ const ConfirmActionModule = (props) => {
 
       {props.confirmAction ?
         <div className='confirmActionModuleButtonsContainer'>
-          <button className='confirmActionModuleButton secondaryButton' onMouseDown={props.displayConfirmAction}>Cancel</button>
-          <button className='confirmActionModuleButton primaryButton' onMouseDown={props.confirmFunction}>Confirm</button>
+          <button className='confirmActionModuleButton secondaryButton' onMouseDown={() => props.displayConfirmAction()}>Cancel</button>
+          <button className='confirmActionModuleButton primaryButton' onMouseDown={() => confirmAction()}>Confirm</button>
         </div>
         :
         <div className='confirmActionModuleButtonsContainer'>

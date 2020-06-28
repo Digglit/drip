@@ -89,6 +89,7 @@
   align-self: center;
   justify-self: end;
   margin-right: 10px;
+  color: var(--tertiary-color);
 }
 
 .checkoutPageSubText {
@@ -98,6 +99,8 @@
 
 .checkoutPageInformationContainer {
   align-self: center;
+  position: relative;
+  top: -30px;
   height: 450px;
 }
 
@@ -128,12 +131,16 @@
 .checkoutPageCustomerDetailsContainer {
   align-self: center;
   width: 100%;
+  position: relative;
+  top: -30px;
   max-width: 390px;
   height: 450px;
 }
 
 .checkoutPageCardDetailsContainer {
   align-self: center;
+  position: relative;
+  top: -30px;
 }
 
 .checkoutPaymentDetailsContainer {

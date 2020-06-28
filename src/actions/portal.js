@@ -13,13 +13,6 @@ export const displayItemAvailability = () => {
   }
 }
 
-export const displayDriverDetails = (zIndex, values) => {
-  return {
-    type: 'DISPLAY_DRIVER_DETAILS',
-    payload: { zIndex, values }
-  }
-}
-
 export const displayConfirmAction = (values) => {
   return {
     type: 'DISPLAY_CONFIRM_ACTION',
@@ -61,5 +54,46 @@ export const displayCustomerDetails = (values) => {
   return {
     type: 'DISPLAY_CUSTOMER_DETAILS',
     payload: values
+  }
+}
+
+export const modifyOrderHandler = () => {
+  return {
+    type: 'MODIFY_ORDER'
+  }
+}
+
+export const displayItemDrawer = () => {
+  return {
+    type: 'DISPLAY_ITEM_DRAWER'
+  }
+}
+
+export const displayPreviousOrders = () => {
+  return {
+    type: 'DISPLAY_PREVIOUS_ORDERS'
+  }
+}
+
+export const closeModalHandler = (modalName) => {
+  switch (modalName) {
+    case 'itemAvailability':
+      return { type: 'DISPLAY_ITEM_AVAILABILITY' }
+    case 'confirmAction':
+      return { type: 'DISPLAY_CONFIRM_ACTION' }
+    case 'viewModifiers':
+      return { type: 'DISPLAY_VIEW_MODIFIERS' }
+    case 'orderDetails':
+      return { type: 'DISPLAY_ORDER_DETAILS' }
+    case 'customTransaction':
+      return { type: 'DISPLAY_CUSTOM_TRANSACTION' }
+    case 'customerDetails':
+      return { type: 'DISPLAY_CUSTOMER_DETAILS' }
+    case 'itemDrawer':
+      return { type: 'DISPLAY_ITEM_DRAWER' }
+    case 'previousOrders':
+      return { type: 'DISPLAY_PREVIOUS_ORDERS' }
+    default:
+      return null
   }
 }

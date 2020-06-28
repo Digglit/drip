@@ -55,7 +55,7 @@ class CheckoutPage extends Component {
           <AnimatePresence exitBeforeEnter>
             {this.state.checkout === 2 ?
               <motion.div className='checkoutPageCardDetailsContainer' key='sdfghw345yhhae' initial={pageTransition.initial} animate={pageTransition.in} exit={pageTransition.out} transition={{ duration: transitionDuration }}>
-                <h2 className='checkoutPageHeader'>Payment Details</h2>
+                <h2 className='checkoutPageHeader' style={{ marginTop: 0 }}>Payment Details</h2>
                 <div className='checkoutPaymentDetailsContainer'>
                   <div className='checkoutPageCardInputContainer'>
                     <p className='checkoutPageText'>Card Number</p>
@@ -75,7 +75,7 @@ class CheckoutPage extends Component {
               </motion.div>
               : this.state.checkout === 1 ?
                 <motion.div className='checkoutPageCustomerDetailsContainer' key='qjfg0j40239th9' initial={pageTransition.initial} animate={pageTransition.in} exit={pageTransition.out} transition={{ duration: transitionDuration }}>
-                  <h2 className='checkoutPageHeader'>Customer Details</h2>
+                  <h2 className='checkoutPageHeader' style={{ marginTop: 0 }}>Customer Details</h2>
                   <div>
                     <p className='checkoutPageText'>Name</p>
                     <Input customClass={'checkoutPageInput'} />

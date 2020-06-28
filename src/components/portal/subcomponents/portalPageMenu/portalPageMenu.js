@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import './portalPageMenu.css'
 import CornerCloseButton from '../../../global/cornerCloseButton/cornerCloseButton'
-import { changePage, displayViewModifiers, checkoutHandler } from '../../../../actions/portal'
+import { changePage, displayViewModifiers, checkoutHandler, modifyOrderHandler, displayOrderDetails } from '../../../../actions/portal'
 import { pageTransition, transitionDuration } from '../../../global/pageTransition'
 import MenuSection from '../../../admin/menuPage/menuSection/menuSection'
 import CheckoutPage from '../../../admin/menuPage/subcomponents/checkoutPage/checkoutPage'
@@ -11,6 +11,13 @@ import PortalMenuItem from './subcomponents/portalMenuItem/portalMenuItem'
 import CornerCheckoutButton from '../../../global/cornerCheckoutButton/cornerCheckoutButton'
 
 class PortalPageMenu extends Component {
+
+  finishOrderModificationHandler = () => {
+    this.props.modifyOrderHandler()
+    this.props.changePage(0)
+    this.props.displayOrderDetails()
+  }
+
   render() {
     return (
       <motion.div className='portalPageMenuContainer' initial={pageTransition.initial} animate={pageTransition.in} exit={pageTransition.out} transition={{ duration: transitionDuration }}>
@@ -30,7 +37,10 @@ class PortalPageMenu extends Component {
                 {this.props.creatingOrder ?
                   <button className='portalMenuFooterButton primaryButton' onMouseDown={this.props.creatingOrder ? this.props.checkoutHandler : this.props.displayViewModifiers}>Checkout</button>
                   :
-                  <button className='portalMenuFooterButton primaryButton' onMouseDown={this.props.displayViewModifiers}>View All Modifiers</button>
+                  this.props.modifyOrder ?
+                    <button className='portalMenuFooterButton primaryButton' onMouseDown={this.finishOrderModificationHandler}>Finish</button>
+                    :
+                    <button className='portalMenuFooterButton primaryButton' onMouseDown={this.props.displayViewModifiers}>View All Modifiers</button>
                 }
               </div>
             </motion.div>
@@ -43,7 +53,8 @@ class PortalPageMenu extends Component {
 
 const mapStateToProps = (state) => ({
   creatingOrder: state.createOrder,
-  checkoutDisplay: state.checkoutDisplay
+  checkoutDisplay: state.checkoutDisplay,
+  modifyOrder: state.modifyOrder
 })
 
-export default connect(mapStateToProps, { changePage, displayViewModifiers, checkoutHandler })(PortalPageMenu)
+export default connect(mapStateToProps, { changePage, displayViewModifiers, checkoutHandler, modifyOrderHandler, displayOrderDetails })(PortalPageMenu)

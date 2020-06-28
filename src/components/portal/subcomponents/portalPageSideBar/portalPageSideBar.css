@@ -103,7 +103,7 @@
   content: '';
   height: 30px;
   width: 2px;
-  background-color: white;
+  background-color: var(--header-font-color);
   position: absolute;
   top: 50%;
 }

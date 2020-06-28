@@ -2,12 +2,16 @@ import React, { Component } from 'react'
 import './portalMenuItem.css'
 import foodImage from '../../../../../../assets/wings.jpg'
 import { connect } from 'react-redux'
-import { displayItemAvailability } from '../../../../../../actions/portal'
+import { displayItemAvailability, displayItemDrawer } from '../../../../../../actions/portal'
 
 
 class PortalMenuItem extends Component {
   itemClickHandler = () => {
-    this.props.displayItemAvailability()
+    if (this.props.modifyOrder || this.props.createOrder) {
+      this.props.displayItemDrawer()
+    } else {
+      this.props.displayItemAvailability()
+    }
   }
 
   foodDetails = {
@@ -87,4 +91,11 @@ class PortalMenuItem extends Component {
   }
 }
 
-export default connect(null, { displayItemAvailability })(PortalMenuItem)
+const mapStateToProps = state => {
+  return {
+    modifyOrder: state.modifyOrder,
+    createOrder: state.createOrder
+  }
+}
+
+export default connect(mapStateToProps, { displayItemAvailability, displayItemDrawer })(PortalMenuItem)

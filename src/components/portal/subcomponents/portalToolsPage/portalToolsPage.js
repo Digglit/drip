@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import './portalToolsPage.css'
 import { motion } from 'framer-motion'
 import { pageTransition, transitionDuration } from '../../../global/pageTransition'
-import { changePage, displayDriverDetails, createOrderHandler, displayCustomTransaction } from '../../../../actions/portal'
+import { changePage, createOrderHandler, displayCustomTransaction, displayConfirmAction } from '../../../../actions/portal'
 import ToolsContainer from '../../../admin/toolsPage/subcomponents/toolsContainer/toolsContainer'
 import Switch from '../../../global/switch/switch'
 import CornerCloseButton from '../../../global/cornerCloseButton/cornerCloseButton'
@@ -56,6 +56,16 @@ class PortalToolsPage extends Component {
     document.documentElement.style.setProperty('--secondary-background-color', colorScheme[2])
     document.documentElement.style.setProperty('--backdrop-overlay-color', colorScheme[3])
     this.setState({ currentMode: !this.state.currentMode })
+  }
+
+  confirmActionHandler = (name) => {
+    let confirmation = {
+      header: 'Log Out Driver?',
+      body: `Are you sure you want to force ${name} to log out?`,
+      confirmFunction: () => { },
+      confirmAction: true
+    }
+    this.props.displayConfirmAction(confirmation)
   }
 
   render() {
@@ -115,8 +125,8 @@ class PortalToolsPage extends Component {
               <div className='toolsPageDriversContainer'>
                 {this.props.drivers.map((value, index) => (
                   <div className='toolsPageDriverContainer' key={index}>
-                    <h4 className='toolsPageDriverText' onMouseDown={() => this.props.displayDriverDetails(10, index)}>{value.name}</h4>
-                    <button className='secondaryButton toolsPageDriverButton' name={value.name} onMouseDown={(e) => this.confirmActionHandler(e.target.name)}>Log Out</button>
+                    <h4 className='portalToolsPageDriverText'>{value.name}</h4>
+                    <button className='secondaryButton toolsPageDriverButton' onMouseDown={() => this.confirmActionHandler(value.name)}>Log Out</button>
                   </div>
                 ))}
               </div>
@@ -132,4 +142,4 @@ const mapStateToProps = (state) => ({
   drivers: state.driverDetails.drivers
 })
 
-export default connect(mapStateToProps, { changePage, displayDriverDetails, createOrderHandler, displayCustomTransaction })(PortalToolsPage)
+export default connect(mapStateToProps, { changePage, createOrderHandler, displayCustomTransaction, displayConfirmAction })(PortalToolsPage)

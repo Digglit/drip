@@ -44,7 +44,7 @@ let initialState = {
 const driverDetails = (state = initialState, action) => {
   switch (action.type) {
     case 'DISPLAY_DRIVER_DETAILS':
-      if (action.payload.zIndex === 0) {
+      if (action.payload === undefined || action.payload.zIndex === 0) {
         return state = { open: false, zIndex: 0, driverSelected: state.driverSelected, drivers: state.drivers }
       } else {
         return state = { open: !state.open, zIndex: action.payload.zIndex, driverSelected: action.payload.values, drivers: state.drivers }

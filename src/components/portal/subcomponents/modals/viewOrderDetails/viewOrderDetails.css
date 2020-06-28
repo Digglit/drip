@@ -75,6 +75,28 @@
   font-size: 15px;
 }
 
+.portalViewOrderDetailsModificationButtonsContainer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  justify-items: end;
+}
+
+.portalViewOrderDetailsModificationButton {
+  height: 70%;
+  width: 95%;
+  margin-right: 10px;
+}
+
+.portalViewOrderDetailsModificationAddItemButton {
+  height: 55px;
+  width: 250px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-top: 10px;
+}
+
 .portalViewOrderDetailsItemNotesContainer {
   display: grid;
   grid-template-rows: 22px auto;

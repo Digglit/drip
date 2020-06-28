@@ -9,3 +9,7 @@
   display: grid;
   grid-template-rows: 50px auto;
 }
+
+.portalToolsPageDriverText {
+  color: var(--tertiary-color);
+}

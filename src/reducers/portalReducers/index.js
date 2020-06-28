@@ -6,6 +6,7 @@ import confirmationDetails from './confirmationDetails'
 import createOrder from './createOrder'
 import checkoutDisplay from './checkoutDisplay'
 import portalCustomerDetails from './portalCustomerDetails'
+import modifyOrder from './modifyOrder'
 
 const rootReducer = combineReducers({
   pageDisplay,
@@ -14,7 +15,8 @@ const rootReducer = combineReducers({
   confirmationDetails,
   createOrder,
   checkoutDisplay,
-  portalCustomerDetails
+  portalCustomerDetails,
+  modifyOrder
 })
 
 export default rootReducer

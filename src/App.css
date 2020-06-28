@@ -12,6 +12,19 @@
   overflow: hidden;
 } */
 
+/* Yellow Color Scheme */
+
+/* :root {
+  --primary-color: rgb(251, 255, 36);
+  --secondary-color: #FF6B6B;
+  --tertiary-color: rgb(255, 255, 255);
+  --primary-background-color: rgb(35, 35, 35);
+  --secondary-background-color: rgb(20, 20, 20);
+  --header-font-color: rgb(0, 0, 0);
+  --backdrop-overlay-color: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+} */
+
 /* Main Color Scheme */
 
 :root {
