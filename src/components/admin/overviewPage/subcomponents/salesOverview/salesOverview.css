@@ -8,6 +8,13 @@
   justify-self: center;
 }
 
+@media(max-width: 1500px) {
+  .salesOverviewContainer {
+    width: 100%;
+    padding: 0%;
+  }
+}
+
 .textContainer {
   display: grid;
   align-items: center;

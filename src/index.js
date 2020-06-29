@@ -9,7 +9,7 @@ import portalRootReducer from './reducers/portalReducers'
 import { Provider } from 'react-redux'
 import PortalPage from './components/portal/portalPage'
 
-const pageDisplay = 1
+const pageDisplay = 0
 
 const store = createStore(
   pageDisplay === 0 ? rootReducer : portalRootReducer,

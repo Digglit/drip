@@ -247,7 +247,7 @@ class ViewCompletedOrders extends Component {
             <h2 className='viewCompletedOrdersHeader'>Today's Tips</h2>
             <p className='viewCompletedOrdersHeaderText'>Pickup: $4.80</p>
             <p className='viewCompletedOrdersHeaderText'>Delivery: $4.80</p>
-            <h2 className='viewCompletedOrdersHeader' style={{ position: 'absolute', bottom: 15 }}>Today's Tips</h2>
+            <h2 className='viewCompletedOrdersHeader' style={{ position: 'absolute', bottom: 15 }}>Customer Details</h2>
           </div>
           <div className='viewCompletedOrdersGraph' />
         </div>

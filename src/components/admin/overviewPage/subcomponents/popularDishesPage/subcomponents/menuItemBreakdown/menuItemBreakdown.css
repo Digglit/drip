@@ -41,7 +41,7 @@
 
 .menuItemBreakdownHeaderText {
   margin: 0px;
-  color: var(--tertiary-color);
+  color: var(--header-font-color);
   font-size: 2em;
   margin-left: 5px;
   margin-bottom: 5px;
